@@ -1,17 +1,16 @@
-$('.testi3').owlCarousel({
-    loop: true,
-    margin: 30,
-    nav: false,
-    dots: true,
-    autoplay: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false
-      },
-      1024: {
-        items: 3
-      }
-    }
-  })
+$(document).ready(function () {
+	$('.testiSlide').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1500,
+		responsive: [{
+		breakpoint: 850,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		}
+		}]
+	});
+});
