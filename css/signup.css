@@ -110,7 +110,7 @@
     color: #777;
   }
   .becomepartner{
-      background-color: lightgray;
+      background-color: ghostwhite;
       margin: auto;
       display: block;
       padding: 5%;
@@ -124,13 +124,14 @@
   .partnerimage{
     display: block;
     margin:auto;
-   
+   width: 50%;
   }
   .partnerdiv{
     border-radius: 2%;
     border-color: white;
-    background-color: lightgray;
+    /* background-color: lightgray; */
   }
   .partnerbutton{
-      margin-top: 2%;
+      margin-top: 3%;
+      width: fit-content;
   }
