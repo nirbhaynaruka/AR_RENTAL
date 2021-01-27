@@ -3,53 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
-    <!-- Optional theme -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-      crossorigin="anonymous"
-    />
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
   </head>
   <body>
+    <!-- Header -->
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#"
+            ><img src="assets/Group 1.png" alt="" srcset="" width="15%"
+          /></a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tarrif</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary my-2 my-sm-0" type="button">
+            Sign In
+          </button>
+        </div>
+      </nav>
+    </header>
     <!-- Footer -->
-    <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
+    <footer
+      class="bg-light text-lg-start"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
       <!-- Grid container -->
-      <div class="container p-4">
+      <div class="container-fluid p-4">
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <img src="assets/Group 1.png" alt="" srcset="" width="20%">
-            <br><br>
-            <p> The best in Class Car Rentals Services </p>
+            <img src="assets/Group 1.png" alt="" srcset="" width="20%" />
+            <br /><br />
+            <p>The best in Class Car Rentals Services</p>
 
             <h5 class="text-uppercase">Head Office</h5>
-            <hr>
+            <hr />
             <p>
-              Piprali-Jhunjhunu by pass road<br>
-Sikar, RJ 332001 <br>
-Phone : +91 80030 73449 <br>
-Email : support@arrentalcar.com <br>
-Office time : 9:00 AM - 7:00 PM <br>
+              Piprali-Jhunjhunu by pass road<br />
+              Sikar, RJ 332001 <br />
+              Phone : +91 80030 73449 <br />
+              Email : support@arrentalcar.com <br />
+              Office time : 9:00 AM - 7:00 PM <br />
             </p>
           </div>
           <!--Grid column-->
@@ -57,7 +84,7 @@ Office time : 9:00 AM - 7:00 PM <br>
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">quick links</h5>
-            <hr>
+            <hr />
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="#!" class="text-dark">About Us</a>
@@ -76,18 +103,17 @@ Office time : 9:00 AM - 7:00 PM <br>
               </li>
             </ul>
 
-            <br><br>
+            <br /><br />
             <h5 class="text-uppercase">NEWSLETTER</h5>
-            <hr>
+            <hr />
             <!-- Add Text fields -->
-
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
-            <hr>
+            <hr />
             <ul class="list-unstyled">
               <li>
                 <a href="#!" class="text-dark">Jaipur</a>
@@ -119,19 +145,32 @@ Office time : 9:00 AM - 7:00 PM <br>
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="container p-3">
+      <div class="container-fluid p-3">
         <div class="row">
           <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
             Designed with by Abhi Gill | Crafted by The White Page
           </div>
-          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-            Icons
-          </div>
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
         </div>
       </div>
-      
+
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
