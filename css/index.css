@@ -1,5 +1,8 @@
 .testimonial_bg {
     background-image: url("../assets/testimonial_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h3 {
 	font-family: 'Patua One', cursive;
