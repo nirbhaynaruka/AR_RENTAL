@@ -13,13 +13,19 @@
   }
   .middiv{
       background-color: whitesmoke;
+      width: 40%;
       border-radius: 2%;
       padding: 2%;
-      width: 40%;
       margin-bottom: 3%;
   }
   .signuplogo{
       margin-bottom: 3%;
+  }
+  .forgpassword{
+      text-align: left;
+  }
+  .createnew{
+text-align: right;
   }
   /* .fake-input { position: relative; width:240px; }
   .fake-input input { border:none; background:white; display:block; width: 100%; box-sizing: border-box }

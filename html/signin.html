@@ -7,7 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/signin.css">
     <title>Document</title>
 </head>
 
@@ -43,10 +43,10 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" href="signup.html">Sign Up</a>
               </li>
             </ul>
-            <a href="signin.html">
+            <a href="#">
               <button class="btn btn-primary my-2 my-sm-0" type="button">
                   Sign In
               </button>
@@ -63,24 +63,11 @@
                     <h1 class="h3 font-weight-bold">
                        
                         <img src="../assets/signup.png" srcset="" width="15%">
-                            Create New Account
+                            Sign In
                         </h1>
                 </div>
                 <div class="signuptextfields">
 
-                    <div class="form-label-group fake-input">
-                        <!-- <img src="../assets/id.png" width="25" /> -->
-                        <input type="text" class="form-control" placeholder="Name" required
-                        autofocus>
-                        <label for="input">Name</label>
-                    </div>
-                    
-                    <div class="form-label-group fake-input">
-                        <!-- <img src="../assets/call.png" width="25" /> -->
-
-                        <input type="number"  class="form-control" placeholder="Mobile" required>
-                        <label for="input">Mobile Number</label>
-                    </div>
                     <div class="form-label-group fake-input">
                         <!-- <img src="../assets/mail.png" width="25" /> -->
 
@@ -95,19 +82,19 @@
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Password</label>
                     </div>
-                    <div class="form-label-group fake-input">
-                        <!-- <img src="../assets/city.png" width="25" /> -->
-                        
-                        <input type="text" class="form-control" placeholder="City" required
-                        autofocus>
-                        <label for="input">City</label>
+                    <div class="row signin">
+                        <div class="col-md-6 forgpassword">
+                            <a href="#">
+                                <p>Forgot Password</p>
+                            </a>
+                        </div>
+                        <div class="col-md-6 createnew">
+                            <a href="#">
+                                <p>Create New Account ?</p>
+                            </a>
+                        </div>
                     </div>
-                    
-                    <div class="signin">
-                        <a href="#">
-                            <p>Already have an account ? Sign In</p>
-                        </a>
-                    </div>
+                   
                 </div>
                     
                     <!-- <div class="checkbox mb-3">
@@ -149,7 +136,7 @@
 </section>
     <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
         <!-- Grid container -->
-        <div class=" p-4">
+        <div class="container p-4">
             <!--Grid row-->
             <div class="row">
                 <!--Grid column-->
