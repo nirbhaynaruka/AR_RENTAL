@@ -23,8 +23,8 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header>
+      <nav class="navbar navbar-expand-lg">
         <button
           class="navbar-toggler"
           type="button"
@@ -38,7 +38,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a class="navbar-brand" href="#"
-            ><img src="assets/Group 1.png" alt="" srcset="" width="15%"
+            ><img src="assets/Group 1.png" alt="logo" srcset="" width="20%"
           /></a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -57,11 +57,11 @@
               <a class="nav-link" href="html/signup.html">Sign Up</a>
             </li>
           </ul>
-          <a href="html/signin.html">
+          <a href="html/signin.html" class="signIn_btn">
             <button class="btn btn-primary my-2 my-sm-0" type="button">
-                Sign In
+              Sign In
             </button>
-        </a>
+          </a>
         </div>
       </nav>
     </header>
@@ -116,7 +116,71 @@
     </section>
 
     <!-- Find My Car -->
-    <section></section>
+    <section>
+      <div id="booking" class="section">
+        <div class="section-center">
+          <div class="container">
+            <div class="booking-form">
+              <form>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Address, zip, city or airport"
+                      />
+                      <span class="form-label">Destination</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                      <span class="select-arrow"></span>
+                      <span class="form-label">Guests</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                      <span class="select-arrow"></span>
+                      <span class="form-label">Children</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input class="form-control" type="date" required />
+                      <span class="form-label">Check In</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input class="form-control" type="date" required />
+                      <span class="form-label">Check out</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-btn">
+                      <button class="submit-btn">Check availability</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Locations -->
     <section class="text-center">
@@ -343,25 +407,25 @@
     <!-- become partner -->
     <section class="becomepartner">
       <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-4">
-              <div class="partnerdiv">
-  
-                  <img class="partnerimage" src="assets/Join us.png"/>
-              </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <div class="partnerdiv">
+            <img class="partnerimage" src="assets/Join us.png" />
           </div>
-          <div class="col-md-7">
-              <div>
-                  <p>Join us on the ride.</p>
-                  <p>Become our Partner and earn Together</p>
-              </div>
-              <div class="partnerbutton">
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">Become Partner</button>
-              </div>
+        </div>
+        <div class="col-md-7">
+          <div>
+            <p>Join us on the ride.</p>
+            <p>Become our Partner and earn Together</p>
           </div>
-  
+          <div class="partnerbutton">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+              Become Partner
+            </button>
+          </div>
+        </div>
       </div>
-  </section>
+    </section>
     <!-- Main Body -->
 
     <!-- Footer -->
@@ -375,7 +439,12 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <img src="assets/logo for footer.png" alt="" srcset="" width="20%" />
+            <img
+              src="assets/logo for footer.png"
+              alt=""
+              srcset=""
+              width="20%"
+            />
             <br /><br />
             <p>The best in Class Car Rentals Services</p>
 
