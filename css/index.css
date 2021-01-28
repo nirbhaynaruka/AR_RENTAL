@@ -1,5 +1,5 @@
 .testimonial_bg {
-    background-image: url("../assets/testimonial_bg.png");
+    background-image: url("../assets/Testimonials.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,4 +214,38 @@ figure.testimonial .peopl h3 {
 }
 .slick-next:before {
 	content: "";
+}
+
+.becomepartner{
+	background-color: ghostwhite;
+	margin: auto;
+	display: block;
+	padding: 5%;
+}
+.becomepartner p{
+	font-weight: bold;
+	font-size: large;
+	margin: auto;
+
+}
+.partnerimage{
+  display: block;
+  margin:auto;
+ width: 50%;
+}
+.partnerdiv{
+  border-radius: 2%;
+  border-color: white;
+  /* background-color: lightgray; */
+}
+.partnerbutton{
+	margin-top: 3%;
+	width: fit-content;
+}
+
+footer{
+	background-image: url("../assets/Footer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
