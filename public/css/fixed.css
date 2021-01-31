@@ -1,0 +1,58 @@
+.navbar-expand-lg {
+	background-color:#EEEFF1;
+	
+}
+.navbar-expand-lg .navbar-nav {
+	float: left;
+}
+.navbar-expand-lg .navbar-nav .nav-item {
+	padding-right: 1em;
+	padding-right: 1.0em;
+	width: max-content;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+	font-size:x-large;
+	font-weight: 600;
+	color: black;
+}
+.navbar-expand-lg .signIn_btn button {
+	padding: 0.5em 1.2em 0.5em 1.2em;
+	font-size:x-large;
+	font-weight: 600;
+	color: white;
+}
+
+.becomepartner{
+	background-color: ghostwhite;
+	margin: auto;
+	display: block;
+	padding: 5%;
+}
+.becomepartner p{
+	font-weight: bold;
+	font-size: large;
+	margin: auto;
+
+}
+.partnerimage{
+  display: block;
+  margin:auto;
+ width: 50%;
+}
+.partnerdiv{
+  border-radius: 2%;
+  border-color: white;
+  /* background-color: lightgray; */
+}
+.partnerbutton{
+	margin-top: 3%;
+	width: fit-content;
+}
+
+footer{
+	background-image: url("../assets/Footer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
