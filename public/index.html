@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AR_CarRental</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
-    />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- <link rel="stylesheet" href="index.css" /> -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR_CarRental</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- <link rel="stylesheet" href="index.css" /> -->
 
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.4/firebase-performance.js"></script>
-    <!-- 
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/8.2.4/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/8.2.4/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-database.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-functions.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-storage.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-remote-config.js"></script>
+  <script defer src="/__/firebase/8.2.4/firebase-performance.js"></script>
+  <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-  </head>
-  <body>
-   <!-- Header -->
-   <header>
-    <nav class="navbar navbar-expand-lg">
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <!-- <nav class="navbar navbar-expand-lg">
       <button
         class="navbar-toggler"
         type="button"
@@ -83,23 +76,60 @@
           </button>
         </a>
       </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top headercover trans">
+
+      <a class="navbar-brand" href="#"
+      ><img src="assets/Group 1.png" alt="logo" srcset="" width="20%"
+    /></a>
+
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Tarrif</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Contact_Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="html/signup.html">Sign_Up</a>
+          </li>
+          <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+              href="about.html">About</a> </li>
+          <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+              href="services.html">Services</a> </li>
+          <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+              href="culture.html">Culture</a> </li>
+          <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+              href="contact.html">Contact</a> </li> -->
+        </ul>
+        <a href="html/signin.html" class="signIn_btn">
+          <button class="btn btn-primary my-2 my-sm-0" type="button">
+            Sign In
+          </button>
+        </a>
+      </div>
     </nav>
   </header>
   <!-- Header -->
 
   <!-- Main Body -->
   <section class="Carousels container-fluid p-3">
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-ride="carousel"
-    >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          class="active"
-        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
@@ -114,21 +144,11 @@
           <img src="assets/banner1.png" class="d-block w-100" alt="..." />
         </div>
       </div>
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-      >
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-      >
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -222,11 +242,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="card" style="width: 18rem">
-          <img
-            src="assets/Location marker.png"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="assets/Location marker.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Choose a Location</h5>
             <p class="card-text">
@@ -246,11 +262,7 @@
       </div>
       <div class="col-md-4">
         <div class="card" style="width: 18rem">
-          <img
-            src="assets/book your car.png"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="assets/book your car.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Book Your Car</h5>
             <p class="card-text">
@@ -335,10 +347,7 @@
               nulla pariatur.
               <div class="btn"></div>
             </blockquote>
-            <img
-              src="https://pbs.twimg.com/profile_images/829191018331385858/jxsj-ZmD.jpg"
-              alt="Maksim Goffin"
-            />
+            <img src="https://pbs.twimg.com/profile_images/829191018331385858/jxsj-ZmD.jpg" alt="Maksim Goffin" />
             <div class="peopl">
               <h3>Neil Patel</h3>
               <p class="indentity">SEO Expert</p>
@@ -357,10 +366,8 @@
               nulla pariatur.
               <div class="btn"></div>
             </blockquote>
-            <img
-              src="https://secure.gravatar.com/avatar/24a495e3a7316e619af62445f1a86886?s=96&d=mm&r=g"
-              alt="Maksim Goffin"
-            />
+            <img src="https://secure.gravatar.com/avatar/24a495e3a7316e619af62445f1a86886?s=96&d=mm&r=g"
+              alt="Maksim Goffin" />
             <div class="peopl">
               <h3>Shaan</h3>
               <p class="indentity">Web Developer</p>
@@ -379,10 +386,8 @@
               nulla pariatur.
               <div class="btn"></div>
             </blockquote>
-            <img
-              src="https://yt3.ggpht.com/a/AGF-l7_ESQtd3r7nPdFdP_mmyxn65RFy9JlGT0dGyA=s900-mo-c-c0xffffffff-rj-k-no"
-              alt="Maksim Goffin"
-            />
+            <img src="https://yt3.ggpht.com/a/AGF-l7_ESQtd3r7nPdFdP_mmyxn65RFy9JlGT0dGyA=s900-mo-c-c0xffffffff-rj-k-no"
+              alt="Maksim Goffin" />
             <div class="peopl">
               <h3>Brian Dean</h3>
               <p class="indentity">SEO / Blogger</p>
@@ -401,10 +406,7 @@
               nulla pariatur.
               <div class="btn"></div>
             </blockquote>
-            <img
-              src="https://design.sva.edu/wp-content/uploads/2018/08/Sagmeister.jpg"
-              alt="Maksim Goffin"
-            />
+            <img src="https://design.sva.edu/wp-content/uploads/2018/08/Sagmeister.jpg" alt="Maksim Goffin" />
             <div class="peopl">
               <h3>Stefan Sagmeister</h3>
               <p class="indentity">Graphic Designer</p>
@@ -440,22 +442,14 @@
   <!-- Main Body -->
 
   <!-- Footer -->
-  <footer
-    class="bg-light text-lg-start"
-    style="background-color: rgba(0, 0, 0, 0.2)"
-  >
+  <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
     <!-- Grid container -->
     <div class="container-fluid p-4">
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <img
-            src="assets/logo for footer.png"
-            alt=""
-            srcset=""
-            width="20%"
-          />
+          <img src="assets/logo for footer.png" alt="" srcset="" width="20%" />
           <br /><br />
           <p>The best in Class Car Rentals Services</p>
 
@@ -547,21 +541,15 @@
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   <script src="js/index.js"></script>
@@ -569,51 +557,52 @@
 
   <script src="/__/firebase/8.2.4/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+  <script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-    <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
-  </body>
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+  <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
+</body>
+
 </html>
