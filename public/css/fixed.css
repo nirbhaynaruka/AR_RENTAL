@@ -1,11 +1,14 @@
-.navbar-expand-lg {
+.navbar-expand-md {
 	background-color:#EEEFF1;
 	
 }
-.navbar-expand-lg .navbar-nav {
+.navbar{
+	flex-wrap: nowrap;
+}
+.navbar-expand-md .navbar-nav {
 	float: left;
 }
-.navbar-expand-lg .navbar-nav .nav-item {
+.navbar-expand-md .navbar-nav .nav-item {
 	padding-right: 1em;
 	padding-right: 1.0em;
 	width: max-content;
@@ -14,6 +17,9 @@
 .navbar-expand-lg .navbar-nav .nav-link{
 	font-size:x-large;
 	font-weight: 600;
+	color: black;
+}
+a{
 	color: black;
 }
 .navbar-expand-lg .signIn_btn button {
@@ -49,10 +55,37 @@
 	margin-top: 3%;
 	width: fit-content;
 }
-
+.navbar-toggler{
+	/* background-color: black; */
+	color: black;
+}
 footer{
 	background-image: url("../assets/Footer.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.nav_tog {
+	display: inline-block;
+	cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+	width: 25px;
+	height: 4px;
+	background-color: #333;
+	margin: 4px 0;
+	transition: 0.4s;
+  }
+  
+  .change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-18px, -8px);
+	transform: rotate(45deg) translate(-5px, -5px);
+  }

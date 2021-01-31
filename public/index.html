@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
   <!-- <link rel="stylesheet" href="style.css" /> -->
   <link rel="stylesheet" href="css/index.css" />
-  <!-- <link rel="stylesheet" href="index.css" /> -->
+  <link rel="stylesheet" href="css/fixed.css" />
 
 
   <!-- update the version number as needed -->
@@ -78,7 +78,7 @@
       </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top headercover trans">
+    <nav class="navbar navbar-expand-md fixed-top headercover trans">
 
       <a class="navbar-brand" href="#"
       ><img src="assets/Group 1.png" alt="logo" srcset="" width="20%"
@@ -86,25 +86,30 @@
 
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <div class="nav_tog" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Home</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Offers</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" href="#">Offers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Tarrif</a>
+            <a class="nav-link text-center text-uppercase font-14 trans" href="#">Tarrif</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="#">Contact_Us</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" href="#">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 text-white trans" href="html/signup.html">Sign_Up</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" href="html/signup.html">Sign Up</a>
           </li>
           <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
               href="about.html">About</a> </li>
@@ -601,6 +606,12 @@
         loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
       }
     });
+  </script>
+  
+<script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
   </script>
   <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
 </body>

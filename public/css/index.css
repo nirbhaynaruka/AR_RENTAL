@@ -1,27 +1,3 @@
-.navbar-expand-lg {
-	background-color:#EEEFF1;
-	
-}
-.navbar-expand-lg .navbar-nav {
-	float: left;
-}
-.navbar-expand-lg .navbar-nav .nav-item {
-	padding-right: 1em;
-	padding-right: 1.0em;
-	width: max-content;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-	font-size:x-large;
-	font-weight: 600;
-	color: black;
-}
-.navbar-expand-lg .signIn_btn button {
-	padding: 0.5em 1.2em 0.5em 1.2em;
-	font-size:x-large;
-	font-weight: 600;
-	color: white;
-}
 
 .Carousels{
 	background-color: #EEEFF1;
