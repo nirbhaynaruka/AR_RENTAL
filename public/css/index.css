@@ -1,4 +1,7 @@
-
+/* *{
+	overflow-x: hidden;
+	overflow-y: auto;
+} */
 .Carousels{
 	background-color: #EEEFF1;
 }
