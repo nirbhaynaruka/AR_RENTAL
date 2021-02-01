@@ -253,6 +253,9 @@
       background-color: #fe6b32;
       border: none;
   }
+  .contactbutton .btn:not(:disabled):not(.disabled){
+    background-color: #fe6b32 !important;
+  }
   .fas{
       color: #fe6b32;
   }
