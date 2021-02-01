@@ -111,7 +111,10 @@ footer h5 {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
   }
-  
+  .social_icons{
+	  text-align: center;
+  }
+
   footer {
 	background-image: url("../assets/Footer.png");
 	background-position: center;
