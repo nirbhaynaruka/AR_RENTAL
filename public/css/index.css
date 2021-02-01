@@ -480,6 +480,9 @@ figure.testimonial .peopl h3 {
 .slick-next {
   right: -40px;
 }
-.slick-next:before {
+/* .slick-next:before {
   content: "";
+} */
+.slick-prev, .slick-next{
+	display: none !important;
 }
