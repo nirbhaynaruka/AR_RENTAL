@@ -28,31 +28,7 @@ a {
   color: white;
 }
 
-.becomepartner {
-  background-color: ghostwhite;
-  margin: auto;
-  display: block;
-  padding: 5%;
-}
-.becomepartner p {
-  font-weight: bold;
-  font-size: large;
-  margin: auto;
-}
-.partnerimage {
-  display: block;
-  margin: auto;
-  width: 50%;
-}
-.partnerdiv {
-  border-radius: 2%;
-  border-color: white;
-  /* background-color: lightgray; */
-}
-.partnerbutton {
-  margin-top: 3%;
-  width: fit-content;
-}
+
 .navbar-toggler {
   /* background-color: black; */
   color: black;
