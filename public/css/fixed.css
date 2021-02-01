@@ -4,6 +4,9 @@
 /* .navbar{
 	flex-wrap: nowrap;
 } */
+.fixed-top{
+	position: relative;
+}
 .navbar-expand-md .navbar-nav {
   float: left;
 }
