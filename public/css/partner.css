@@ -10,3 +10,63 @@
     margin: 5%;
     text-align: center;
 }
+.large_text p{
+    font-weight: bold;
+}
+.text-partner{
+    text-align: justify;
+}
+.program_text{
+    padding: 5%;
+    font-weight: bold;
+    text-align: center;
+}
+.card{
+    width: 80%;
+    padding: 5%;
+    background-color: #eeeff1;
+    border-radius: 3%;
+    border-color: white;
+    border-width: 2px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    height: max-content;
+    min-height: 15rem;
+}
+.partnericon{
+    display: block;
+    margin: auto;
+    height: 6rem;
+}
+.partnertext p{
+   
+}
+.partnertitletext p{
+    padding: 2%;
+    text-align: justify;
+    font-weight: bold;
+}
+.cardnew{
+    margin-bottom: 2%;
+    width: 50%;
+    padding: 5%;
+    background-color: #eeeff1;
+    border-radius: 3%;
+    border-color: white;
+    border-width: 2px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    height: max-content;
+}
+.right{
+    float: right;
+}
+.partnershiptext p{
+    font-weight: bold;
+}
+.formtitle p{
+    font-weight: bold;
+}
+.formimage img{
+    display: block;
+    margin:auto;
+    width:-webkit-fill-available;
+}
