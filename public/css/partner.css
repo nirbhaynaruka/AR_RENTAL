@@ -72,3 +72,16 @@
     margin:auto;
     width:-webkit-fill-available;
 }
+form input{
+    width: -webkit-fill-available;
+
+}
+form label{
+    font-weight: bold;
+}
+[type=reset], [type=submit], button, html [type=button]{
+    /* border-radius: 3%; */
+    color: white;
+    background-color:#494f9d;
+    margin:2% 0 2% 0;
+}
