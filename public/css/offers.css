@@ -9,9 +9,9 @@
   text-align: left;
   font-size: xx-large;
 }
-
 .offers img {
-    width: 100%;
+    margin: auto;
+    width: 90%;
     padding-top: 5%;
 }
 
