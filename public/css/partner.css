@@ -1,87 +1,124 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,800&display=swap");
 
-.heading hr{
-    background-color: #fe6b32;
-    width: 20%;
-    height: 0.4rem;
-    
+.heading hr {
+  background-color: #fe6b32;
+  width: 20%;
+  height: 0.4rem;
 }
-.heading{
-    margin: 5%;
-    text-align: center;
+.heading {
+  margin: 5%;
+  text-align: center;
 }
-.large_text p{
+
+.image-p img {
+  width: 100%;
+}
+.large_text {
+  margin: auto;
+}
+.large_text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.text-partner {
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+}
+.program_text {
+  padding: 5%;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.card {
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 5%;
+  background-color: #eeeff1;
+  border-radius: 3%;
+  border-color: white;
+  border-width: 2px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  height: max-content;
+  min-height: 15rem;
+}
+.partnericon {
+  display: block;
+  margin: auto;
+  /* height: 6rem; */
+  padding-bottom: 5%;
+}
+
+.partnertitletext h6 {
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
 }
-.text-partner{
-    text-align: justify;
+.partnertitletext p {
+    font-family: "Open Sans", sans-serif;
+  padding: 2%;
+  text-align: justify;
+  font-weight: bold;
 }
-.program_text{
-    padding: 5%;
-    font-weight: bold;
-    text-align: center;
+.cardnew {
+  margin-bottom: 2%;
+  width: 50%;
+  padding: 5%;
+  background-color: #eeeff1;
+  border-radius: 3%;
+  border-color: white;
+  border-width: 2px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  height: max-content;
 }
-.card{
-    display: block;
-    margin: auto;
-    width: 80%;
-    padding: 5%;
-    background-color: #eeeff1;
-    border-radius: 3%;
-    border-color: white;
-    border-width: 2px;
-    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
-    height: max-content;
-    min-height: 15rem;
+.right {
+  float: right;
 }
-.partnericon{
-    display: block;
-    margin: auto;
-    height: 6rem;
+.partnershiptext h5 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
-.partnertext p{
-   
+.cardnew p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
 }
-.partnertitletext p{
-    padding: 2%;
-    text-align: justify;
-    font-weight: bold;
+.formtitle h5 {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
-.cardnew{
-    margin-bottom: 2%;
-    width: 50%;
-    padding: 5%;
-    background-color: #eeeff1;
-    border-radius: 3%;
-    border-color: white;
-    border-width: 2px;
-    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
-    height: max-content;
+.formtext {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
 }
-.right{
-    float: right;
-}
-.partnershiptext p{
-    font-weight: bold;
-}
-.formtitle p{
-    font-weight: bold;
-}
-.formimage img{
-    display: block;
-    margin:auto;
-    width:-webkit-fill-available;
-}
-form input{
-    width: -webkit-fill-available;
+.formimage img {
+  margin: auto;
+  width: 100%;
 
 }
-form label{
-    font-weight: bold;
+form input {
+  width: -webkit-fill-available;
+  border-radius: 5px ;
+  margin-bottom: 2%;
+  height: 3.0em;
 }
-[type=reset], [type=submit], button, html [type=button]{
-    /* border-radius: 3%; */
-    color: white;
-    background-color:#494f9d;
-    margin:2% 0 2% 0;
+form label {
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+    font-size: 1.1em;
+}
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #494f9d;
+  margin: 2% 0 5% 0;
+  height: 3.0em;
 }

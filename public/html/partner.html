@@ -1,379 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/fixed.css">
-    <link rel="stylesheet" href="../css/partner.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/fixed.css" />
+    <link rel="stylesheet" href="../css/partner.css" />
     <title>AR_CarRental</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="">
+      <nav class="navbar navbar-expand-md fixed-top headercover trans">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%"
+        /></a>
 
-        <nav class="navbar navbar-expand-md fixed-top headercover trans">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="nav_tog" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
 
-            <a class="navbar-brand" href="../index.html"><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%" /></a>
-
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- <span class="navbar-toggler-icon"></span> -->
-                <div class="nav_tog" onclick="myFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase font-14 trans"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase font-14 trans"
+                href="offers.html"
+                >Offers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase font-14 trans"
+                href="tarrif.html"
+                >Tarrif</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase font-14 trans"
+                href="contact_us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase font-14 trans"
+                href="signup.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+          <a href="signin.html" class="signIn_btn">
+            <button class="btn btn-primary my-2 my-sm-0" type="button">
+              Sign In
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-uppercase font-14  trans" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-uppercase font-14  trans" href="offers.html">Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-uppercase font-14 trans" href="tarrif.html">Tarrif</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-uppercase font-14  trans" href="contact_us.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-uppercase font-14  trans" href="signup.html">Sign Up</a>
-                    </li>
-                </ul>
-                <a href="signin.html" class="signIn_btn">
-                    <button class="btn btn-primary my-2 my-sm-0" type="button">
-                        Sign In
-                    </button>
-                </a>
-            </div>
-        </nav>
+          </a>
+        </div>
+      </nav>
     </header>
     <div class="container">
-        <div class="heading text-uppercase">
-            <h5>
-                GROW YOUR BUSINESS WITH AR RENTAL CAR RENTAL CARS
-            </h5>
-            <hr>
+      <div class="heading text-uppercase">
+        <h3>GROW YOUR BUSINESS WITH AR RENTAL CAR RENTAL CARS</h3>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-md-6 image-p">
+          <img src="../assets/16387.png" alt="" srcset="" />
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../assets/16387.png" alt="" srcset="">
+        <div class="col-md-6 large_text">
+          <p>
+            Get the tools, technology and support <br />
+            to accelerate your business - <br />
+            with AR Rental Cars at your side.
+          </p>
+        </div>
+      </div>
+      <div class="heading text-uppercase">
+        <h3>A program built for and with partners</h3>
+        <hr />
+      </div>
+      <div class="text-partner">
+        <p>
+          We believe the best solutions are born from collaboration. That's why
+          we created the lowcars platform for everyone and now we've built a
+          partner program to make it easier to work with us and to innovate with
+          us.
+        </p>
+      </div>
+      <div class="row program_text">
+        <div class="col-md-4"><p>Collaboration</p></div>
+        <div class="col-md-4"><p>Growth</p></div>
+        <div class="col-md-4"><p>Simplicity</p></div>
+      </div>
+      <div class="heading text-uppercase">
+        <h3>features of being our partner</h3>
+        <hr />
+        <h5>Differentiate your business</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="partnericon">
+              <img src="../assets/app_web.png" />
             </div>
-            <div class="col-md-6 large_text">
-                <p>
-                    Get the tools, technology and support <br> to accelerate your business - <br> with AR Rental Cars at
-                    your side.
-                </p>
+            <div class="partnertext">
+              <div class="partnertitletext">
+                <h6>App/Web Platform</h6>
+              </div>
+              <p>
+                Full-Featured App &<br />Website to get<br />
+                instant bookings.
+              </p>
             </div>
+          </div>
         </div>
-        <div class="heading text-uppercase">
-            <h5>
-                a program built for and with partners
-            </h5>
-            <hr>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="partnericon">
+              <img src="../assets/brand value.png" />
+            </div>
+            <div class="partnertext">
+              <div class="partnertitletext">
+                <h6>Brand Value</h6>
+              </div>
+              <p>
+                AR Rental Cars is well established in car rental market and a
+                known player among travellers.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="text-partner">
-            <p>
-                We believe the best solutions are born from collaboration. That's why we created the lowcars platform
-                for everyone and now we've built a partner program to make it easier to work with us and to
-                innovate with us.
+        <div class="col-md-3">
+          <div class="card">
+            <div class="partnericon">
+              <img src="../assets/legal support.png" />
+            </div>
+            <div class="partnertext">
+              <div class="partnertitletext">
+                <h6>Legal Support</h6>
+              </div>
+              <p>
+                With name comes the responsiblity so we will help you in any
+                trouble you get.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="partnericon">
+              <img src="../assets/weekly payment.png" />
+            </div>
+            <div class="partnertext">
+              <div class="partnertitletext">
+                <h6>Weekly Payment</h6>
+              </div>
+              <p>
+                What you will earn will be credited to your bank account each
+                week without any delay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heading text-uppercase">
+        <h3>Partnership types</h3>
+        <hr />
+        <h5>Following are two methods by which you can join us</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="cardnew right">
+            <div class="partnershiptext">
+              <h5 class="text-center">By Attaching Vehicles</h5>
+            </div>
+            <p class="text-center">Attach your car at discussed rates and earn weekly/monthly</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="cardnew left">
+            <div class="partnershiptext">
+              <h5 class="text-center">By opening your own branch under name of AR Rental Cars</h5>
+            </div>
+            <p class="text-center">
+              Open a Fleet(Branch) and operate by yourself. Become owner of
+              your branch and lowcars will take just 20% of total revenue and
+              you'll get mobile app/website and all the support from experienced
+              lowcars team in managing your business.
             </p>
+          </div>
         </div>
-        <div class="row program_text">
-            <div class="col-md-4"><p>Collaboration</p></div>
-            <div class="col-md-4"><p>Growth</p></div>
-            <div class="col-md-4"><p>Simplicity</p></div>
-
+      </div>
+      <div class="heading text-uppercase">
+        <h3>Partnership types</h3>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="formimage">
+            <img src="../assets/range rover.png" />
+          </div>
         </div>
-        <div class="heading text-uppercase">
-            <h5>
-                features of being our partner
-            </h5>
-            <hr>
-            <h6>
-                Differentiate your business
-            </h6>
+        <div class="col-md-7">
+          <div class="formtitle">
+            <h5>Partner With Us</h5>
+          </div>
+          <div class="formtext">
+            <p>
+              Open a Fleet(Branch) and operate by yourself.<br />become owner of
+              your branch and lowcars will take just 20% of total revenue and
+              you'll get mobile app/website and all the support from experienced
+              lowcars team in managing your business.
+            </p>
+          </div>
+          <div class="formdiv">
+            <form>
+              <label for="mobile">Mobile Number</label><br />
+              <input type="number" id="fname" name="fname" /><br />
+              <label for="fname">Your name</label><br />
+              <input type="text" id="lname" name="lname" /><br />
+              <label for="name">Your city</label><br />
+              <input type="text" id="lname" name="lname" /><br />
+              <label for="lname">Total no of vehicles</label><br />
+              <input type="text" id="lname" name="lname" /><br />
+              <label for="lname">message</label><br />
+              <input type="text" id="lname" name="lname" /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-
-                    <div class="partnericon">
-                        <img src="../assets/app_web.png">
-                    </div>
-                    <div class="partnertext">
-                        <div class="partnertitletext">
-                            <p>
-                                App/Web Platform
-                            </p>
-                        </div>
-                        <p>
-                                Full-Featured App &<br>Website to get<br> instant bookings.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-
-                    <div class="partnericon">
-                        <img src="../assets/brand value.png">
-                    </div>
-                    <div class="partnertext">
-                        <div class="partnertitletext">
-                            <p>
-                                Brand Value
-                            </p>
-                        </div>
-                        <p>
-                               AR Rental Cars is well established in car rental market and a known player among travellers.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-
-                    <div class="partnericon">
-                        <img src="../assets/legal support.png">
-                    </div>
-                    <div class="partnertext">
-                        <div class="partnertitletext">
-                            <p>
-                                Legal Support
-                            </p>
-                        </div>
-                        <p>
-                            With name comes the responsiblity so we will help you in any trouble you get.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-
-                    <div class="partnericon">
-                        <img src="../assets/weekly payment.png">
-                    </div>
-                    <div class="partnertext">
-                        <div class="partnertitletext">
-                            <p>
-                                Weekly Payment
-                            </p>
-                        </div>
-                        <p>
-                             What you will earn will be credited to your bank account each week without any delay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="heading text-uppercase">
-            <h5>
-                Partnership types
-            </h5>
-            <hr>
-            <h6>
-                Following are two methods by which you can join us
-            </h6>
-        </div>
-        <div class="row">
-            <div class="col-md-6 ">
-                <div class="cardnew right">
-                    <div class="partnershiptext">
-                        <p>
-                            By Attaching Vehicles
-                        </p>
-                    </div>
-                    <p>
-                        Attach your car at discussed rates and earn weekly/monthly
-                    </p>                
-                </div>
-            </div>
-            <div class="col-md-6 ">
-                <div class="cardnew left">
-
-                    <div class="partnershiptext">
-                        <p>
-                            By opening your own branch under name of AR Rental Cars
-                        </p>
-                    </div>
-                    <p>
-                        open a fleet(Branch) and operate by yourself.<br>become owner of your branch and lowcars will take just 20% of total revenue and you'll get mobile app/website and all the support from experienced lowcars team in managing your business.
-                    </p>        
-                </div>
-                </div>
-                
-        </div>
-        <div class="heading text-uppercase">
-            <h5>
-                Partnership types
-            </h5>
-            <hr>
-        </div>
-        <div class="row">
-            <div class="col-md-4 ">
-                <div class="formimage">
-
-                    <img src="../assets/range rover.png"/>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="formtitle">
-                    <p>Partner with us</p>
-                </div>
-                <div class="formtext">
-                    <p>
-                        open a fleet(Branch) and operate by yourself.<br>become owner of your branch and lowcars will take just 20% of total revenue and you'll get mobile app/website and all the support from experienced lowcars team in managing your business.
-
-                    </p>
-                </div>
-                <div class="formdiv">
-                    <form>
-                        <label for="mobile">Mobile Number</label><br>
-                        <input type="number" id="fname" name="fname"><br>
-                        <label for="fname">Your name</label><br>
-                        <input type="text" id="lname" name="lname" ><br>
-                        <label for="name">Your city</label><br>
-                        <input type="text" id="lname" name="lname"><br>
-                        <label for="lname">Total no of vehicles</label><br>
-                        <input type="text" id="lname" name="lname" ><br>
-                        <label for="lname">message</label><br>
-                        <input type="text" id="lname" name="lname" ><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
     <!-- Footer -->
-    <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <img src="../assets/logo for footer.png" alt="" srcset="" width="20%" />
-                    <br /><br />
-                    <p>The best in Class Car Rentals Services</p>
+    <footer
+      class="bg-light text-lg-start"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <img
+              src="../assets/logo for footer.png"
+              alt=""
+              srcset=""
+              width="20%"
+            />
+            <br /><br />
+            <p>The best in Class Car Rentals Services</p>
 
-                    <h5 class="text-uppercase">Head Office</h5>
-                    <hr />
-                    <p>
-                        Piprali-Jhunjhunu by pass road<br />
-                        Sikar, RJ 332001 <br />
-                        Phone : +91 80030 73449 <br />
-                        Email : support@arrentalcar.com <br />
-                        Office time : 9:00 AM - 7:00 PM <br />
-                    </p>
-                </div>
-                <!--Grid column-->
+            <h5 class="text-uppercase">Head Office</h5>
+            <hr />
+            <p>
+              Piprali-Jhunjhunu by pass road<br />
+              Sikar, RJ 332001 <br />
+              Phone : +91 80030 73449 <br />
+              Email : support@arrentalcar.com <br />
+              Office time : 9:00 AM - 7:00 PM <br />
+            </p>
+          </div>
+          <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">quick links</h5>
-                    <hr />
-                    <ul class="list-unstyled mb-0 foot-link">
-                        <li>
-                            <a href="#!" class="text-white text-underline">About Us</a>
-                        </li>
-                        <li>
-                            <a href="faq.html" class="text-white">FAQ</a>
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">quick links</h5>
+            <hr />
+            <ul class="list-unstyled mb-0 foot-link">
+              <li>
+                <a href="#!" class="text-white text-underline">About Us</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-white">FAQ</a>
               </li>
               <li>
                 <a href="terms.html" class="text-white">Terms</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html" class="text-white">Privacy</a>
-                        </li>
-                        <li>
-                            <a href="disclaimer.html" class="text-white">Disclaimer</a>
-                        </li>
-                    </ul>
+              </li>
+              <li>
+                <a href="privacy.html" class="text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="disclaimer.html" class="text-white">Disclaimer</a>
+              </li>
+            </ul>
 
-                    <br /><br />
-                    <h5 class="text-uppercase">NEWSLETTER</h5>
-                    <hr />
-                    <!-- Add Text fields -->
-                </div>
-                <!--Grid column-->
+            <br /><br />
+            <h5 class="text-uppercase">NEWSLETTER</h5>
+            <hr />
+            <!-- Add Text fields -->
+          </div>
+          <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
-                    <hr />
-                    <ul class="list-unstyled foot-link">
-                        <li>
-                            <a href="#!" class="text-white">Jaipur</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Sikar</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Chirawa</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Pilani</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Gudha Gorji</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Jhunjhunu</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Nawalgarh</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-            </div>
-            <!--Grid row-->
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
+            <hr />
+            <ul class="list-unstyled foot-link">
+              <li>
+                <a href="#!" class="text-white">Jaipur</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Sikar</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Chirawa</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Pilani</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Gudha Gorji</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Jhunjhunu</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Nawalgarh</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
         </div>
-        <!-- Grid container -->
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
 
-        <!-- Copyright -->
-        <div class="container p-3">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                    Designed with by Abhi Gill | Crafted by The White Page
-                </div>
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
-            </div>
+      <!-- Copyright -->
+      <div class="container p-3">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+            Designed with by Abhi Gill | Crafted by The White Page
+          </div>
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
         </div>
+      </div>
 
-        <!-- Copyright -->
+      <!-- Copyright -->
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
     </script>
     <script src="../js/index.js"></script>
-
-</body>
-
+  </body>
 </html>
