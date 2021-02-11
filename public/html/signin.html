@@ -9,6 +9,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="../css/signin.css">
   <link rel="stylesheet" href="../css/fixed.css">
+  <!-- <link rel="stylesheet" href="../css/fsignin.css"> -->
 
   <title>Document</title>
 </head>
@@ -66,9 +67,10 @@
   </header>
   <section>
 
-    <div class="signupform">
-      <div class="middiv">
-        <form class="form-signin">
+    
+    <div class="signupform" id="login_div">
+      <div class="middiv form-signin">
+        <!-- <form class="form-signin" onsubmit="login()"> -->
           <div class="text-center signuplogo">
             <h1 class="h3 font-weight-bold">
 
@@ -81,14 +83,14 @@
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/mail.png" width="25" /> -->
 
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <input type="email" id="email_field" class="form-control" placeholder="Email address" required autofocus>
               <label for="inputEmail">Email address</label>
             </div>
 
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/pass.png" width="25" /> -->
 
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" id="password_field" class="form-control" placeholder="Password" required>
               <label for="inputPassword">Password</label>
             </div>
             <div class="row signin">
@@ -106,12 +108,26 @@
 
           </div>
 
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="login()">Sign In</button>
 
-        </form>
       </div>
 
     </div>
+   
+    <!-- <div id="login_div" class="main-div">
+      <h3>Firebase Web login Example</h3>
+      <input type="email" placeholder="Email..." id="email_field" />
+      <input type="password" placeholder="Password..." id="password_field" />
+  
+      <button onclick="login()">Login to Account</button>
+    </div> -->
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  
+  
   </section>
   <section class="becomepartner">
     <div class="row">
@@ -249,6 +265,30 @@
       x.classList.toggle("change");
     }
   </script>
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+ <!-- <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+<script>
+ // Your web app's Firebase configuration
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ var firebaseConfig = {
+   apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+   authDomain: "ar-carrental.firebaseapp.com",
+   projectId: "ar-carrental",
+   storageBucket: "ar-carrental.appspot.com",
+   messagingSenderId: "655577676197",
+   appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+   measurementId: "G-VEEQWJ4ETM"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+</script>
+ <script src="../js/signin.js"></script>
 </body>
 
 </html>
