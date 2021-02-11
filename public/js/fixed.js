@@ -2,6 +2,30 @@ function myFunction(x) {
   x.classList.toggle("change");
 }
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    
+  
+      var user = firebase.auth().currentUser;
+  
+      if(user != null){
+  
+        var email_id = user.email;
+        document.getElementById("signin").innerHTML =  email_id;
+  
+      }
+  
+    } else {
+      // No user is signed in.
+  
+      document.getElementById("user_div").style.display = "none";
+      document.getElementById("login_div").style.display = "block";
+  
+    }
+  });
+  
+
 $(document).ready(function () {
 	$('.testiSlide').slick({
 		slidesToShow: 2,

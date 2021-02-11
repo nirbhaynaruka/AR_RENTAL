@@ -112,7 +112,7 @@
             <a class="nav-link text-center text-uppercase font-14  trans" href="html/contact_us.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14  trans" href="html/signup.html">Sign Up</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" id="signup" href="html/signup.html">Sign Up</a>
           </li>
           <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
               href="about.html">About</a> </li>
@@ -123,7 +123,7 @@
           <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
               href="contact.html">Contact</a> </li> -->
         </ul>
-        <a href="html/signin.html" class="signIn_btn">
+        <a href="html/signin.html" class="signIn_btn" id="signin">
           <button class="btn btn-primary my-2 my-sm-0" type="button">
             Sign In
           </button>
@@ -619,6 +619,30 @@
     x.classList.toggle("change");
   }
   </script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script> -->
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+      
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+          authDomain: "ar-carrental.firebaseapp.com",
+          projectId: "ar-carrental",
+          storageBucket: "ar-carrental.appspot.com",
+          messagingSenderId: "655577676197",
+          appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+          measurementId: "G-VEEQWJ4ETM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+  <script src="js/fixed.js"></script>
   <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
 </body>
 
