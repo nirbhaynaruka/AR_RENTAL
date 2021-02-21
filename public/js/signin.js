@@ -4,6 +4,7 @@
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
+      
   
       document.getElementById("user_div").style.display = "block";
       document.getElementById("login_div").style.display = "none";
@@ -36,7 +37,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-  
+      // window.location.href="home.html";
       // window.alert("Error : " + errorMessage);
   
       // ...
@@ -46,6 +47,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   
   function logout(){
     firebase.auth().signOut();
-    window.location.href="../index.html";
+    window.location.href="home.html";
   }
 

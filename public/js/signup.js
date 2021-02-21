@@ -2,7 +2,7 @@
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        window.location.href="../index.html";
+        window.location.href="home.html";
       // User is signed in.
   
     //   document.getElementById("user_div").style.display = "block";
