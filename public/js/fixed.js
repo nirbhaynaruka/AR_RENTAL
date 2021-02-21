@@ -26,7 +26,19 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     if (user != null) {
       var email_id = user.email;
-      document.getElementById("signin").innerHTML = email_id;
+      document.getElementById("logout").innerHTML = "Log Out";
+      document.getElementById("signup").innerHTML = "Account";
+	  document.getElementById("signup").href = "account.html";
+      document.getElementById("account").innerHTML = "Account";
+	  document.getElementById("account").href = "html/account.html";
+	//   document.getElementById("logout").href = firebase.auth().signOut();
+
+	//   document.getElementById("logout").click() = function(){ firebase.auth().signOut();};
+
+	  
+
+
+
     }
   } else {
     // No user is signed in.
@@ -35,4 +47,10 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("login_div").style.display = "block";
   }
 });
+
+function logout(){
+    firebase.auth().signOut();
+  }
+  
+
 

@@ -83,14 +83,14 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-center text-uppercase font-14 trans"
+                class="nav-link text-center text-uppercase font-14 trans" id="signup"
                 href="signup.html"
                 >Sign Up</a
               >
             </li>
           </ul>
-          <a href="signin.html" class="signIn_btn">
-            <button class="btn btn-primary my-2 my-sm-0" type="button">
+          <a href="signin.html" class="signIn_btn" id="signin">
+            <button class="btn btn-primary my-2 my-sm-0"  id="logout" type="button">
               Sign In
             </button>
           </a>
@@ -622,6 +622,25 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+<script>
+
+ var firebaseConfig = {
+   apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+   authDomain: "ar-carrental.firebaseapp.com",
+   projectId: "ar-carrental",
+   storageBucket: "ar-carrental.appspot.com",
+   messagingSenderId: "655577676197",
+   appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+   measurementId: "G-VEEQWJ4ETM"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+</script>
     <script src="../js/fixed.js"></script>
   </body>
 </html>

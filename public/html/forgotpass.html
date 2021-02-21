@@ -87,7 +87,7 @@
                     href="contact.html">Contact</a> </li> -->
           </ul>
           <a href="signin.html" class="signIn_btn">
-            <button class="btn btn-primary my-2 my-sm-0" type="button">
+            <button class="btn btn-primary my-2 my-sm-0" id="logout" type="button">
               Sign In
             </button>
           </a>
@@ -273,5 +273,24 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+<script>
+
+ var firebaseConfig = {
+   apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+   authDomain: "ar-carrental.firebaseapp.com",
+   projectId: "ar-carrental",
+   storageBucket: "ar-carrental.appspot.com",
+   messagingSenderId: "655577676197",
+   appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+   measurementId: "G-VEEQWJ4ETM"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+</script>
   </body>
 </html>

@@ -14,7 +14,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   
         var email_id = user.email;
         document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-        document.getElementById("signin").innerHTML =  email_id;
 
   
       }
@@ -27,7 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   
     }
   });
-  
+
   function login(){
   
     var userEmail = document.getElementById("email_field").value;
@@ -38,7 +37,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var errorCode = error.code;
       var errorMessage = error.message;
   
-      window.alert("Error : " + errorMessage);
+      // window.alert("Error : " + errorMessage);
   
       // ...
     });
@@ -47,5 +46,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   
   function logout(){
     firebase.auth().signOut();
+    window.location.href="../index.html";
   }
-  
+
