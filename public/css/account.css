@@ -1,31 +1,90 @@
-.accountsection{
-
+.accountsection1 {
+  margin-top: 4rem;
+  display: block;
 }
-.accountsection1{
-    margin-top: 4rem;
-
+mark {
+  background-color: #fe6b32;
 }
-mark{
-    background-color: #fe6b32;
+.avatardetails {
+  display: block;
 }
-
 .avatarimg {
-    /* vertical-align: middle; */
-    background-color: #fe6b32;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-  }
-  .user{
-      text-align: center;
-  }
-  .accountmark{
-    text-align: justify;
-   
-  }
-  .myaccount>img{
-      /* background-image: url(../assets/offers.png); */
-      width: 100%;
-  }
+  /* vertical-align: middle; */
+  background-color: #fe6b32;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+.user {
+  text-align: center;
+}
+.accountmark {
+  text-align: justify;
+}
+.myaccount > img {
+  /* background-image: url(../assets/offers.png); */
+  width: 100%;
+}
+
+.accountDetails {
+  margin: auto;
+  vertical-align: center;
+  padding-top: 40px;
+}
+
+#updateProfile,
+#wallet,
+#editProfile,
+#booking,
+#updatePassword {
+  text-align: left;
+  background: transparent;
+  margin: 5px 0 5px 0;
+  width: -webkit-fill-available;
+  border:none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* #updateProfile :active,
+#wallet :active,
+#editProfile :active,
+#booking :active,
+#updatePassword :active{ */
+  button:active {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:focus {
+  border: none !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.wallet {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  /* display: block; */
+}
+.wallet > img {
+  width: 50%;
+  /* margin: auto; */
+  /* text-align: center; */
+  margin-bottom: 40px;
+}
+
+#code,
+#amount {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.codeText,
+.amountText {
+  font-size: 1.1em;
+  text-align: center;
+}
