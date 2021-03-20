@@ -33,30 +33,16 @@ function getDoc(email) {
             const myData = doc.data();
             document.getElementById("user").innerHTML = "Welcome " + myData.name;
 
+            document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg">'
             document.getElementById("accounttd").innerHTML = myData.phone;
-
-            document.getElementById("bookingtd").innerHTML = myData.bookingCount;
-            document.getElementById('avatar').innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg">'
+            // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
 
         }
     }).catch(function (error) {
         console.log("got an error" + error);
     })
 };
-// $(document).ready(function() {
-    
-// var colors = new Array("ff0000","00ff00","0000ff","ff00ff","beeeef");
-// var n = 5;
 
-// for(var i=0;i<n;i++){
-//     var div = document.createElement('div');
-//     div.className = "inlineDiv";
-//     div.style.backgroundColor = "#" + colors[i];
-//     div.style.width = ($('#holder').width() / n) + "px";
-//     div.style.height = "500px";
-//     document.getElementById('holder').appendChild(div);
-// }
-// });
 window.onload = function () {
     firestore.collection("Cars")
         .get()
