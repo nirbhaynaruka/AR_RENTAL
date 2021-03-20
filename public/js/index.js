@@ -21,7 +21,9 @@ firebase.auth().onAuthStateChanged(function (user) {
   
 	  if (user != null) {
 		var email_id = user.email;
-	
+		// <li class="nav-item"> <a class="nav-link text-center text-uppercase font-14 trans" href="#">Contact Us</a></li>
+		document.getElementById("account").innerHTML = "Account";
+		document.getElementById("account").href = "html/account.html";
 		document.getElementById("account").innerHTML = "Account";
 		document.getElementById("account").href = "html/account.html";
 	  //   document.getElementById("logout").href = firebase.auth().signOut();

@@ -26,6 +26,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     if (user != null) {
       var email_id = user.email;
+	  document.getElementById("myBookings").innerHTML = "My Bookings";
+	  document.getElementById("myBookings").href = "myBookings.html";
       document.getElementById("logout").innerHTML = "Log Out";
       document.getElementById("signup").innerHTML = "Account";
 	  document.getElementById("signup").href = "account.html";
