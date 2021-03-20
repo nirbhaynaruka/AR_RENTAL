@@ -60,23 +60,27 @@
   </header>
   <!-- Header -->
   <!-- Main Body -->
-  <!-- <section class="Carousels container-fluid">
+  <section class="container offers-page">
+    <div class="heading">
+      <h1>Offers</h1>
+    </div>
+    <!-- <div class="offers">
+      <img src="../assets/offers.png" alt="" srcset="">
+    </div> -->
+  </section> 
+
+  <section class="Carousels container-fluid">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" id="carousel-inner">
         <div class="carousel-item active">
           <img src="../assets/offers.png" class="d-block w-100" alt="..." />
         </div>
-        <div class="carousel-item">
-          <img src="../assets/banner1.png" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/banner1.png" class="d-block w-100" alt="..." />
-        </div>
+       
       </div>
       <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -86,17 +90,9 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a> -->
-    <!-- </div>
-  </section> -->
-  <!-- <section class="container offers-page">
-    <div class="heading">
-      <h1>Offers</h1>
-    </div>
-    <div class="offers">
-      <img src="../assets/offers.png" alt="" srcset="">
-    </div>
-  </section> --> 
-
+     </div>
+  </section>
+ 
   <!-- Testimonials -->
   <section class="testimonial_bg">
     <div class="testimonial_heading text-center">
@@ -328,50 +324,18 @@
       x.classList.toggle("change");
     }
   </script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+   <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
 
-  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-  <script>
-    db.collection('banner').get().then((s) => {
-      $("#station").html(""); // This will empty your station button
-      $("#station_box").html(""); // This will empty your station box
-      var n = 0;
-      s.forEach(function (x) {
-        $("#accordion").append(`
-  <div class="card">
-    <div class="card-header" id="heading` + n + `">
-        <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse` + n + `">` + x.id + `</button>
-        </h5>
-     </div>
-  
-     <div id="collapse` + n + `" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-           <p>` + x.data().ForwardPower + `</p>
-        </div>
-     </div>
-  </div>
-  `);
+   <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+ 
+   <!-- Add Firebase products that you want to use -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
-        n += 1;
-      });
-    });
-  </script>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
-      authDomain: "ar-carrental.firebaseapp.com",
-      projectId: "ar-carrental",
-      storageBucket: "ar-carrental.appspot.com",
-      messagingSenderId: "655577676197",
-      appId: "1:655577676197:web:861ff437996c0e3a19d04c",
-      measurementId: "G-VEEQWJ4ETM"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <script src="../js/offer.js"></script>
   <script src="../js/fixed.js"></script>
 </body>
 
