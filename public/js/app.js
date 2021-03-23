@@ -11,6 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var firestore = firebase.firestore();
+var storage = firebase.storage();
 var email_id = "none";
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -18,6 +19,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         if (user != null) {
             getDoc(user.email);
             window.email_id = user.email;
+            // console.log(email_id);
         }
     } else {
         document.getElementById("user_div").style.display = "none";
@@ -28,11 +30,13 @@ firebase.auth().onAuthStateChanged(function (user) {
 // alert(email_id);
 function getDoc(email) {
     const docRef = firestore.collection("users").doc(email);
+    console.log(email);
     docRef.get().then(function (doc) {
         if (doc && doc.exists) {
             const myData = doc.data();
-            document.getElementById("user").innerHTML = "Welcome " + myData.name;
+            console.log(myData.name);
 
+            document.getElementById("user").innerHTML = "Welcome " + myData.name;
             document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg">'
             document.getElementById("accounttd").innerHTML = myData.phone;
             // document.getElementById("bookingtd").innerHTML = myData.bookingCount;

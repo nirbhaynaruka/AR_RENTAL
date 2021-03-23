@@ -1,97 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/fixed.css" />
-    <link rel="stylesheet" href="../css/account.css" />
-    <title>AR_CarRental</title>
-  </head>
 
-  <body>
-    <header class="">
-      <nav class="navbar navbar-expand-md fixed-top headercover trans">
-        <a class="navbar-brand" href="home.html"
-          ><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%"
-        /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/fixed.css" />
+  <link rel="stylesheet" href="../css/account.css" />
+  <title>AR_CarRental</title>
+</head>
 
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <!-- <span class="navbar-toggler-icon"></span> -->
-          <div class="nav_tog" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-        </button>
+<body>
+  <header class="">
+    <nav class="navbar navbar-expand-md fixed-top headercover trans">
+      <a class="navbar-brand" href="home.html"><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%" /></a>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="home.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="offers.html"
-                >Offers</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="tarrif.html"
-                >Tarrif</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="#"
-                >Contact Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="#"
-                id="myBookings"
-              ></a>
-            </li>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <div class="nav_tog" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </button>
 
-            <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                id="signup"
-                href="signup.html"
-                >Sign Up</a
-              >
-            </li>
-            <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" href="offers.html">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" href="tarrif.html">Tarrif</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" href="#" id="myBookings"></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-center text-uppercase font-14 trans" id="signup" href="signup.html">Sign Up</a>
+          </li>
+          <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
                 href="about.html">About</a> </li>
             <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
                 href="services.html">Services</a> </li>
@@ -99,237 +59,278 @@
                 href="culture.html">Culture</a> </li>
             <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
                 href="contact.html">Contact</a> </li> -->
-          </ul>
-          <a href="signin.html" class="signIn_btn" id="signin">
-            <button
-              class="btn btn-primary my-2 my-sm-0"
-              id="logout"
-              type="button"
-            >
-              Sign In
-            </button>
-          </a>
-        </div>
-      </nav>
-    </header>
-    <section class="accountsection">
-      <div class="container accountsection1">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="avatar" id="avatar">
-              <!-- <img src="../assets/handshake.png" alt="Avatar" class="avatarimg"> -->
-            </div>
-            <div class="avatardetails">
-              <div class="user" id="user"></div>
-              <div id="accounttd" class="text-center"></div>
-              <div class="accountDetails">
-                <table class="text-left">
-                  <tr>
-                    <td><button id="updateProfile">Update Profile Pic</button></td>
-                    <!-- <td id="accounttd"></td> -->
-                  </tr>
-                  <tr>
-                    <td><button id="booking">My Bookings</button></td>
-                    <!-- <td id="bookingtd"></td> -->
-                  </tr>
-                  <tr>
-                    <td><button id="wallet">Wallet</button></td>
-                  </tr>
-                  <tr>
-                    <td><button id="editProfile"> Edit Profile</button></td>
-                  </tr>
-                  <tr>
-                    <td><button id="updatePassword">Change Password</button></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8 accountmark" id="singlePage">
-            <p>
-              <mark>
-                <i>Due to COVID-19 there is a restriction on numbers of people
-                traveling in vehicles. Each states in India has framed thier own
-                guidelines. Please follow the Guidelines Issued By States/Cities you are traveling to or passing by.</i>
-              </mark>
-            </p>
-            <div class="myaccount">
-              <h3 class="text-uppercase">All Set!</h3>
-              <div class="partnerbutton">
-                <a href="home.html"><button class="btn btn-lg btn-primary btn-block"
-                    type="submit">Book Now</button></a>
-              </div>
-              <img src="../assets/Testimonials.png" alt="Snow" />
-              <div class="instruction">
-                <p>Please bring original documents (Aadhaar + DL) with you when coming to fleet.</p>
-              </div>
-            </div>
-          </div>
-        <!-- </div> -->
-        
-      <!-- </div> -->
-    </section>
-    <section class="becomepartner">
+        </ul>
+        <a href="signin.html" class="signIn_btn" id="signin">
+          <button class="btn btn-primary my-2 my-sm-0" id="logout" type="button">
+            Sign In
+          </button>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <section class="accountsection">
+    <div class="container accountsection1">
       <div class="row">
         <div class="col-md-4">
-          <div class="partnerdiv">
-            <img class="partnerimage" src="../assets/Join us.png" />
+          <div class="avatar" id="avatar">
+            <!-- <img src="../assets/handshake.png" alt="Avatar" class="avatarimg"> -->
+          </div>
+          <div class="avatardetails">
+            <div class="user" id="user"></div>
+            <div id="accounttd" class="text-center"></div>
+            <div class="accountDetails">
+              <table class="text-left">
+                <tr>
+                  <td><button id="updateProfile">Update Profile Pic</button></td>
+                  <!-- <td id="accounttd"></td> -->
+                </tr>
+                <tr>
+                  <td><button id="booking">My Bookings</button></td>
+                  <!-- <td id="bookingtd"></td> -->
+                </tr>
+                <tr>
+                  <td><button id="wallet">Wallet</button></td>
+                </tr>
+                <tr>
+                  <td><button id="editProfile"> Edit Profile</button></td>
+                </tr>
+                <tr>
+                  <td><button id="updatePassword">Change Password</button></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="col-md-8 partner-text">
-          <div>
-            <p>Join us on the ride.</p>
-            <p>Become our Partner and earn Together</p>
-          </div>
-          <div class="partnerbutton">
-            <a href="partner.html"
-              ><button class="btn btn-lg btn-primary btn-block" type="submit">
-                Become Partner
-              </button></a
-            >
+        <div class="col-md-8 accountmark" id="singlePage">
+          <p>
+            <mark>
+              <i>Due to COVID-19 there is a restriction on numbers of people
+                traveling in vehicles. Each states in India has framed thier own
+                guidelines. Please follow the Guidelines Issued By States/Cities you are traveling to or passing by.</i>
+            </mark>
+          </p>
+          <div class="myaccount">
+            <h3 class="text-uppercase">All Set!</h3>
+            <div class="partnerbutton">
+              <a href="home.html"><button class="btn btn-lg btn-primary btn-block" type="submit">Book Now</button></a>
+            </div>
+            <img src="../assets/Testimonials.png" alt="Snow" />
+            <div class="instruction">
+              <p>Please bring original documents (Aadhaar + DL) with you when coming to fleet.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+        <!-- </div> -->
 
-    <!-- Footer -->
-    <footer
-      class="bg-light text-lg-start"
-      style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <img
-              src="../assets/logo for footer.png"
-              alt=""
-              srcset=""
-              width="20%"
-            />
-            <br /><br />
-            <p>The best in Class Car Rentals Services</p>
-
-            <h5 class="text-uppercase">Head Office</h5>
-            <hr />
-            <p>
-              Piprali-Jhunjhunu by pass road<br />
-              Sikar, RJ 332001 <br />
-              Phone : +91 80030 73449 <br />
-              Email : support@arrentalcar.com <br />
-              Office time : 9:00 AM - 7:00 PM <br />
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">quick links</h5>
-            <hr />
-            <ul class="list-unstyled mb-0 foot-link">
-              <li>
-                <a href="#!" class="text-white text-underline">About Us</a>
-              </li>
-              <li>
-                <a href="faq.html" class="text-white">FAQ</a>
-              </li>
-              <li>
-                <a href="terms.html" class="text-white">Terms</a>
-              </li>
-              <li>
-                <a href="privacy.html" class="text-white">Privacy</a>
-              </li>
-              <li>
-                <a href="disclaimer.html" class="text-white">Disclaimer</a>
-              </li>
-            </ul>
-
-            <br /><br />
-            <h5 class="text-uppercase">NEWSLETTER</h5>
-            <hr />
-            <!-- Add Text fields -->
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
-            <hr />
-            <ul class="list-unstyled foot-link">
-              <li>
-                <a href="#!" class="text-white">Jaipur</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Sikar</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Chirawa</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Pilani</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Gudha Gorji</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Jhunjhunu</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Nawalgarh</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="container p-3">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-            Designed with by Abhi Gill | Crafted by The White Page
-          </div>
-          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
+        <!-- </div> -->
+  </section>
+  <section class="becomepartner">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="partnerdiv">
+          <img class="partnerimage" src="../assets/Join us.png" />
         </div>
       </div>
+      <div class="col-md-8 partner-text">
+        <div>
+          <p>Join us on the ride.</p>
+          <p>Become our Partner and earn Together</p>
+        </div>
+        <div class="partnerbutton">
+          <a href="partner.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
+              Become Partner
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Copyright -->
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <img src="../assets/logo for footer.png" alt="" srcset="" width="20%" />
+          <br /><br />
+          <p>The best in Class Car Rentals Services</p>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
+          <h5 class="text-uppercase">Head Office</h5>
+          <hr />
+          <p>
+            Piprali-Jhunjhunu by pass road<br />
+            Sikar, RJ 332001 <br />
+            Phone : +91 80030 73449 <br />
+            Email : support@arrentalcar.com <br />
+            Office time : 9:00 AM - 7:00 PM <br />
+          </p>
+        </div>
+        <!--Grid column-->
 
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">quick links</h5>
+          <hr />
+          <ul class="list-unstyled mb-0 foot-link">
+            <li>
+              <a href="#!" class="text-white text-underline">About Us</a>
+            </li>
+            <li>
+              <a href="faq.html" class="text-white">FAQ</a>
+            </li>
+            <li>
+              <a href="terms.html" class="text-white">Terms</a>
+            </li>
+            <li>
+              <a href="privacy.html" class="text-white">Privacy</a>
+            </li>
+            <li>
+              <a href="disclaimer.html" class="text-white">Disclaimer</a>
+            </li>
+          </ul>
 
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+          <br /><br />
+          <h5 class="text-uppercase">NEWSLETTER</h5>
+          <hr />
+          <!-- Add Text fields -->
+        </div>
+        <!--Grid column-->
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    <script src="../js/app.js"></script>
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
+          <hr />
+          <ul class="list-unstyled foot-link">
+            <li>
+              <a href="#!" class="text-white">Jaipur</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Sikar</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Chirawa</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Pilani</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Gudha Gorji</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Jhunjhunu</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Nawalgarh</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
 
-    <script type="module" src="../js/account.js"></script>
-    <script type="module" src="../js/fixed.js"></script>
-  </body>
+    <!-- Copyright -->
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+          Designed with by Abhi Gill | Crafted by The White Page
+        </div>
+        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  <script src="../js/app.js"></script>
+
+  <script type="module" src="../js/account.js"></script>
+  <script type="module" src="../js/fixed.js"></script>
+  <script>
+    function referralfunc() {
+      firestore.collection("users").doc(email_id).update({
+          "myReferral": referral,
+        })
+        .then(() => {
+          window.location.href = "account.html";
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+    }
+
+    function myName() {
+      var abc = document.getElementById("inputName1").value;
+      console.log(abc);
+      firestore.collection("users").doc(email_id).update({
+          "name": abc,
+        })
+        .then(() => {
+          window.location.href = "account.html";
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+
+    }
+  </script>
+  <script>
+    // var loadFile = function(event) {
+    //     var image = document.getElementById('output');
+    //     image.src = URL.createObjectURL(event.target.files[0]);
+    // };
+    var upload = function (event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      console.log(URL.createObjectURL(event.target.files[0]));
+       file = URL.createObjectURL(event.target.files[0]);
+      //  function uploadBlob(file) {
+  const ref = firebase.storage().ref();
+  var mountainsRef = ref.child('mountains.jpg');
+
+// Create a reference to 'images/mountains.jpg'
+var mountainImagesRef = ref.child('images/mountains.jpg');
+
+// While the file names are the same, the references point to different files
+mountainsRef.name === mountainImagesRef.name;           // true
+mountainsRef.fullPath === mountainImagesRef.fullPath;  
+  // [START storage_upload_blob]
+  // 'file' comes from the Blob or File API
+  ref.put(file).then((snapshot) => {
+    console.log('Uploaded a blob or file!');
+  });
+  // [END storage_upload_blob]
+// }
+      // [END storage_upload_handle_error]
+    }
+  </script>
+</body>
+
 </html>

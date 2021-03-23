@@ -88,3 +88,9 @@ button:focus {
   font-size: 1.1em;
   text-align: center;
 }
+.referralbutton{
+  color: darkcyan;
+  font-size: 1.5em !important;
+  font-weight: bold;
+  text-align: center;
+}

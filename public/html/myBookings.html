@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p><p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" width="200" /></p>
+    
+    <script>
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+        console.log(URL.createObjectURL(event.target.files[0]));
+    };
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script>
+        (() => { // protect the lemmings!
+            // Initialize Firebase
+            const config = {
+                apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+                authDomain: "ar-carrental.firebaseapp.com",
+                projectId: "ar-carrental",
+                storageBucket: "ar-carrental.appspot.com",
+                messagingSenderId: "655577676197",
+                appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+                measurementId: "G-VEEQWJ4ETM"
+            };
+
+            // change handler for fileSelect
+            fileElem.addEventListener('change', (e) => {
+                // e.target.files contains File object references
+                // to all chosen items by user
+                console.log(e.target.files);
+
+                /* ADDED THESE LINES */
+                // since e.target.files is "array-like", we turn it into an array
+                // then map it to the .put() method from Firebase, which returns promises...
+                const fileUploads = Array.from(e.target.files).map((currFile) => {
+                    // we store the name of the file as a storage ref
+                    const fileRef = imagesRef.child(currFile.name);
+                    // we return a promise where we first "put" or upload the file
+                    // and then once the upload is complete, we return promise with
+                    // download URL string of the file we uploaded
+                    return fileRef.put(currFile).then((snapshot) => snapshot.downloadURL);
+                });
+
+                // once ALL the promises have been resolved
+                // we console.log the urls...but we can do whatever we need to with this data 
+                // from here
+              
+                /* END ADDED THESE LINES */
+            });
+        })();
+    </script>
+    
+</body>
+
+</html>
