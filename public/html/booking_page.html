@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="../css/fixed.css">
     <link rel="stylesheet" href="../css/bookingpage.css">
-
+    
   </head>
   <body>
     <!-- Header -->
@@ -96,6 +96,7 @@
     <section>
         <div class="container booking_page">
             <div class="row">
+              <h1 id="paramss"></h1>
                 <div class="left_side col-md-6">
                     <div class="car_img">
                         <img src="../assets/suv.png" alt="" srcset="">
@@ -281,7 +282,9 @@
         x = pa[i].split('=');
         params[x[0]] = x[1];
       }
-      console.log(params);
+      console.log(JSON.stringify(params));
+      var carID = Object.values(params)[0];
+      document.getElementById("paramss").innerHTML = "CarId : "+carID;
       return params;
     }();
   </script>
