@@ -85,7 +85,7 @@
                   <!-- <td id="accounttd"></td> -->
                 </tr>
                 <tr>
-                  <td><button id="booking">My Bookings</button></td>
+                  <td><a href="myBookings.html"><button id="booking">My Bookings</button></a></td>
                   <!-- <td id="bookingtd"></td> -->
                 </tr>
                 <tr>
@@ -302,34 +302,25 @@
     }
   </script>
   <script>
-    // var loadFile = function(event) {
-    //     var image = document.getElementById('output');
-    //     image.src = URL.createObjectURL(event.target.files[0]);
-    // };
-    var upload = function (event) {
-      var image = document.getElementById('output');
-      image.src = URL.createObjectURL(event.target.files[0]);
-      console.log(URL.createObjectURL(event.target.files[0]));
-       file = URL.createObjectURL(event.target.files[0]);
-      //  function uploadBlob(file) {
-  const ref = firebase.storage().ref();
-  var mountainsRef = ref.child('mountains.jpg');
-
-// Create a reference to 'images/mountains.jpg'
-var mountainImagesRef = ref.child('images/mountains.jpg');
-
-// While the file names are the same, the references point to different files
-mountainsRef.name === mountainImagesRef.name;           // true
-mountainsRef.fullPath === mountainImagesRef.fullPath;  
-  // [START storage_upload_blob]
-  // 'file' comes from the Blob or File API
-  ref.put(file).then((snapshot) => {
-    console.log('Uploaded a blob or file!');
-  });
-  // [END storage_upload_blob]
-// }
-      // [END storage_upload_handle_error]
+    function uploadImage() {
+      const ref = firebase.storage().ref();
+    const ref1 = ref.child("users");
+    const ref2 = ref1.child(email_id);
+    const ref3 = ref2.child("image");
+      const file = document.querySelector("#photo").files[0];
+      const name = email_id;
+      const metadata = {
+        contentType: file.type
+      };
+      const task = ref3.child(name).put(file, metadata);
+      task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+          window.location.href = "account.html";
+        })
+        .catch(console.error);
     }
+
   </script>
 </body>
 

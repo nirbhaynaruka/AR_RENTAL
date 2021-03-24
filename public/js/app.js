@@ -37,7 +37,7 @@ function getDoc(email) {
             console.log(myData.name);
 
             document.getElementById("user").innerHTML = "Welcome " + myData.name;
-            document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg">'
+            document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
             document.getElementById("accounttd").innerHTML = myData.phone;
             // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
 
@@ -58,11 +58,6 @@ window.onload = function () {
                 div.innerHTML = '<div class="container booking_page"><div class="row"><div class="left_side col-md-6"><div class="car_img"> <img src=\'' + doc.data().carImageURL + '\' alt="carImage" srcset=""></div><div class="necessary_details included"><h4 class="text-uppercase">Included</h4><ul class="text-uppercase"><li>VEHICLE INSURANCE (USER+3RD PARTY)</li><li>TOEING AND IMPOUNDING (CAUSED BY VEHICLE FAILURE)</li><li>MAINTENNANCE AND CLEANING</li><li>24X7 SUPPORT SERVICE</li></ul></div><div class="necessary_details exlcuded"><h4 class="text-uppercase">EXCLUDED</h4><ul class="text-uppercase"><li>FUEL</li><li>PARKING</li><li>STATE AND TOLL TAXES</li><li>TRAFFIC VOILATIONS AND PENALTIES</li><li>TOEING AND IMPOUNDING (CAUSED BY COUSTOMER FAILURE)</li></ul></div></div><div class="right_side col-md-6"><div class="car_model"><h5>\''+ doc.data().modelName + '\'</h5><h3 class="text-uppercase">\'' + doc.data().companyName + '\'</h3><ul class="mr-auto mt-2 mt-lg-0 text-uppercase"><li>\'' + doc.data().transmission + '\'</li><li>\'' + doc.data().type + '\'</li><li>\'' + doc.data().seats + '\'</li></ul></div><div class="booking_details"></div></div></div></div>'
                 document.getElementById('holder').appendChild(div);
             // }
-
-                    // document.getElementById("allCars").innerHTML = '<div class="container booking_page"><div class="row"><div class="left_side col-md-6"><div class="car_img"> <img src=\'' + doc.data().carImageURL + '\' alt="carImage" srcset=""></div><div class="necessary_details included"><h4 class="text-uppercase">Included</h4><ul class="text-uppercase"><li>VEHICLE INSURANCE (USER+3RD PARTY)</li><li>TOEING AND IMPOUNDING (CAUSED BY VEHICLE FAILURE)</li><li>MAINTENNANCE AND CLEANING</li><li>24X7 SUPPORT SERVICE</li></ul></div><div class="necessary_details exlcuded"><h4 class="text-uppercase">EXCLUDED</h4><ul class="text-uppercase"><li>FUEL</li><li>PARKING</li><li>STATE AND TOLL TAXES</li><li>TRAFFIC VOILATIONS AND PENALTIES</li><li>TOEING AND IMPOUNDING (CAUSED BY COUSTOMER FAILURE)</li></ul></div></div><div class="right_side col-md-6"><div class="car_model"><h5>\''+ doc.data().modelName + '\'</h5><h3 class="text-uppercase">\'' + doc.data().companyName + '\'</h3><ul class="mr-auto mt-2 mt-lg-0 text-uppercase"><li>\'' + doc.data().transmission + '\'</li><li>\'' + doc.data().type + '\'</li><li>\'' + doc.data().seats + '\'</li></ul></div><div class="booking_details"></div></div></div></div>'
-
-                
-
                 console.log(doc.id, " => ", doc.data());
             });
         })

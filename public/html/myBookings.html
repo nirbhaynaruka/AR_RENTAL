@@ -1,68 +1,348 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head></head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/fixed.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <style>
+        .mybookings {
+            overflow-x: auto;
+        }
+
+        #details {
+            text-align: left;
+            background: transparent;
+            margin: 5px 0 5px 0;
+            width: -webkit-fill-available;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    </style>
+    <title>AR_CarRental</title>
+</head>
 
 <body>
+    <header class="">
+        <nav class="navbar navbar-expand-md fixed-top headercover trans">
+            <a class="navbar-brand" href="home.html"><img src="../assets/Group 1.png" alt="logo" srcset=""
+                    width="25%" /></a>
 
-    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p><p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-    <p><img id="output" width="200" /></p>
-    
-    <script>
-    var loadFile = function(event) {
-        var image = document.getElementById('output');
-        image.src = URL.createObjectURL(event.target.files[0]);
-        console.log(URL.createObjectURL(event.target.files[0]));
-    };
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <div class="nav_tog" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" href="offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" href="tarrif.html">Tarrif</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" href="#" id="myBookings"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-center text-uppercase font-14 trans" id="signup" href="signup.html">Sign
+                            Up</a>
+                    </li>
+                    <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+                href="about.html">About</a> </li>
+            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+                href="services.html">Services</a> </li>
+            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+                href="culture.html">Culture</a> </li>
+            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
+                href="contact.html">Contact</a> </li> -->
+                </ul>
+                <a href="signin.html" class="signIn_btn" id="signin">
+                    <button class="btn btn-primary my-2 my-sm-0" id="logout" type="button">
+                        Sign In
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class="accountsection">
+        <div class="mybookings container">
+            <div style="color:green;"><br>
+                Your Bookings<br>
+            </div>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>OrderID</th>
+                        <th>Car</th>
+                        <th>Booked On</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="container" id="cardetails">
+
+
+            <!-- Start Page Content -->
+
+            <!-- <a title="06-02-2020 21:52 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214507.jpg.jpg?alt=media&amp;token=8c428610-79e6-4a05-931e-3fc2176cf2f7"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214507.jpg.jpg?alt=media&amp;token=8c428610-79e6-4a05-931e-3fc2176cf2f7"
+                    width="100" height="100"></a>
+
+
+            <a title="06-02-2020 21:51 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214454.jpg.jpg?alt=media&amp;token=bf547017-d74e-4e5c-8eb3-8d7aa9728765"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214454.jpg.jpg?alt=media&amp;token=bf547017-d74e-4e5c-8eb3-8d7aa9728765"
+                    width="100" height="100"></a>
+
+
+            <a title="06-02-2020 21:51 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214445.jpg.jpg?alt=media&amp;token=6eabe8f0-9a83-4e4b-8351-2c3535e4c52d"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214445.jpg.jpg?alt=media&amp;token=6eabe8f0-9a83-4e4b-8351-2c3535e4c52d"
+                    width="100" height="100"></a>
+
+
+            <a title="06-02-2020 21:51 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214252.jpg.jpg?alt=media&amp;token=bfbf56dd-11ab-482c-8f89-4e74b84439bc"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214252.jpg.jpg?alt=media&amp;token=bfbf56dd-11ab-482c-8f89-4e74b84439bc"
+                    width="100" height="100"></a>
+
+
+            <a title="06-02-2020 21:51 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214430.jpg.jpg?alt=media&amp;token=5dd93cac-960d-4791-a44e-9778091b92ed"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214430.jpg.jpg?alt=media&amp;token=5dd93cac-960d-4791-a44e-9778091b92ed"
+                    width="100" height="100"></a>
+
+
+            <a title="06-02-2020 21:51 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214418.jpg.jpg?alt=media&amp;token=baa78381-6711-4749-be11-103f80ed3941"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200206_214418.jpg.jpg?alt=media&amp;token=baa78381-6711-4749-be11-103f80ed3941"
+                    width="100" height="100"></a>
+
+            <h3>CAR PICS AFTER SUBMISSION</h3>
+            <!-- Start Page Content -->
+
+            <!-- <a title="07-02-2020 13:21 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131748.jpg.jpg?alt=media&amp;token=78582b4e-9f61-4eb1-856d-8d6f17bccff0"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131748.jpg.jpg?alt=media&amp;token=78582b4e-9f61-4eb1-856d-8d6f17bccff0"
+                    width="100" height="100"></a>
+
+
+            <a title="07-02-2020 13:21 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131740.jpg.jpg?alt=media&amp;token=719689ac-937c-4cd7-bf3e-2ad9258ec872"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131740.jpg.jpg?alt=media&amp;token=719689ac-937c-4cd7-bf3e-2ad9258ec872"
+                    width="100" height="100"></a>
+
+
+            <a title="07-02-2020 13:21 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131730.jpg.jpg?alt=media&amp;token=cd55d149-77f2-4e36-83d7-5718971fd98c"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131730.jpg.jpg?alt=media&amp;token=cd55d149-77f2-4e36-83d7-5718971fd98c"
+                    width="100" height="100"></a>
+
+
+            <a title="07-02-2020 13:21 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131721.jpg.jpg?alt=media&amp;token=479da080-1a1e-4ca3-be14-62acc8198860"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131721.jpg.jpg?alt=media&amp;token=479da080-1a1e-4ca3-be14-62acc8198860"
+                    width="100" height="100"></a>
+
+
+            <a title="07-02-2020 13:20 PM" target="blank"
+                href="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131635.jpg.jpg?alt=media&amp;token=fa1a56bf-65fb-40ea-a67a-3f981570f590"><img
+                    style="border:1px solid black;"
+                    src="https://firebasestorage.googleapis.com/v0/b/lcpiccloud.appspot.com/o/images%2Fbookings%2F132487%2FIMG_20200207_131635.jpg.jpg?alt=media&amp;token=fa1a56bf-65fb-40ea-a67a-3f981570f590"
+                    width="100" height="100"></a>
+
+ -->
+
+
+        </div>
+    </section>
+    <section class="becomepartner">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="partnerdiv">
+                    <img class="partnerimage" src="../assets/Join us.png" />
+                </div>
+            </div>
+            <div class="col-md-8 partner-text">
+                <div>
+                    <p>Join us on the ride.</p>
+                    <p>Become our Partner and earn Together</p>
+                </div>
+                <div class="partnerbutton">
+                    <a href="partner.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Become Partner
+                        </button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <img src="../assets/logo for footer.png" alt="" srcset="" width="20%" />
+                    <br /><br />
+                    <p>The best in Class Car Rentals Services</p>
+
+                    <h5 class="text-uppercase">Head Office</h5>
+                    <hr />
+                    <p>
+                        Piprali-Jhunjhunu by pass road<br />
+                        Sikar, RJ 332001 <br />
+                        Phone : +91 80030 73449 <br />
+                        Email : support@arrentalcar.com <br />
+                        Office time : 9:00 AM - 7:00 PM <br />
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">quick links</h5>
+                    <hr />
+                    <ul class="list-unstyled mb-0 foot-link">
+                        <li>
+                            <a href="#!" class="text-white text-underline">About Us</a>
+                        </li>
+                        <li>
+                            <a href="faq.html" class="text-white">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="terms.html" class="text-white">Terms</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-white">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="disclaimer.html" class="text-white">Disclaimer</a>
+                        </li>
+                    </ul>
+
+                    <br /><br />
+                    <h5 class="text-uppercase">NEWSLETTER</h5>
+                    <hr />
+                    <!-- Add Text fields -->
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
+                    <hr />
+                    <ul class="list-unstyled foot-link">
+                        <li>
+                            <a href="#!" class="text-white">Jaipur</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Sikar</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Chirawa</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Pilani</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Gudha Gorji</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Jhunjhunu</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Nawalgarh</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                    Designed with by Abhi Gill | Crafted by The White Page
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">Icons</div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
+
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
     <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-  
+
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <!-- <script src="../js/app.js"></script> -->
+
+    <script src="../js/mybookings.js"></script>
+    <script type="module" src="../js/fixed.js"></script>
+    <script src="../js/mybooking.js"></script>
     <script>
-        (() => { // protect the lemmings!
-            // Initialize Firebase
-            const config = {
-                apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
-                authDomain: "ar-carrental.firebaseapp.com",
-                projectId: "ar-carrental",
-                storageBucket: "ar-carrental.appspot.com",
-                messagingSenderId: "655577676197",
-                appId: "1:655577676197:web:861ff437996c0e3a19d04c",
-                measurementId: "G-VEEQWJ4ETM"
-            };
-
-            // change handler for fileSelect
-            fileElem.addEventListener('change', (e) => {
-                // e.target.files contains File object references
-                // to all chosen items by user
-                console.log(e.target.files);
-
-                /* ADDED THESE LINES */
-                // since e.target.files is "array-like", we turn it into an array
-                // then map it to the .put() method from Firebase, which returns promises...
-                const fileUploads = Array.from(e.target.files).map((currFile) => {
-                    // we store the name of the file as a storage ref
-                    const fileRef = imagesRef.child(currFile.name);
-                    // we return a promise where we first "put" or upload the file
-                    // and then once the upload is complete, we return promise with
-                    // download URL string of the file we uploaded
-                    return fileRef.put(currFile).then((snapshot) => snapshot.downloadURL);
-                });
-
-                // once ALL the promises have been resolved
-                // we console.log the urls...but we can do whatever we need to with this data 
-                // from here
-              
-                /* END ADDED THESE LINES */
-            });
-        })();
+       
     </script>
-    
 </body>
 
 </html>

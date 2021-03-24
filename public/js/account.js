@@ -45,7 +45,7 @@ function myfunc(email_id) {
         
         function updateProfile() {
           document.getElementById("singlePage").innerHTML =
-            '<div class="updateProfile"><h3>Update Profile Picture</h3><form><div class="form-group"><label for="exampleFormControlFile1">Select Profile Photo</label><input type="file" class="form-control-file" accept="image/*" id="exampleFormControlFile1" onchange="upload(event)"></div><button  class="btn btn-primary js-fileSelect" >Submit</button></form><p><img id="output" width="200" /></p></div>';
+            '<div class="updateProfile"><h3>Update Profile Picture</h3><div class="form-group"><label for="exampleFormControlFile1">Select Profile Photo</label><input type="file" class="form-control-file" accept="image/*" id="photo"></div><button class="btn btn-primary" onclick="uploadImage()">Upload Image</button><p><img id="output" width="200" /></p></div>';
         }
 
         function wallet() {
