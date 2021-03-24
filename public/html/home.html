@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="../css/fixed.css" />
   </head>
 
-  <body>
+  <body onload="formDate()">  
     <header>
       <nav class="navbar navbar-expand-md fixed-top headercover trans">
         <a class="navbar-brand" href="#"
@@ -150,17 +150,17 @@
         <div class="section-center">
           <div class="container">
             <div class="booking-form">
-              <form action="findCar.html">
+              <form action="findCar.html" method="GET">
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="date" value="" required />
+                      <input class="form-control" type="date" id="pickup-date" required />
                       <span class="form-label">Pick-Up Date</span>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="time" required />
+                      <input class="form-control" type="time" id="pickup-time" required />
                       <span class="form-label">Pick-Up Time</span>
                     </div>
                   </div>
@@ -184,13 +184,13 @@
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="date" required />
+                      <input class="form-control" type="date" id="drop-date" required />
                       <span class="form-label">Drop-Off Date</span>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="time" required />
+                      <input class="form-control" type="time" id="drop-time" required />
                       <span class="form-label">Drop-Off Time</span>
                     </div>
                   </div>

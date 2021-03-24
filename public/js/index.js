@@ -1,3 +1,14 @@
+function formDate() {
+	// var dropDate = new Date();
+	// dropDate.setDate(dropDate.getDate() + 1); //number  of days to add, e.x. 15 days
+    //  var dateFormated = dropDate.toISOString().substr(0,10);
+	document.getElementById('pickup-date').valueAsDate = new Date();
+	document.getElementById('pickup-time').valueAsNumber = new Date(new Date().getHours(),new Date().getMinutes());
+	document.getElementById('drop-date').valueAsDate = new Date( new Date().getFullYear(),new Date().getMonth(),new Date().getDate()+2);
+	document.getElementById('drop-time').valueAsNumber = new Date(new Date().getHours(),new Date().getMinutes());
+	
+}
+
 $(document).ready(function () {
 	$('.testiSlide').slick({
 		slidesToShow: 2,
