@@ -43,6 +43,7 @@
   background-size: cover;
   background-position: center;
   font-weight: 300;
+  
 }
 
 .booking-form {
@@ -50,6 +51,7 @@
   padding: 30px 15px 0px;
   border-radius: 4px;
   overflow: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .booking-form .form-group {
