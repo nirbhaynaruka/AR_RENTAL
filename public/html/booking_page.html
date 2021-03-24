@@ -273,7 +273,18 @@
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/fixed.js"></script>
-
+  <script>
+    window.params = function(){
+      var params = {};
+      var pa = window.location.href.split('?')[1].split('&');
+      for(var i in pa){
+        x = pa[i].split('=');
+        params[x[0]] = x[1];
+      }
+      console.log(params);
+      return params;
+    }();
+  </script>
 
    
   </body>

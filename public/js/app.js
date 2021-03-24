@@ -28,24 +28,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 // window.onload = function () {
 // alert(email_id);
-function getDoc(email) {
-    const docRef = firestore.collection("users").doc(email);
-    console.log(email);
-    docRef.get().then(function (doc) {
-        if (doc && doc.exists) {
-            const myData = doc.data();
-            console.log(myData.name);
-
-            document.getElementById("user").innerHTML = "Welcome " + myData.name;
-            document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
-            document.getElementById("accounttd").innerHTML = myData.phone;
-            // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
-
-        }
-    }).catch(function (error) {
-        console.log("got an error" + error);
-    })
-};
 
 window.onload = function () {
     firestore.collection("Cars")

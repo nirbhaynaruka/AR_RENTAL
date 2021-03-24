@@ -1,5 +1,17 @@
-// import firebase from "firebase/app";
-// import "firebase/database";
+var firebaseConfig = {
+  apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+  authDomain: "ar-carrental.firebaseapp.com",
+  projectId: "ar-carrental",
+  storageBucket: "ar-carrental.appspot.com",
+  messagingSenderId: "655577676197",
+  appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+  measurementId: "G-VEEQWJ4ETM"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+var firestore = firebase.firestore();
+var storage = firebase.storage();
 var email = "none";
 var referral;
 firebase.auth().onAuthStateChanged(function (user) {
@@ -11,6 +23,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       // console.log(user.uid.substring(0, 5))
       window.referral = user.uid.substring(0, 5);
       myfunc(email_id);
+      getDoc(user.email);
       
     //   firestore.collection("users").doc(email_id).update({
     //     "myReferral": referral,
@@ -28,6 +41,24 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("login_div").style.display = "block";
   }
 });
+function getDoc(email) {
+  const docRef = firestore.collection("users").doc(email);
+  console.log(email);
+  docRef.get().then(function (doc) {
+      if (doc && doc.exists) {
+          const myData = doc.data();
+          console.log(myData.name);
+
+          document.getElementById("user").innerHTML = "Welcome " + myData.name;
+          document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
+          document.getElementById("accounttd").innerHTML = myData.phone;
+          // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
+
+      }
+  }).catch(function (error) {
+      console.log("got an error" + error);
+  })
+};
 
 
 
