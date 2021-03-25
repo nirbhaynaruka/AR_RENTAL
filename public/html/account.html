@@ -269,58 +269,10 @@
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
   <!-- <script src="../js/app.js"></script> -->
 
-  <script type="module" src="../js/account.js"></script>
+  <script src="../js/account.js"></script>
   <script type="module" src="../js/fixed.js"></script>
-  <script>
-    function referralfunc() {
-      firestore.collection("users").doc(email_id).update({
-          "myReferral": referral,
-        })
-        .then(() => {
-          window.location.href = "account.html";
-          console.log("Document successfully written!");
-        })
-        .catch((error) => {
-          console.error("Error writing document: ", error);
-        });
-    }
-
-    function myName() {
-      var abc = document.getElementById("inputName1").value;
-      console.log(abc);
-      firestore.collection("users").doc(email_id).update({
-          "name": abc,
-        })
-        .then(() => {
-          window.location.href = "account.html";
-          console.log("Document successfully written!");
-        })
-        .catch((error) => {
-          console.error("Error writing document: ", error);
-        });
-
-    }
-  </script>
-  <script>
-    function uploadImage() {
-      const ref = firebase.storage().ref();
-    const ref1 = ref.child("users");
-    const ref2 = ref1.child(email_id);
-    const ref3 = ref2.child("image");
-      const file = document.querySelector("#photo").files[0];
-      const name = email_id;
-      const metadata = {
-        contentType: file.type
-      };
-      const task = ref3.child(name).put(file, metadata);
-      task
-        .then(snapshot => snapshot.ref.getDownloadURL())
-        .then(url => {
-          window.location.href = "account.html";
-        })
-        .catch(console.error);
-    }
-
+  <script src="../js/updateaccount.js">
+   
   </script>
   
 </body>
