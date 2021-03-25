@@ -5,9 +5,7 @@ function formDate() {
 	hours = hours % 12;
 	hours = hours ? hours : 12; 
 	minutes = minutes < 10 ? '0' + minutes : minutes;
-	var drop = hours + 6;
 	const formatYmd = date => date.toISOString().slice(0, 10);
-	console.log(formatYmd(new Date()));
 	var dateControl = document.querySelector('input[type="time"]');
 	dateControl.value = hours + ":" + minutes;
 	dateControl.min = hours + ":" + minutes;
@@ -18,8 +16,8 @@ function formDate() {
 	var dropdate = document.getElementById('drop-date');
 	dropdate.min = formatYmd(new Date());
 	var droptime = document.getElementById('drop-time');
-	droptime.value  = drop + ":" + minutes;
-	droptime.min = drop + ":" + minutes;
+	droptime.value  = hours + ":" + minutes;
+	
 }
 
 $(document).ready(function () {
