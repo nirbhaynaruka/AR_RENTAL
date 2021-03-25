@@ -389,7 +389,9 @@
         var drop = Object.values(params)[3];
         var city = Object.values(params)[4];
 
-        const pickupDate = new Date(pickup);
+        var pick = pickup.replaceAll("%20", "-");
+        console.log(pick);
+        const pickupDate = new Date(pick);
         const dropDate = new Date(drop);
 
         document.getElementById("pickupDate").innerHTML = pickupDate;
