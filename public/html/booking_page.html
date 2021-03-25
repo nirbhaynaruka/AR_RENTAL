@@ -187,14 +187,14 @@
                 </div>
                 <div class="col-md-6 booking_values">
                   <ul>
-                    <li>Pickup Date</li>
-                    <li>Drop Date</li>
-                    <li>7</li>
-                    <li>Unlimited KMs</li>
-                    <li>Unlimited</li>
-                    <li>Manual</li>
-                    <li>200</li>
-                    <li>2000</li>
+                    <li id="pickupDate">Pickup Date</li>
+                    <li id="dropDate">Drop Date</li>
+                    <li id="hours">7</li>
+                    <li id="freeKms">Unlimited KMs</li>
+                    <li id="package">Unlimited</li>
+                    <li id="type">Manual</li>
+                    <li id="baseAmount">200</li>
+                    <li id="security">2000</li>
                   </ul>
                 </div>
               </div>
@@ -388,6 +388,11 @@
         var pickup = Object.values(params)[2];
         var drop = Object.values(params)[3];
         var city = Object.values(params)[4];
+
+        const pickupDate = new Date(pickup);
+        const dropDate = new Date(drop);
+
+        document.getElementById("pickupDate").innerHTML = pickupDate;
         console.log(carID, totaltime, pickup, drop, city);
         return params;
       })();
