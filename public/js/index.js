@@ -2,13 +2,14 @@ function formDate() {
 	var hours = new Date().getHours();
 	var minutes = new Date().getMinutes();
 	var ampm = hours >= 12 ? 'pm' : 'am';
-	hours = hours % 12;
-	hours = hours ? hours : 12; 
+	// hours = hours % 12;
+	// hours = hours ? hours : 12; 
+	hours = hours < 10 ? '0' + hours : hours;
 	minutes = minutes < 10 ? '0' + minutes : minutes;
 	const formatYmd = date => date.toISOString().slice(0, 10);
 	var dateControl = document.querySelector('input[type="time"]');
 	dateControl.value = hours + ":" + minutes;
-	dateControl.min = hours + ":" + minutes;
+	// dateControl.min = hours + ":" + minutes;
 	var dateControl1 = document.querySelector('input[type="date"]');
 	dateControl1.value = formatYmd(new Date());
 	dateControl1.min = formatYmd(new Date());

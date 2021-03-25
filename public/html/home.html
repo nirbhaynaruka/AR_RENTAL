@@ -168,10 +168,10 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <input
+                      type="time"
                         class="form-control"
-                        type="time"
-                        id="pickup-time"
                         name="pickupTime"
+                        id="pickup-time"
                         required
                       />
                       <span class="form-label">Pick-Up Time</span>
@@ -180,13 +180,13 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <select class="form-control text-uppercase" name="city">
-                        <option value="1">JAIPUR</option>
-                        <option value="2">CHIRAWA</option>
-                        <option value="3">SIKAR</option>
-                        <option value="4">JHUNJHUNU</option>
-                        <option value="5">PILANI</option>
-                        <option value="6">GUDHA</option>
-                        <option value="7">NAWALGARH</option>
+                        <option value="JAIPUR">JAIPUR</option>
+                        <option value="CHIRAWA">CHIRAWA</option>
+                        <option value="SIKAR">SIKAR</option>
+                        <option value="JHUNJHUNU">JHUNJHUNU</option>
+                        <option value="PILANI">PILANI</option>
+                        <option value="GUDHA">GUDHA</option>
+                        <option value="NAWALGARH">NAWALGARH</option>
                       </select>
                       <span class="select-arrow"></span>
                       <span class="form-label">Select City</span>
@@ -220,7 +220,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button class="submit-btn" onclick="getDate()">
+                      <button class="submit-btn" >
                         Check availability
                       </button>
                     </div>
@@ -625,9 +625,7 @@
     <script src="../js/fixed.js"></script>
     <script src="../js/index.js"></script>
     <script>
-      function getDate() {
-        window.location = "findCar.html" + " ?name=";
-      }
+     
     </script>
     <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
   </body>
