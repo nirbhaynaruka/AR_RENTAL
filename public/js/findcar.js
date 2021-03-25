@@ -50,9 +50,11 @@ window.onload = function () {
     var p = new Date(pickupDate);
     p.setHours(pickupTime.substring(0, 2));
     p.setMinutes(pickupTime.substring(5, 7))
+    console.log(p);
     var d = new Date(dropDate);
     d.setHours(dropTime.substring(0, 2));
-    d.setMinutes(dropTime.substring(5, 7))
+    d.setMinutes(dropTime.substring(5, 7));
+    console.log(d);
     var hr = (d - p);
     var h = parseFloat(hr / 3600000).toPrecision(3);
     console.log(h);

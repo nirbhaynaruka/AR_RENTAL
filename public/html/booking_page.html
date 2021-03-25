@@ -133,7 +133,7 @@
       <div class="container booking_page">
         <div class="row">
           <h1 id="paramss"></h1>
-          <div class="left_side col-md-6">
+          <div class="left_side col-md-5">
             <div class="car_img">
               <img src="../assets/suv.png" alt="" srcset="" />
             </div>
@@ -157,7 +157,7 @@
               </ul>
             </div>
           </div>
-          <div class="right_side col-md-6">
+          <div class="right_side col-md-7">
             <div class="car_model">
               <h5>SUV</h5>
               <h3 class="text-uppercase">Scorpio</h3>
@@ -169,7 +169,7 @@
             </div>
             <div class="booking_details">
               <div class="row">
-                <div class="col-md-6 booking_para">
+                <div class="col-md-4 booking_para">
                   <ul>
                     <li>Pickup Date</li>
                     <li>Drop Date</li>
@@ -185,7 +185,7 @@
                   </ul>
                   <!-- <p>(Refundable within 7 days)</p> -->
                 </div>
-                <div class="col-md-6 booking_values">
+                <div class="col-md-8 booking_values">
                   <ul>
                     <li id="pickupDate">Pickup Date</li>
                     <li id="dropDate">Drop Date</li>
@@ -384,18 +384,48 @@
         }
         console.log(JSON.stringify(params));
         var carID = Object.values(params)[0];
-        var totaltime = Object.values(params)[1];
+        var totaltime = parseInt(Object.values(params)[1]);
         var pickup = Object.values(params)[2];
         var drop = Object.values(params)[3];
         var city = Object.values(params)[4];
 
-        var pick = pickup.replaceAll("%20", "-");
-        console.log(pick);
-        const pickupDate = new Date(pick);
-        const dropDate = new Date(drop);
+        var pick = pickup.replaceAll("%20", " ");
 
-        document.getElementById("pickupDate").innerHTML = pickupDate;
-        console.log(carID, totaltime, pickup, drop, city);
+        var dropD = pickup.replaceAll("%20", " ");
+        // console.log(pick);
+        const m = new Date(pick);
+        const n = new Date(dropD);
+
+        // var p = pickupDate.replace(" (India Standard Time)", "");
+        var pickDateString =
+          m.getUTCFullYear() +
+          "/" +
+          ("0" + (m.getUTCMonth() + 1)).slice(-2) +
+          "/" +
+          ("0" + m.getUTCDate()).slice(-2) +
+          " " +
+          ("0" + m.getUTCHours()).slice(-2) +
+          ":" +
+          ("0" + m.getUTCMinutes()).slice(-2) +
+          ":" +
+          ("0" + m.getUTCSeconds()).slice(-2);
+        var dropDateString =
+          n.getUTCFullYear() +
+          "/" +
+          ("0" + (n.getUTCMonth() + 1)).slice(-2) +
+          "/" +
+          ("0" + n.getUTCDate()).slice(-2) +
+          " " +
+          ("0" + n.getUTCHours()).slice(-2) +
+          ":" +
+          ("0" + n.getUTCMinutes()).slice(-2) +
+          ":" +
+          ("0" + n.getUTCSeconds()).slice(-2);
+        document.getElementById("pickupDate").innerHTML = pickDateString;
+        document.getElementById("dropDate").innerHTML = dropDateString;
+        document.getElementById("hours").innerHTML = totaltime;
+        // document.getElementById("pickupDate").innerHTML = pickupDate;
+        // console.log(carID, totaltime, pickup, drop, city);
         return params;
       })();
     </script>
