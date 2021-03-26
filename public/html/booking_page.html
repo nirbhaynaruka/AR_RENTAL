@@ -160,23 +160,66 @@
                 </option>
               </select>
             </div>
-            <div class="coupon ">
-              <h6>Coupon Code</h6>
-
-              <div class="form-group ">
-               
-              </div>
-              <button class="btn btn-primary">Apply</button>
-
+          </div>
+          <div class="right_side col-md-7">
+            <div class="car_model">
+              <h5>SUV</h5>
+              <h3 class="text-uppercase">Scorpio</h3>
+              <ul class="text-uppercase">
+                <li><img src="../assets/type.png" width="5%">Manual</li>
+                <li><img src="../assets/petrol.png" width="4%">Diesel</li>
+                <li><img src="../assets/seat.png" width="4%">7 Seat</li>
+              </ul>
             </div>
             <div class="netAmount">
               <div class="row">
                 <div class="col-md-6 total_text">
                   <p class="text-uppercase">Net Payable</p>
                 </div>
-                <div class="col-md-3 total" >3567</div>
-                <div class="col-md-3">
-                  <button type="submit" class="btn btn-primary">Book</button>
+                <div class="col-md-8 booking_values">
+                  <ul>
+                    <li id="pickupDate">Pickup Date</li>
+                    <li id="dropDate">Drop Date</li>
+                    <li id="hours">7</li>
+                    <li id="freeKms">Unlimited KMs</li>
+                    <li id="package">Unlimited</li>
+                    <li id="type">Manual</li>
+                    <li id="baseAmount">₹200</li>
+                    <li id="security">₹2000</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select_fleet">
+                <h6>Select Fleet</h6>
+                <select class="text-uppercase" id="fleet" name="fleet">
+                  <option value="1">
+                    NEAR DHUKIA HOSPITAL ABUSAR ROAD JJN
+                  </option>
+                </select>
+              </div>
+              <div class="coupon">
+                <h6>Coupon Code</h6>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control text-uppercase"
+                      id="couponCode"
+                      placeholder="Coupon Code"
+                    />
+                  </div>
+                  <button type="button" class="btn btn-primary" id="applyCoupon">Apply</button>
+                </form>
+              </div>
+              <div class="netAmount">
+                <div class="row">
+                  <div class="col-md-6 total_text">
+                    <p class="text-uppercase">Net Payable</p>
+                  </div>
+                  <div class="col-md-3 total">₹3567</div>
+                  <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">Book</button>
+                  </div>
                 </div>
               </div>
             </div>

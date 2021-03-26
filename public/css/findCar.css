@@ -121,41 +121,106 @@
 }
 
 .car-image {
+  width: fit-content;
   border-style: solid;
   border-width: 5px 5px 5px 5px;
   border-color: #f2f1f1;
   padding: 20px;
   justify-content: center;
   align-items: center;
+  display: block;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .car-image img {
   width: 90%;
+  margin: auto;
 }
 
 .car-details {
-    margin: auto;
-  padding: 10px 10px 10px 10px;
-  float: left;
-  /* align-content: center;
-  display: block; */
+  display: block;
+  padding: 0 20px 0 20px;
+  margin: auto;
+}
+.car-details h3{
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+.car-details h3 span {
+  justify-items: auto;
+  margin-left: 0.5em;
+  background-color: orange;
+  width: fit-content;
+  padding: 0.4em;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 0.5em;
+}
+
+.car-details h5{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #184c8f;
+  letter-spacing: 1.1px;
+}
+
+.car-details p{
+  font-size: 1.1em;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1.1px;
+}
+.car-details p span{
+  font-size: 1.1em;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1.1px;
+  padding-left: 10px;
 }
 
 .car-details ul {
   display: flex;
   list-style-type: none;
-  
+  margin: 0px !important;
+  padding: 0px !important;
+
 }
 
-.car-details ul li{
-    padding-right: 10px;
+.car-details ul li {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  /* display: block; */
+  /* margin: auto; */
+}
+.car-details ul li img{
+  padding-right: 5px;
+  margin: auto;
 }
 
 .button-search{
-    margin: auto;
+  display: block;
+  margin: auto;
+}
+.button-search button[type="submit"]{
+  margin: auto;
+  background-color: #184c8f;
+  color: white; 
+  font-size: 18px;
+  letter-spacing: 1.1px;
 
 }
-#invaliddetails{
+.button-search button[type="disabled"]{
+  margin: auto;
+  /* background-color: #184c8f; */
+  color: black; 
+  font-size: 18px;
+  letter-spacing: 1.1px;
+}
+#invaliddetails {
   margin: 10%;
   text-align: center;
   font-weight: bold;
