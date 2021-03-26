@@ -34,6 +34,7 @@ async function bookcar() {
         console.log("got an error" + error);
     })
     await console.log(couponc, orderId, carid, modelName,
+        "address" + address,
         "carImageurl" + carImageURL,
         "carName" + companyName,
         "couponCharge" + coupon,
