@@ -6,8 +6,8 @@
 } */
 .fixed-top {
   position: relative;
-  height: 5em;
-  float: left;
+  /* height: 5.5em; */
+  /* float: left; */
 }
 .navbar-expand-md .navbar-nav .nav-item {
   padding-right: 1em;
@@ -15,7 +15,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
-  height: inherit;
+  /* height: inherit; */
 }
 
 .navbar-expand-lg .navbar-nav .nav-item .nav-link {
@@ -213,5 +213,20 @@ footer h5 {
   border: 2px solid orange;
   text-decoration: none;
   color: orange;
+}
+
+.last-text{
+  font-size: 18px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.social_icons i{
+  padding-right: 1em;
+  color: orange;
+  font-size: 1.5em;
+  float: right;
+  /* size: 30px; */
 }
 

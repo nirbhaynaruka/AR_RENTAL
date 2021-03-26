@@ -49,7 +49,7 @@ function getDoc(email) {
           const myData = doc.data();
           console.log(myData.name);
 
-          document.getElementById("user").innerHTML = "Welcome " + myData.name;
+          document.getElementById("user").innerHTML = "Welcome, " + myData.name;
           document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
           document.getElementById("accounttd").innerHTML = myData.phone;
           // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
@@ -81,8 +81,10 @@ function myfunc(email_id) {
 
         function wallet() {
           myData.myReferral == null || myData.myReferral == "" ? document.getElementById("singlePage").innerHTML =
-            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p class="referralbutton" id="code"><button class="btn btn-lg btn-primary btn-block" id="referralfunc" onclick="referralfunc(\'' + email_id+'\')" type="button">Get Referral Code</button></p></a><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> \'' + myData.mywalletmoney + '\'</p><p class="amountText">AR Rental Balance</p></div></div></div>' : document.getElementById("singlePage").innerHTML =
-            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p id="code">\'' + myData.myReferral + '\'</p><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> ' + myData.mywalletmoney + '\</p><p class="amountText">AR Rental Balance</p></div></div></div>';
+            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p class="referralbutton" id="code"><button class="btn btn-lg btn-primary btn-block" id="referralfunc" onclick="referralfunc(\'' + email_id+'\')" type="button">Get Referral Code</button></p></a><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> \'' + myData.mywalletmoney + '\'</p><p class="amountText">AR Rental Balance</p></div></div></div>' 
+            : 
+            document.getElementById("singlePage").innerHTML =
+            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p id="code">' + myData.myReferral + '</p><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> ' + myData.mywalletmoney + '\</p><p class="amountText">AR Rental Balance</p></div></div></div>';
         }
 
         function editProfile() {

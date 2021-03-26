@@ -2,36 +2,51 @@
   margin-top: 4rem;
   display: block;
 }
-mark {
+
+.avatarimg {
+  /* vertical-align: middle; */
   background-color: #fe6b32;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .avatardetails {
   display: block;
 }
-.avatarimg {
-  /* vertical-align: middle; */
-  background-color: #fe6b32;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-}
 .user {
+  padding-top: 20px;
   text-align: center;
+  font-size: 18px;
+  font-weight: 500;
 }
-.accountmark {
+#accounttd{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #494f9d;
+
+}
+.accountmark> p  {
+  /* text-decoration: orange; */
   text-align: justify;
+  background-color: #fe6b32;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .myaccount > img {
   /* background-image: url(../assets/offers.png); */
   width: 100%;
+
 }
 
 .accountDetails {
   margin: auto;
   vertical-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #updateProfile,
@@ -39,6 +54,8 @@ mark {
 #editProfile,
 #booking,
 #updatePassword {
+  font-size: 18px;
+  font-weight: 500;
   text-align: left;
   background: transparent;
   margin: 5px 0 5px 0;
@@ -46,6 +63,7 @@ mark {
   border:none;
   background: transparent;
   cursor: pointer;
+  height: 30px; 
 }
 
 /* #updateProfile :active,
@@ -54,7 +72,7 @@ mark {
 #booking :active,
 #updatePassword :active{ */
   button:active {
-  border: none;
+  border: none !important;
   cursor: pointer;
   font-weight: bold;
 }
@@ -64,29 +82,41 @@ button:focus {
   font-weight: 600;
 }
 
+button:hover{
+  border-bottom: 3px solid orange !important;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .wallet {
   padding: 10px 10px 10px 10px;
   text-align: center;
   /* display: block; */
 }
 .wallet > img {
-  width: 50%;
+  width: 40%;
   /* margin: auto; */
   /* text-align: center; */
   margin-bottom: 40px;
 }
-
+.referPara p{
+  font-size: 18px;
+  font-weight: 500;
+  justify-content: center;
+}
 #code,
 #amount {
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
+  color: orange;
 }
 
 .codeText,
 .amountText {
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
+  font-weight: bold;
 }
 .referralbutton{
   color: darkcyan;
