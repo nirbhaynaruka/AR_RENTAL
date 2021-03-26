@@ -1,3 +1,5 @@
+
+var Coupon = 0;
 function checkcoupon(city) {
     var couponcode = document.getElementById("couponCode").value;
     
@@ -5,9 +7,9 @@ function checkcoupon(city) {
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                document.getElementById("couponCharge").innerHTML = "-" + (couponc * doc.data().finalAmount) / 100;
-                coupon = (couponc * doc.data().finalAmount) / 100;
-                document.getElementById("netpayable").innerHTML = (netpayable - coupon);
+                document.getElementById("couponCharge").innerHTML = "-" + parseInt((couponc * doc.data().finalAmount) / 100);
+                Coupon = parseInt((couponc * doc.data().finalAmount) / 100);
+                document.getElementById("netpayable").innerHTML = (netpayable - parseInt(Coupon));
                 // console.log(doc.id, " => ", doc.data(), doc.data().finalAmount);
             });
 
@@ -18,11 +20,15 @@ function checkcoupon(city) {
 }
 
 async function bookcar() {
-    console.log(email_id);
+    // coupon == null ? coupon = 0 : coupon;
+    var myTimestamp = firebase.firestore.Timestamp.fromDate(new Date(dropDate));
+    console.log(typeof(myTimestamp));
     var orderId = Date.now().toString();
     var address = document.getElementById("fleet").value;
     var userphone;
     var walletcharge = 0;
+    var dropDate1 = firebase.firestore.Timestamp.fromDate(new Date(dropDate));
+    var pickDate1 = firebase.firestore.Timestamp.fromDate(new Date(pickDate));
     await firestore.collection("users").doc(email_id).get().then(function (doc) {
         if (doc && doc.exists) {
             const myData = doc.data();
@@ -36,15 +42,15 @@ async function bookcar() {
     await console.log(couponc, orderId, carid, modelName,
         "carImageurl" + carImageURL,
         "carName" + companyName,
-        "couponCharge" + coupon,
-        "dropDate" + dropDate,
+        "couponCharge" + parseInt(Coupon),
+        "dropDate" + dropDate1,
         "excessKM" + excessKM,
         "extraCharge" + 0,
         "orderId" + orderId,
-        "pickupDate" + pickDate,
+        "pickupDate" + pickDate1,
         "security" + 2000,
         "status" + "incoming",
-        "total" + (netpayable - coupon - walletcharge),
+        "total" + (netpayable - parseInt(Coupon) - walletcharge),
         "user" + email_id,
         "userphoneno" + userphone, "walletcharge" + walletcharge);
     await firebase.firestore().collection("users").doc(email_id).collection("orders").doc(orderId).set({
@@ -55,15 +61,15 @@ async function bookcar() {
             "bookingmodel": modelName,
             "carImageurl": carImageURL,
             "carName": companyName,
-            "couponCharge": coupon,
-            "dropDate": dropDate,
+            "couponCharge": parseInt(Coupon),
+            "dropDate": dropDate1,
             "excessKM": excessKM,
             "extraCharge": 0,
             "orderId": parseInt(orderId),
-            "pickupDate": pickDate,
+            "pickupDate": pickDate1,
             "security": 2000,
             "status": "incoming",
-            "total": (netpayable - coupon - walletcharge),
+            "total": (netpayable - parseInt(Coupon) - walletcharge),
             "user": email_id,
             "userphoneno": userphone,
             "walletcharge": walletcharge,
@@ -83,15 +89,15 @@ async function bookcar() {
             "bookingmodel": modelName,
             "carImageurl": carImageURL,
             "carName": companyName,
-            "couponCharge": coupon,
-            "dropDate": dropDate,
+            "couponCharge": parseInt(Coupon),
+            "dropDate": dropDate1,
             "excessKM": excessKM,
             "extraCharge": 0,
             "orderId": parseInt(orderId),
-            "pickupDate": pickDate,
+            "pickupDate": pickDate1,
             "security": 2000,
             "status": "incoming",
-            "total": (netpayable - coupon - walletcharge),
+            "total": (netpayable - parseInt(Coupon) - walletcharge),
             "user": email_id,
             "userphoneno": userphone,
             "walletcharge": walletcharge,
