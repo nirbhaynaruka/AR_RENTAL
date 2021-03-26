@@ -81,9 +81,14 @@
 .car_model ul li {
   display: inline;
   padding-right: 0.5em;
-  /* float: left; */
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.car_model ul li img{
+  padding-right: 5px;
+  margin: auto;
 }
 
 .booking_details {
