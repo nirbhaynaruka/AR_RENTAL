@@ -31,18 +31,18 @@
   margin: auto;
 }
 
-.necessary_details{
-    margin: 2em 0 2em 0;
+.necessary_details {
+  margin: 2em 0 2em 0;
 }
 
-.necessary_details ul{
-    list-style-type: none;
+.necessary_details ul {
+  list-style-type: none;
   margin: 0px !important;
   padding: 0px !important;
 }
 
 .necessary_details ul li {
-    /* padding-right: 0.5em; */
+  /* padding-right: 0.5em; */
   padding-bottom: 0.3em;
   /* float: left; */
   font-weight: 400;
@@ -144,7 +144,7 @@
   padding: 0 0.5em 0 0.5em;
 }
 .coupon {
-    display: block;
+  display: block;
 }
 
 .coupon h6 {
@@ -152,56 +152,55 @@
   font-size: 18px;
 }
 
-.coupon input{
-    /* width: ; */
-    /* margin-right: 1em; */
-    margin: auto;
-    border-radius: 5px;
-    border: 2px solid black;
-    color: black;
+.coupon input {
+  /* width: ; */
+  /* margin-right: 1em; */
+  margin: auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: black;
 }
 
-.coupon button{
-    background-color: #494f9d;
-    font-size: 20px;
-    /* font-weight: bold; */
-    letter-spacing: 1.1px;
-    margin: auto;
+.coupon button {
+  background-color: #494f9d;
+  font-size: 20px;
+  /* font-weight: bold; */
+  letter-spacing: 1.1px;
+  margin: auto;
 }
 
-.netAmount{
-    display: block;
-    padding: 1em 0 1em 0;
+.netAmount {
+  display: block;
+  padding: 1em 0 1em 0;
 }
 
-.netAmount .total_text{
-    display: block;
+.netAmount .total_text {
+  display: block;
 }
 
-.netAmount .total_text p{
-    margin: auto;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1.1px;
-    font-family: "Open Sans", sans-serif;
-    text-align: left;
-    justify-content: center;
-    
+.netAmount .total_text p {
+  margin: auto;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  justify-content: center;
 }
 
-.netAmount .total{
-    color: #494f9d;
-    /* margin: auto; */
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1.1px;
-    font-family: "Open Sans", sans-serif;
+.netAmount .total {
+  color: #494f9d;
+  /* margin: auto; */
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-family: "Open Sans", sans-serif;
 }
 
-.netAmount button{
-    /* margin: auto; */
-    background-color: #494f9d;
-    font-size: 22px;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1.1px;
+.netAmount button {
+  /* margin: auto; */
+  background-color: #494f9d;
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.1px;
 }
