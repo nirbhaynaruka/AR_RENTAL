@@ -12,6 +12,18 @@ function referralfunc(email_id) {
         });
 }
 
+function updatepass() {
+    var user = firebase.auth().currentUser;
+    var newPassword = getASecureRandomPassword();
+
+    user.updatePassword(newPassword).then(function () {
+        alert("Success");
+    }).catch(function (error) {
+        alert(error);
+    });
+
+}
+
 function myName(email_id) {
     var abc = document.getElementById("inputName1").value;
     console.log(".." + abc + email_id);

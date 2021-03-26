@@ -94,7 +94,7 @@ function myfunc(email_id) {
 
         function updatePassword() {
           document.getElementById("singlePage").innerHTML =
-            '<div class="updatePassword"> <label for="oldPassword">Old Password</label> <input type="password" id="oldPassword" class="form-control" aria-describedby="passwordHelpBlock"> <small id="passwordHelpBlock" class="form-text text-muted"> Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. </small> <label for="newPassword">New Password</label> <input type="password" id="newPassword" class="form-control"> <button type="submit" class="btn btn-primary">Update Password</button></div>';
+            '<div class="updatePassword"> <label for="oldPassword">Old Password</label> <input type="password" id="oldPassword" class="form-control" aria-describedby="passwordHelpBlock"> <small id="passwordHelpBlock" class="form-text text-muted"> Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. </small> <label for="newPassword">New Password</label> <input type="password" id="newPassword" class="form-control"> <button type="submit" class="btn btn-primary" onclick="updatepass()">Update Password</button></div>';
         }
 
         document

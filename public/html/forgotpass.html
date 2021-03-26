@@ -97,7 +97,7 @@
     <section>
       <div class="signupform">
         <div class="middiv">
-          <form class="form-signin">
+         
             <div class="text-center signuplogo">
               <h1 class="h3 font-weight-bold">
                 <img src="../assets/signup.png" srcset="" width="15%" />
@@ -111,6 +111,7 @@
               <div class="form-label-group fake-input">
                 <!-- <img src="../assets/id.png" width="25" /> -->
                 <input
+                  id="signupmail"
                   type="text"
                   class="form-control"
                   placeholder="Enter Email"
@@ -126,10 +127,10 @@
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
                     </div> -->
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-lg btn-primary btn-block" onclick="forgot()" type="submit">
               Submit
             </button>
-          </form>
+          
         </div>
       </div>
       <div></div>
@@ -293,12 +294,16 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
 <script>
-
  var firebaseConfig = {
    apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
    authDomain: "ar-carrental.firebaseapp.com",
@@ -312,5 +317,18 @@
  firebase.initializeApp(firebaseConfig);
  firebase.analytics();
 </script>
+<script>
+  function forgot(){
+
+    var auth = firebase.auth();
+    var emailAddress = document.getElementById("signupmail").value;
+    
+    auth.sendPasswordResetEmail(emailAddress).then(function() {
+      alert("Password Reset mail has been send to given mail id.")
+    }).catch(function(error) {
+      alert(error);
+    });
+  }
+  </script>
   </body>
 </html>

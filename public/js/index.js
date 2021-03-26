@@ -1,3 +1,36 @@
+var firebaseConfig = {
+	apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
+	authDomain: "ar-carrental.firebaseapp.com",
+	projectId: "ar-carrental",
+	storageBucket: "ar-carrental.appspot.com",
+	messagingSenderId: "655577676197",
+	appId: "1:655577676197:web:861ff437996c0e3a19d04c",
+	measurementId: "G-VEEQWJ4ETM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+firebase.auth().onAuthStateChanged(function (user) {
+	if (user) {
+		var user = firebase.auth().currentUser;
+
+		if (user != null) {
+			var email_id = user.email;
+			// <li class="nav-item"> <a class="nav-link text-center text-uppercase font-14 trans" href="#">Contact Us</a></li>
+			document.getElementById("account").innerHTML = "Account";
+			document.getElementById("account").href = "html/account.html";
+			document.getElementById("account").innerHTML = "Account";
+			document.getElementById("account").href = "html/account.html";
+			document.getElementById("logout").innerHTML = "Log Out";
+		}
+	} else {
+		// No user is signed in.
+
+		document.getElementById("user_div").style.display = "none";
+		document.getElementById("login_div").style.display = "block";
+	}
+});
 function formDate() {
 	var hours = new Date().getHours();
 	var minutes = new Date().getMinutes();
@@ -36,32 +69,4 @@ $(document).ready(function () {
 			}
 		}]
 	});
-});
-
-firebase.auth().onAuthStateChanged(function (user) {
-	if (user) {
-		var user = firebase.auth().currentUser;
-
-		if (user != null) {
-			var email_id = user.email;
-			// <li class="nav-item"> <a class="nav-link text-center text-uppercase font-14 trans" href="#">Contact Us</a></li>
-			document.getElementById("account").innerHTML = "Account";
-			document.getElementById("account").href = "html/account.html";
-			document.getElementById("account").innerHTML = "Account";
-			document.getElementById("account").href = "html/account.html";
-			//   document.getElementById("logout").href = firebase.auth().signOut();
-
-			//   document.getElementById("logout").click() = function(){ firebase.auth().signOut();};
-
-
-
-
-
-		}
-	} else {
-		// No user is signed in.
-
-		document.getElementById("user_div").style.display = "none";
-		document.getElementById("login_div").style.display = "block";
-	}
 });

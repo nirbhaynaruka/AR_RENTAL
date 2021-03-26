@@ -291,28 +291,19 @@
       x.classList.toggle("change");
     }
   </script>
- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-<script>
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
- var firebaseConfig = {
-   apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
-   authDomain: "ar-carrental.firebaseapp.com",
-   projectId: "ar-carrental",
-   storageBucket: "ar-carrental.appspot.com",
-   messagingSenderId: "655577676197",
-   appId: "1:655577676197:web:861ff437996c0e3a19d04c",
-   measurementId: "G-VEEQWJ4ETM"
- };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
- firebase.analytics();
-</script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
+<script src="../js/signin.js"></script>
 <script src="../js/fixed.js"></script>
- <script src="../js/signin.js"></script>
 </body>
 
 </html>

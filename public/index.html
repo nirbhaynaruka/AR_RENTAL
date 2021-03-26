@@ -567,35 +567,38 @@
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
  
   <!-- <script src="index.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-  <script src="/__/firebase/8.2.4/firebase-app.js"></script>
-
-  <script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
-
-  <script src="/__/firebase/init.js"></script>
-
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const loadEl = document.querySelector('#load');
-      try {
-        let app = firebase.app();
-        let features = [
-          'auth',
-          'database',
-          'firestore',
-          'functions',
-          'messaging',
-          'storage',
-          'analytics',
-          'remoteConfig',
-          'performance',
-        ].filter(feature => typeof app[feature] === 'function');
-        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-      } catch (e) {
-        console.error(e);
-        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-      }
-    });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const loadEl = document.querySelector('#load');
+    //   try {
+    //     let app = firebase.app();
+    //     let features = [
+    //       'auth',
+    //       'database',
+    //       'firestore',
+    //       'functions',
+    //       'messaging',
+    //       'storage',
+    //       'analytics',
+    //       'remoteConfig',
+    //       'performance',
+    //     ].filter(feature => typeof app[feature] === 'function');
+    //     loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+    //   } catch (e) {
+    //     console.error(e);
+    //     loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+    //   }
+    // });
   </script>
   
 <script>
@@ -603,25 +606,12 @@
     x.classList.toggle("change");
   }
   </script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
-      
+
       <script>
-        var firebaseConfig = {
-          apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
-          authDomain: "ar-carrental.firebaseapp.com",
-          projectId: "ar-carrental",
-          storageBucket: "ar-carrental.appspot.com",
-          messagingSenderId: "655577676197",
-          appId: "1:655577676197:web:861ff437996c0e3a19d04c",
-          measurementId: "G-VEEQWJ4ETM"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+        
         </script>
-  <script src="js/fixed.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/fixed.js"></script>
 
   <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
 </body>
