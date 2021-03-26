@@ -14,13 +14,13 @@ function getorder(x) {
                     // console.log(myData.pickupDate);
                     document.getElementById("cardetails").innerHTML =
                         '<div class="container"><div id="cardetails"><h4>Your booking Details</h4><div class="alert alert-info"> <strong>Need Help!</strong> Call: 0141 4106979</div>Order ID :' +
-                        myData.orderId + '\ | Transaction ID : ' + myData.orderId +
+                        myData.orderId + '\ | Transaction ID : ' + myData.paymentID +
                         '\ | PaidVIA : Unified Payments-UPI | Order Status :<span class="label label-default" style="color:white;background-color:green;">' +
                         myData.status + '\</span> <br> FLEET/Pickup Location: <b>' + myData.address +
                         '\</b><hr> Car Name : ' + myData.bookingmodel + '\ | Seats : ' + mycarData.seats +
                         '\ | Car type : ' + mycarData.companyName + '\ | Package: ' + mycarData.packageType + '\ </div><hr><hr> Security Deposit: ₹' +
                         myData.security + '\<br> Base Charge: ₹' + myData.baseCharge +
-                        '\ <br>Coupon Applied: ₹' + myData.couponCharge + '\ <br>Extra Charge: ₹' + myData
+                        '\ <br>Coupon Applied: ₹' + myData.couponCharge + '\ <br>Wallet Applied: ₹' + myData.walletcharge + '\ <br>Extra Charge: ₹' + myData
                         .extraCharge + '\ <br> Total Charge: ₹' + myData.total +
                         '\ <br> Tax: 5% :₹75.65 GST EXCLUDED<br> Final Charge: ₹' + myData.total +
                         '\<hr>Assigned Number: <span class="label label-default" style="color:white;background-color:brown;padding:5px;">' +
