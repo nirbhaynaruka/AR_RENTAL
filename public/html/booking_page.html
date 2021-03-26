@@ -218,7 +218,7 @@
                       placeholder="Coupon Code"
                     />
                   </div>
-                  <button type="submit" class="btn btn-primary">Apply</button>
+                  <button type="button" class="btn btn-primary" id="applyCoupon">Apply</button>
                 </form>
               </div>
               <div class="netAmount">
@@ -426,6 +426,11 @@
         document.getElementById("hours").innerHTML = totaltime;
         // document.getElementById("pickupDate").innerHTML = pickupDate;
         // console.log(carID, totaltime, pickup, drop, city);
+
+        $('#applyCoupon').click(function (event){
+          var code = document.querySelector('input[type="text"]').value;
+          console.log(code);
+        });
         return params;
       })();
     </script>
