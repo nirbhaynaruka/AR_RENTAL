@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR_CarRental</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/fixed.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top headercover trans">
+        <a class="navbar-brand" href="#"
+          ><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%"
+        /></a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="nav_tog" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link trans" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link trans" href="offers.html">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link trans" href="#">Tarrif</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link trans" href="contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link trans" href="#" id="myBookings"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link trans" id="signup" href="signup.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+          <a href="signin.html" class="signIn_btn" id="signin">
+            <button
+              class="btn btn-primary my-2 my-sm-0"
+              id="logout"
+              type="button"
+            >
+              Sign In
+            </button>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Header -->
+    <!-- Main Body -->
+    <section class="container">
+      <div class="success_img">
+        <img src="../assets/payment_failed.gif" alt="failed" />
+        <h4 class="text-center">Payment Failed</h4>
+        <h6 class="text-center">Please try again!</h6>
+      </div>
+      
+      <div class="navPage">
+        <button type="button" class="btn">Go to Home</button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="bg-light text-lg-start"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0 footer_logo">
+            <img src="../assets/logo for footer.png" alt="" srcset="" />
+            <br /><br />
+            <p>The best in Class Car Rentals Services</p>
+
+            <h5 class="text-uppercase">Head Office</h5>
+            <hr />
+            <p>
+              Piprali-Jhunjhunu by pass road<br />
+              Sikar, RJ 332001 <br />
+              Phone : +91 80030 73449 <br />
+              Email : support@arrentalcar.com <br />
+              Office time : 9:00 AM - 7:00 PM <br />
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 quick_links">
+            <h5 class="text-uppercase">quick links</h5>
+            <hr />
+            <ul class="list-unstyled mb-0 foot-link">
+              <li>
+                <a href="#!" class="text-white text-underline">About Us</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-white">FAQ</a>
+              </li>
+              <li>
+                <a href="terms.html" class="text-white">Terms</a>
+              </li>
+              <li>
+                <a href="privacy.html" class="text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="disclaimer.html" class="text-white">Disclaimer</a>
+              </li>
+            </ul>
+
+            <br /><br />
+            <h5 class="text-uppercase">NEWSLETTER</h5>
+            <hr />
+            <!-- Add Text fields -->
+            <div class="row news">
+              <div class="col-md-8 newsEmail">
+                <input
+                  type="email"
+                  name="emailNews"
+                  placeholder="Your Email Address"
+                />
+              </div>
+              <div class="col-md-4">
+                <button type="submit" id="newsletter">
+                  <img src="../assets/newsletter_send.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 cities">
+            <h5 class="text-uppercase mb-0">ALSO AVAILABLE IN</h5>
+            <hr />
+            <ul class="list-unstyled foot-link">
+              <li>
+                <a href="#!" class="text-white">Jaipur</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Sikar</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Chirawa</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Pilani</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Gudha Gorji</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Jhunjhunu</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Nawalgarh</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="container p-3">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0 last-text">
+            Designed with by Abhi Gill | Crafted by The White Page
+          </div>
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0 social_icons">
+            <i class="fab fa-facebook-f fa-6"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script src="../js/fixed.js"></script>
+  </body>
+</html>
