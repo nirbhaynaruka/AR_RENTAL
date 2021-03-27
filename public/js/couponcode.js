@@ -142,13 +142,14 @@ async function bookcar(e) {
     };
     var rzp1 = new Razorpay(options);
     rzp1.on('payment.failed', function (response){
-            alert(response.error.code);
-            alert(response.error.description);
-            alert(response.error.source);
-            alert(response.error.step);
-            alert(response.error.reason);
-            alert(response.error.metadata.order_id);
-            alert(response.error.metadata.payment_id);
+            // alert(response.error.code);
+            // alert(response.error.description);
+            // alert(response.error.source);
+            // alert(response.error.step);
+            // alert(response.error.reason);
+            // alert(response.error.metadata.order_id);
+            // alert(response.error.metadata.payment_id);
+            window.location.href = "failurePage.html";
     });
 
     rzp1.open();
