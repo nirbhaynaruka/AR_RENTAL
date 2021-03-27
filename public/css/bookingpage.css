@@ -209,3 +209,7 @@
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1.1px;
 }
+
+.mchild{
+  width: -webkit-fill-available;
+}
