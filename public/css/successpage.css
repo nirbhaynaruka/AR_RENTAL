@@ -1,0 +1,16 @@
+.success_img > img{
+    /* width: 100%; */
+    display: block;
+    margin: auto;
+}
+.navPage{
+    text-align: center;
+}
+.btn{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.navPage{
+    margin: 1rem;
+}
