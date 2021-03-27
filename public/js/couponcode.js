@@ -92,7 +92,7 @@ async function bookcar(e) {
             "paymentID": response.razorpay_payment_id,
         })
         .then(() => {
-            // window.location.href = "account.html";
+            
             console.log("Document successfully written!");
         })
         .catch((error) => {
@@ -121,7 +121,7 @@ async function bookcar(e) {
             "paymentID": response.razorpay_payment_id,
         })
         .then(() => {
-            // window.location.href = "account.html";
+            window.location.href = "successPage.html";
             console.log("Document successfully written!");
         })
         .catch((error) => {

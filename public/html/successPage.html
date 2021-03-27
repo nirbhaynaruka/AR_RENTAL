@@ -26,9 +26,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/fixed.css" />
-    <link rel="stylesheet" href="../css/bookingpage.css" />
   </head>
-
   <body>
     <!-- Header -->
     <header>
@@ -57,58 +55,26 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="home.html"
-                >Home</a
-              >
+              <a class="nav-link trans" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="offers.html"
-                >Offers</a
-              >
+              <a class="nav-link trans" href="offers.html">Offers</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="#"
-                >Tarrif</a
-              >
+              <a class="nav-link trans" href="#">Tarrif</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="contact_us.html"
-                >Contact Us</a
-              >
+              <a class="nav-link trans" href="contact_us.html">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                href="#"
-                id="myBookings"
-              ></a>
+              <a class="nav-link trans" href="#" id="myBookings"></a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link text-center text-uppercase font-14 trans"
-                id="signup"
-                href="signup.html"
+              <a class="nav-link trans" id="signup" href="signup.html"
                 >Sign Up</a
               >
             </li>
-            <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
-                href="about.html">About</a> </li>
-                 trans" id="signup" href="signup
-            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
-                href="services.html">Services</a> </li>
-            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
-                href="culture.html">Culture</a> </li>
-            <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
-                href="contact.html">Contact</a> </li> -->
           </ul>
           <a href="signin.html" class="signIn_btn" id="signin">
             <button
@@ -123,165 +89,44 @@
       </nav>
     </header>
     <!-- Header -->
-
     <!-- Main Body -->
-    <section class="covid">
-      <div id="alert_covid" class="container-fluid">
-        <span
-          >Due to COVID-19 there is a restriction on numbers of people traveling
-          in vehicles.Please follow the Guidelines Issued By States/Cities You
-          are traveling to or passing by.</span
-        ><br />
+    <section class="container">
+      <div class="success_img">
+        <img src="../assets/payment_success.gif" alt="success" />
+        <h4 class="text-center">Payment Successful</h4>
       </div>
-    </section>
-    <div id="holder"></div>
-    <section id="allCars"></section>
-    <section>
-      <div class="container booking_page" id="booking_page">
-        <!-- <div class="row">
-        <div class="left_side col-md-5">
-          <div class="car_img">
-            <img src="../assets/suv.png" alt="" srcset="" />
-          </div>
-          <div class="necessary_details included">
-            <h4 class="text-uppercase text-underline">Included</h4>
-            <ul class="text-uppercase">
-              <li>VEHICLE INSURANCE (USER+3RD PARTY)</li>
-              <li>TOEING AND IMPOUNDING (CAUSED BY VEHICLE FAILURE)</li>
-              <li>MAINTENNANCE AND CLEANING</li>
-              <li>24X7 SUPPORT SERVICE</li>
-            </ul>
-          </div>
-          <div class="necessary_details exlcuded">
-            <h4 class="text-uppercase text-underline">EXCLUDED</h4>
-            <ul class="text-uppercase">
-              <li>FUEL</li>
-              <li>PARKING</li>
-              <li>STATE AND TOLL TAXES</li>
-              <li>TRAFFIC VOILATIONS AND PENALTIES</li>
-              <li>TOEING AND IMPOUNDING (CAUSED BY COUSTOMER FAILURE)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="right_side col-md-7">
-          <div class="car_model">
-            <h5>SUV</h5>
-            <h3 class="text-uppercase">Scorpio</h3>
-            <ul class="text-uppercase">
-              <li>Manual</li>
-              <li>Diesel</li>
-              <li>7 Seat</li>
-            </ul>
-          </div>
-          <div class="booking_details">
-            <div class="row">
-              <div class="col-md-4 booking_para">
-                <ul>
-                  <li>Pickup Date</li>
-                  <li>Drop Date</li>
-                  <li>Hours</li>
-                  <li>Free KMs</li>
-                  <li>Package Type</li>
-                  <li>Type</li>
-                  <li>Base Charge</li>
-                  <li id="coupon">
-                    Coupon Charge
-                  </li>
-                  <li>
-                    Security Deposit <br />
-                    <span>(Refundable within 7 days)</span>
-                  </li>
-                </ul>
-              
-              </div>
-              <div class="col-md-8 booking_values">
-                <ul>
-                  <li id="pickupDate">Pickup Date</li>
-                  <li id="dropDate">Drop Date</li>
-                  <li id="hours">7</li>
-                  <li id="freeKms">Unlimited KMs</li>
-                  <li id="package">Unlimited</li>
-                  <li id="type">Manual</li>
-                  <li id="baseAmount">200</li>
-                  <li id="">0</li>
-                  <li id="security">2000</li>
-                </ul>
-              </div>
-            </div>
-            <div class="select_fleet">
-              <h6>Select Fleet</h6>
-              <select class="text-uppercase" id="" name="fleet">
-                <option value="1">
-                  NEAR DHUKIA HOSPITAL ABUSAR ROAD JJN
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="right_side col-md-7">
-            <div class="car_model">
-              <h5>SUV</h5>
-              <h3 class="text-uppercase">Scorpio</h3>
-              <ul class="text-uppercase">
-                <li><img src="../assets/type.png" width="5%">Manual</li>
-                <li><img src="../assets/petrol.png" width="4%">Diesel</li>
-                <li><img src="../assets/seat.png" width="4%">7 Seat</li>
-              </ul>
-            </div>
-            <div class="netAmount">
-              <div class="row">
-                <div class="col-md-6 total_text">
-                  <p class="text-uppercase">Net Payable</p>
-                </div>
-                <div class="col-md-8 booking_values">
-                  <ul>
-                    <li id="pickupDate">Pickup Date</li>
-                    <li id="dropDate">Drop Date</li>
-                    <li id="hours">7</li>
-                    <li id="freeKms">Unlimited KMs</li>
-                    <li id="package">Unlimited</li>
-                    <li id="type">Manual</li>
-                    <li id="baseAmount">₹200</li>
-                    <li id="security">₹2000</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="select_fleet">
-                <h6>Select Fleet</h6>
-                <select class="text-uppercase" id="fleet" name="fleet">
-                  <option value="1">
-                    NEAR DHUKIA HOSPITAL ABUSAR ROAD JJN
-                  </option>
-                </select>
-              </div>
-              <div class="coupon">
-                <h6>Coupon Code</h6>
-                <form class="form-inline">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control text-uppercase"
-                      id="couponCode"
-                      placeholder="Coupon Code"
-                    />
-                  </div>
-                  <button type="button" class="btn btn-primary" id="applyCoupon">Apply</button>
-                </form>
-              </div>
-              <div class="netAmount">
-                <div class="row">
-                  <div class="col-md-6 total_text">
-                    <p class="text-uppercase">Net Payable</p>
-                  </div>
-                  <div class="col-md-3 total">₹3567</div>
-                  <div class="col-md-3">
-                    <button type="submit" class="btn btn-primary">Book</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+      <div class="success_details">
+        <table class="table" id="table">
+          <tbody>
+            <tr>
+              <td>OrderID</td>
+              <td>OrderID</td>
+            </tr>
+            <tr>
+              <td>Payment ID</td>
+              <td>5465</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>654</td>
+            </tr>
+            <tr>
+              <td>Mobile</td>
+              <td>546</td>
+            </tr>
+            <tr>
+              <td>Amount Paid</td>
+              <td>54654</td>
+            </tr>
+            <tr>
+              <td>Booking Time</td>
+              <td>54 654</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="navPage">
+        <button type="button" class="btn">Home</button>
       </div>
     </section>
     <!-- Footer -->
@@ -432,10 +277,7 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <!-- <script src="../js/app.js"></script> -->
-    <script src="../js/booking_page.js"></script>
-    <script src="../js/couponcode.js"></script>
+
     <script src="../js/fixed.js"></script>
   </body>
 </html>
