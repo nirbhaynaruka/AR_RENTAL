@@ -24,16 +24,16 @@ firebase.auth().onAuthStateChanged(function (user) {
       window.referral = user.uid.substring(0, 5);
       myfunc(email_id);
       getDoc(user.email);
-      
-    //   firestore.collection("users").doc(email_id).update({
-    //     "myReferral": referral,
-    // })
-    // .then(() => {
-    //     console.log("Document successfully written!");
-    // })
-    // .catch((error) => {
-    //     console.error("Error writing document: ", error);
-    // });
+
+      //   firestore.collection("users").doc(email_id).update({
+      //     "myReferral": referral,
+      // })
+      // .then(() => {
+      //     console.log("Document successfully written!");
+      // })
+      // .catch((error) => {
+      //     console.error("Error writing document: ", error);
+      // });
     }
   } else {
     // No user is signed in.
@@ -41,22 +41,23 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("login_div").style.display = "block";
   }
 });
+
 function getDoc(email) {
   const docRef = firestore.collection("users").doc(email);
   console.log(email);
   docRef.get().then(function (doc) {
-      if (doc && doc.exists) {
-          const myData = doc.data();
-          console.log(myData.name);
+    if (doc && doc.exists) {
+      const myData = doc.data();
+      console.log(myData.name);
 
-          document.getElementById("user").innerHTML = "Welcome, " + myData.name;
-          document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
-          document.getElementById("accounttd").innerHTML = myData.phone;
-          // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
+      document.getElementById("user").innerHTML = "Welcome, " + myData.name;
+      document.getElementById("avatar").innerHTML = '<img src=\'' + myData.profileImage + '\' class="avatarimg" id="avatarimg">'
+      document.getElementById("accounttd").innerHTML = myData.phone;
+      // document.getElementById("bookingtd").innerHTML = myData.bookingCount;
 
-      }
+    }
   }).catch(function (error) {
-      console.log("got an error" + error);
+    console.log("got an error" + error);
   })
 };
 
@@ -72,8 +73,8 @@ function myfunc(email_id) {
       console.log(email);
 
       (function () {
-   
-        
+
+
         function updateProfile() {
           document.getElementById("singlePage").innerHTML =
             '<div class="updateProfile"><h3>Update Profile Picture</h3><div class="form-group"><label for="exampleFormControlFile1">Select Profile Photo</label><input type="file" class="form-control-file" accept="image/*" id="photo"></div><button class="btn btn-primary" onclick="uploadImage(\'' + email_id + '\')">Upload Image</button><p><img id="output" width="200" /></p></div>';
@@ -81,8 +82,7 @@ function myfunc(email_id) {
 
         function wallet() {
           myData.myReferral == null || myData.myReferral == "" ? document.getElementById("singlePage").innerHTML =
-            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p class="referralbutton" id="code"><button class="btn btn-lg btn-primary btn-block" id="referralfunc" onclick="referralfunc(\'' + email_id+'\')" type="button">Get Referral Code</button></p></a><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> \'' + myData.mywalletmoney + '\'</p><p class="amountText">AR Rental Balance</p></div></div></div>' 
-            : 
+            '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p class="referralbutton" id="code"><button class="btn btn-lg btn-primary btn-block" id="referralfunc" onclick="referralfunc(\'' + email_id + '\')" type="button">Get Referral Code</button></p></a><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> \'' + myData.mywalletmoney + '\'</p><p class="amountText">AR Rental Balance</p></div></div></div>' :
             document.getElementById("singlePage").innerHTML =
             '<div class="wallet"> <img src="../assets/refer.png" alt="Refer&Earn"><div class="referPara"><p class="text-center">Refer your friends and get Rs 50 in your AR Rental Car wallet, when your friend signup and completes his/her ride using your referral code.</p></div><div class="row"><div class="col-md-6 text-center"><p id="code">' + myData.myReferral + '</p><p class="codeText">Your Referral Code</p></div><div class="col-md-6 text-center"><p id="amount"> ' + myData.mywalletmoney + '\</p><p class="amountText">AR Rental Balance</p></div></div></div>';
         }
@@ -93,8 +93,16 @@ function myfunc(email_id) {
         }
 
         function updatePassword() {
-          document.getElementById("singlePage").innerHTML =
-            '<div class="updatePassword"> <label for="oldPassword">Old Password</label> <input type="password" id="oldPassword" class="form-control" aria-describedby="passwordHelpBlock"> <small id="passwordHelpBlock" class="form-text text-muted"> Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. </small> <label for="newPassword">New Password</label> <input type="password" id="newPassword" class="form-control"> <button type="submit" class="btn btn-primary" onclick="updatepass()">Update Password</button></div>';
+
+          firestore.collection("users").doc(email_id).get().then(function (doc) {
+            if (doc && doc.exists) {
+              const myData = doc.data();
+              window.verified = myData.verified;
+              console.log(myData.verified);
+            }
+          });
+          document.getElementById("singlePage").innerHTML = (verified == "no" ? '<div class="referPara"><p class="text-center">Please Verify your ID from our Android App <span style="color:orange">AR_CarRental</span><br>By submitting your Aadhar card and Driving License<br>*Physical copy of Aadhar card and Driving License is <br>required when coming to recieve the car at fleet</p></div>' :
+            '<div class="wallet"> <img src="../assets/verified.png" alt="verified"><div class="referPara"><p class="text-center">Hooray ! Your ID is verified and you <br> are eligible for bookings</p><p>*Physical copy of Aadhar card and Driving License is <br>required when coming to recieve the car at fleet</p></div></div>');
         }
 
         document

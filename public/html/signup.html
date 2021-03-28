@@ -69,24 +69,14 @@
       </div>
     </nav>
   </header>
-  <form>
-    <input type="text" id="number" placeholder="+923********">
-    <div id="recaptcha-container"></div>
-    <button type="button" onclick="phoneAuth();">SendCode</button>
-  </form><br>
-  <h1>Enter Verification code</h1>
-  <form>
-    <input type="text" id="verificationCode" placeholder="Enter verification code">
-    <button type="button" onclick="codeverify();">Verify code</button>
+ 
+ 
 
-  </form>
-
-  <section>
-
+  <section id="signupid" class="signup">
     <div class="signupform">
       <div class="middiv form-signin">
-        <form class="form-signin" id="demo-form" method="POST">
-          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        <form class="form-signin">
+
           <div class="text-center signuplogo">
             <h1 class="h3 font-weight-bold">
 
@@ -98,15 +88,16 @@
 
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/id.png" width="25" /> -->
-              <input type="text" class="form-control" placeholder="Name" required autofocus />
+              <input type="text" id="name" class="form-control" placeholder="Name" required autofocus />
               <label for="input">Name</label>
             </div>
 
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/call.png" width="25" /> -->
 
-              <input type="number" class="form-control" placeholder="Mobile" required />
+              <input type="text" id="number" placeholder="+91********" class="form-control" required />
               <label for="input">Mobile Number</label>
+              <div id="recaptcha-container"></div>
             </div>
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/mail.png" width="25" /> -->
@@ -125,8 +116,14 @@
             <div class="form-label-group fake-input">
               <!-- <img src="../assets/city.png" width="25" /> -->
 
-              <input type="text" class="form-control" placeholder="City" required autofocus>
+              <input type="text" id="city" class="form-control" placeholder="City" required autofocus>
               <label for="input">City</label>
+            </div>
+            <div class="form-label-group fake-input">
+              <!-- <img src="../assets/city.png" width="25" /> -->
+
+              <input type="text" id="referral" class="form-control" placeholder="Referral" required autofocus>
+              <label for="input">Referral</label>
             </div>
 
             <div class="signin">
@@ -142,9 +139,8 @@
                         </label>
                     </div> -->
 
-          <button data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'
-            class="g-recaptcha btn btn-lg btn-primary btn-block" id="" type="submit"
-            onclick="recaptchaVerifierInvisible()">Sign Up</button>
+          <button class="g-recaptcha btn btn-lg btn-primary btn-block" id="" type="button" onclick="phoneAuth();">Sign
+            Up</button>
 
         </form>
       </div>
@@ -154,6 +150,40 @@
 
     </div>
 
+  </section>
+  <section  id="otpid">
+    <div class="signupform">
+      <div class="middiv">
+        <form class="form-signin">
+          <div class="text-center signuplogo">
+            <h1 class="h3 font-weight-bold">
+              <img src="../assets/signup.png" srcset="" width="15%" />
+              Sign Up
+            </h1>
+          </div>
+          <div class="otp">
+            <p>Enter otp sent to your registered mobile number</p>
+          </div>
+          <div class="signuptextfields">
+            <div class="form-label-group fake-input">
+              <!-- <img src="../assets/id.png" width="25" /> -->
+              <input id="verificationCode"
+                type="text"
+                class="form-control"
+                placeholder="Otp"
+                required
+                autofocus
+              />
+              <label for="inputEmail">Enter otp</label>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="button" onclick="codeverify();">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <div></div>
   </section>
 
   <section class="becomepartner">
