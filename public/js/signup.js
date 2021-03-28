@@ -58,107 +58,36 @@ function signUpWithEmailPassword() {
   // [END auth_signup_password]
 }
 // Mask the global 'window' for this snippet file
-  
-const window1 = {
-  recaptchaVerifier: undefined
+window.onload=function () {
+  render();
 };
-
-function recaptchaVerifierInvisible() {
-  function onSignInSubmit() {
-    // TODO(you): Implement
-  }
-
-  // [START auth_phone_recaptcha_verifier_invisible]
-  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-    'size': 'invisible',
-    'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-      onSignInSubmit();
-    }
-  });
-  // [END auth_phone_recaptcha_verifier_invisible]
+function render() {
+    window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    recaptchaVerifier.render();
 }
-
-function recaptchaVerifierVisible() {
-  // [START auth_phone_recaptcha_verifier_visible]
-  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-    'size': 'normal',
-    'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-      // ...
-    },
-    'expired-callback': () => {
-      // Response expired. Ask user to solve reCAPTCHA again.
-      // ...
-    }
-  });
-  // [END auth_phone_recaptcha_verifier_visible]
+function phoneAuth() {
+    //get the number
+    var number=document.getElementById('number').value;
+    //phone number authentication function of firebase
+    //it takes two parameter first one is number,,,second one is recaptcha
+    firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
+        //s is in lowercase
+        window.confirmationResult=confirmationResult;
+        coderesult=confirmationResult;
+        console.log(coderesult);
+        alert("Message sent");
+    }).catch(function (error) {
+      console.log(error);
+        alert(error.message);
+    });
 }
-
-function recaptchaVerifierSimple() {
-  // [START auth_phone_recaptcha_verifier_simple]
-  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-  // [END auth_phone_recaptcha_verifier_simple]
-}
-
-function recaptchaRender() {
-  /** @type {firebase.auth.RecaptchaVerifier} */
-  const recaptchaVerifier = window1.recaptchaVerifier;
-
-  // [START auth_phone_recaptcha_render]
-  recaptchaVerifier.render().then((widgetId) => {
-    window1.recaptchaWidgetId = widgetId;
-  });
-  // [END auth_phone_recaptcha_render]
-}
-
-function phoneSignIn() {
-  function getPhoneNumberFromUserInput() {
-    return "+15558675309";
-  }
-
-  // [START auth_phone_signin]
-  const phoneNumber = getPhoneNumberFromUserInput();
-  const appVerifier = window1.recaptchaVerifier;
-  firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
-      .then((confirmationResult) => {
-        // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        window1.confirmationResult = confirmationResult;
-        // ...
-      }).catch((error) => {
-        // Error; SMS not sent
-        // ...
-      });
-  // [END auth_phone_signin]
-}
-
-function verifyCode() {
-  function getCodeFromUserInput() {
-    return "1234";
-  }
-
-  /** @type {firebase.auth.ConfirmationResult} */
-  const confirmationResult = undefined;
-
-  // [START auth_phone_verify_code]
-  const code = getCodeFromUserInput();
-  confirmationResult.confirm(code).then((result) => {
-    // User signed in successfully.
-    const user = result.user;
-    // ...
-  }).catch((error) => {
-    // User couldn't sign in (bad verification code?)
-    // ...
-  });
-  // [END auth_phone_verify_code]
-}
-
-function getRecaptchaResponse() {
-  const recaptchaWidgetId = "...";
-  const grecaptcha = {};
-
-  // [START auth_get_recaptcha_response]
-  const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
-  // [END auth_get_recaptcha_response]
+function codeverify() {
+    var code=document.getElementById('verificationCode').value;
+    coderesult.confirm(code).then(function (result) {
+        alert("Successfully registered");
+        var user=result.user;
+        console.log(user);
+    }).catch(function (error) {
+        alert(error.message);
+    });
 }
