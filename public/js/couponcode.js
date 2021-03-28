@@ -47,7 +47,7 @@ async function bookcar(e) {
         "amount": (netpayable - parseInt(Coupon) - walletcharge) * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency": "INR",
         "name": "AR Rental Car",
-        "description": "Wallet Charge - " + walletcharge,
+        "description": "Wallet Charge Deducted (-₹"+ walletcharge+")",
         // "image": "https://example.com/your_logo",
         // "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
         "handler": async function (response) {
@@ -152,14 +152,15 @@ async function bookcar(e) {
         }
     };
     var rzp1 = new Razorpay(options);
-    rzp1.on('payment.failed', function (response) {
-        alert(response.error.code);
-        alert(response.error.description);
-        alert(response.error.source);
-        alert(response.error.step);
-        alert(response.error.reason);
-        alert(response.error.metadata.order_id);
-        alert(response.error.metadata.payment_id);
+    rzp1.on('payment.failed', function (response){
+            // alert(response.error.code);
+            // alert(response.error.description);
+            // alert(response.error.source);
+            // alert(response.error.step);
+            // alert(response.error.reason);
+            // alert(response.error.metadata.order_id);
+            // alert(response.error.metadata.payment_id);
+            window.location.href = "failurePage.html";
     });
 
     rzp1.open();
