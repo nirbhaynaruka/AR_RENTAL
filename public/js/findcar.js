@@ -24,6 +24,14 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 window.onload = function () {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            var user = firebase.auth().currentUser;
+            if (user != null) {
+                window.email_id = user.email_id;
+            }
+        }
+    });
     var params = {};
     var pa = window.location.href.split('?')[1].split('&');
     for (var i in pa) {
@@ -57,7 +65,7 @@ window.onload = function () {
     console.log(d);
     var hr = (d - p);
     var h = parseFloat(hr / 3600000).toPrecision(3);
-    console.log(h);
+    console.log(email_id);
     h >= 6 ? firestore.collection("Cars").where("city", "==", city)
         .get()
         .then((querySnapshot) => {
@@ -66,10 +74,10 @@ window.onload = function () {
                 div.className = 'section';
                 doc.data().packageType == "Base" ? (km = ' 120 Free KMs <span> ₹' + doc.data().excessKM + '/excess KM </span>') : (km = 'Unlimited Free KMs');
                 doc.data().status == "Available" ?
-                    div.innerHTML = '<div class="section-center"><div class="container"><div class="search-car"><div class="row"><div class="col-md-4 car-image"> <img src="' + doc.data().carImageURL + '\" alt="" srcset=""></div><div class="col-md-5 car-details"><h3>' + doc.data().companyName+'<span class="text-uppercase">'+ doc.data().modelName + '</span>\</h3><h5>₹' + Math.ceil(h*doc.data().amount_hr) + '\</h5><p>' + km + '</p><ul><li><img src="../assets/type.png" width="25%">' + doc.data().transmission + '\</li><li><img src="../assets/petrol.png" width="25%">' + doc.data().type + '\</li><li><img src="../assets/seat.png" width="25%">' + doc.data().seats + '\ Seats</li></ul></div><div class="col-md-3 button-search"> <button type="submit" class="btn btn-primary" onclick="bookcar(\''+  doc.data().carID.toString()+'\',\''+h+'\',\'' +p+'\',\''+d+'\',\''+city+'\')">Rent This Car</button></div></div></div></div></div>'
-
-                    :
-                    div.innerHTML = '<div class="section-center"><div class="container"><div class="search-car"><div class="row"><div class="col-md-4 car-image"> <img src="' + doc.data().carImageURL + '\" alt="" srcset=""></div><div class="col-md-5 car-details"><h3>' + doc.data().companyName +'<span class="text-uppercase">'+ doc.data().modelName + '</span>\</h3><h5>₹' + Math.ceil(h*doc.data().amount_hr) + '\</h5><p>' + km + '</p><ul><li><img src="../assets/type.png" width="25%">' + doc.data().transmission + '\</li><li><img src="../assets/petrol.png" width="25%">' + doc.data().type + '\</li><li><img src="../assets/seat.png" width="25%">' + doc.data().seats + '\ Seats</li></ul></div><div class="col-md-3 button-search"> <button type="disabled" class="btn">Unavailable</button></div></div></div></div></div>';
+                    (email_id == "none" ? div.innerHTML = '<div class="section-center"><div class="container"><div class="search-car"><div class="row"><div class="col-md-4 car-image"> <img src="' + doc.data().carImageURL + '\" alt="" srcset=""></div><div class="col-md-5 car-details"><h3>' + doc.data().companyName + '<span class="text-uppercase">' + doc.data().modelName + '</span>\</h3><h5>₹' + Math.ceil(h * doc.data().amount_hr) + '\</h5><p>' + km + '</p><ul><li><img src="../assets/type.png" width="25%">' + doc.data().transmission + '\</li><li><img src="../assets/petrol.png" width="25%">' + doc.data().type + '\</li><li><img src="../assets/seat.png" width="25%">' + doc.data().seats + '\ Seats</li></ul></div><div class="col-md-3 button-search"> <a href="signin.html"><button type="submit" class="btn btn-primary" >Log In to rent</button></a></div></div></div></div></div>' :
+                        div.innerHTML = '<div class="section-center"><div class="container"><div class="search-car"><div class="row"><div class="col-md-4 car-image"> <img src="' + doc.data().carImageURL + '\" alt="" srcset=""></div><div class="col-md-5 car-details"><h3>' + doc.data().companyName + '<span class="text-uppercase">' + doc.data().modelName + '</span>\</h3><h5>₹' + Math.ceil(h * doc.data().amount_hr) + '\</h5><p>' + km + '</p><ul><li><img src="../assets/type.png" width="25%">' + doc.data().transmission + '\</li><li><img src="../assets/petrol.png" width="25%">' + doc.data().type + '\</li><li><img src="../assets/seat.png" width="25%">' + doc.data().seats + '\ Seats</li></ul></div><div class="col-md-3 button-search"> <button type="submit" class="btn btn-primary" onclick="bookcar(\'' + doc.data().carID.toString() + '\',\'' + h + '\',\'' + p + '\',\'' + d + '\',\'' + city + '\')">Rent This Car</button></div></div></div></div></div>'
+                    ) :
+                    div.innerHTML = '<div class="section-center"><div class="container"><div class="search-car"><div class="row"><div class="col-md-4 car-image"> <img src="' + doc.data().carImageURL + '\" alt="" srcset=""></div><div class="col-md-5 car-details"><h3>' + doc.data().companyName + '<span class="text-uppercase">' + doc.data().modelName + '</span>\</h3><h5>₹' + Math.ceil(h * doc.data().amount_hr) + '\</h5><p>' + km + '</p><ul><li><img src="../assets/type.png" width="25%">' + doc.data().transmission + '\</li><li><img src="../assets/petrol.png" width="25%">' + doc.data().type + '\</li><li><img src="../assets/seat.png" width="25%">' + doc.data().seats + '\ Seats</li></ul></div><div class="col-md-3 button-search"> <button type="disabled" class="btn">Unavailable</button></div></div></div></div></div>';
                 document.getElementById('AllCars').appendChild(div);
 
 
@@ -79,8 +87,8 @@ window.onload = function () {
         .catch((error) => {
             console.log("Error getting documents: ", error);
         }) : (
-            
-        document.getElementById('invaliddetails').innerHTML = '<div><h1>Select Valid Date and Time </h1><br> <span style="color:grey">Select atleast 6 hr of journey time</span></div>'
+
+            document.getElementById('invaliddetails').innerHTML = '<div><h1>Select Valid Date and Time </h1><br> <span style="color:grey">Select atleast 6 hr of journey time</span></div>'
         );
 
 }
