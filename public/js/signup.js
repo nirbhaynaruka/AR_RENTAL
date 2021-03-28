@@ -58,8 +58,10 @@ function signUpWithEmailPassword() {
   // [END auth_signup_password]
 }
 // Mask the global 'window' for this snippet file
-
-
+  
+const window1 = {
+  recaptchaVerifier: undefined
+};
 
 function recaptchaVerifierInvisible() {
   function onSignInSubmit() {
@@ -67,7 +69,7 @@ function recaptchaVerifierInvisible() {
   }
 
   // [START auth_phone_recaptcha_verifier_invisible]
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
     'size': 'invisible',
     'callback': (response) => {
       // reCAPTCHA solved, allow signInWithPhoneNumber.
@@ -79,7 +81,7 @@ function recaptchaVerifierInvisible() {
 
 function recaptchaVerifierVisible() {
   // [START auth_phone_recaptcha_verifier_visible]
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
     'size': 'normal',
     'callback': (response) => {
       // reCAPTCHA solved, allow signInWithPhoneNumber.
@@ -95,17 +97,17 @@ function recaptchaVerifierVisible() {
 
 function recaptchaVerifierSimple() {
   // [START auth_phone_recaptcha_verifier_simple]
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+  window1.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
   // [END auth_phone_recaptcha_verifier_simple]
 }
 
 function recaptchaRender() {
   /** @type {firebase.auth.RecaptchaVerifier} */
-  const recaptchaVerifier = window.recaptchaVerifier;
+  const recaptchaVerifier = window1.recaptchaVerifier;
 
   // [START auth_phone_recaptcha_render]
   recaptchaVerifier.render().then((widgetId) => {
-    window.recaptchaWidgetId = widgetId;
+    window1.recaptchaWidgetId = widgetId;
   });
   // [END auth_phone_recaptcha_render]
 }
@@ -117,12 +119,12 @@ function phoneSignIn() {
 
   // [START auth_phone_signin]
   const phoneNumber = getPhoneNumberFromUserInput();
-  const appVerifier = window.recaptchaVerifier;
+  const appVerifier = window1.recaptchaVerifier;
   firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
       .then((confirmationResult) => {
         // SMS sent. Prompt user to type the code from the message, then sign the
         // user in with confirmationResult.confirm(code).
-        window.confirmationResult = confirmationResult;
+        window1.confirmationResult = confirmationResult;
         // ...
       }).catch((error) => {
         // Error; SMS not sent
