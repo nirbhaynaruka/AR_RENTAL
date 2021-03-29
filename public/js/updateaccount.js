@@ -54,7 +54,17 @@ function uploadImage(email_id) {
     task
         .then(snapshot => snapshot.ref.getDownloadURL())
         .then(url => {
-            window.location.href = "account.html";
+            firestore.collection("users").doc(email_id).update({
+                "profileImage": url,
+            })
+            .then(() => {
+                window.location.href = "account.html";
+                console.log("Document successfully written!");
+            })
+            .catch((error) => {
+                console.error("Error writing document: ", error);
+            });
+            z
         })
         .catch(console.error);
 }

@@ -1,4 +1,3 @@
-
 var firebaseConfig = {
   apiKey: "AIzaSyCSrz_WzvNeSyb5KinqgPbOdFOKIdjoSXg",
   authDomain: "ar-carrental.firebaseapp.com",
@@ -13,20 +12,8 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    window.location.href = "home.html";
-    // User is signed in.
+    // window.location.href = "home.html";
 
-    //   document.getElementById("user_div").style.display = "block";
-    //   document.getElementById("login_div").style.display = "none";
-
-    //   var user = firebase.auth().currentUser;
-
-    //   if(user != null){
-
-    //     var email_id = user.email;
-    //     document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
-    //   }
 
   } else {
     // No user is signed in.
@@ -37,126 +24,105 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
-function signUpWithEmailPassword() {
 
 
-  var email = document.getElementById("email_field").value;
-  var password = document.getElementById("password_field").value;
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in 
-      var user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+// function signUpWithEmailPassword() {
 
-      window.alert("Error : " + errorMessage);
-      // ..
-    });
-  // [END auth_signup_password]
-}
+
+//   var email = document.getElementById("email_field").value;
+//   var password = document.getElementById("password_field").value;
+//   var number = document.getElementById('number').value;
+
+//   firebase.auth().createUserWithEmailAndPassword(email, password)
+//     .then((userCredential) => {
+//       var user = userCredential.user;
+//       console.log("email done...");
+//       document.getElementById("otpid").style.display = "block";
+//       document.getElementById("signupid").style.display = "none";
+//       phoneAuth(number);
+//       // ...
+//     })
+//     .catch((error) => {
+//       var errorCode = error.code;
+//       var errorMessage = error.message;
+
+//       window.alert("Error : " + errorMessage);
+//       // ..
+//     });
+//   // [END auth_signup_password]
+// }
 // Mask the global 'window' for this snippet file
+window.onload = function () {
+  render();
+};
 
-
-
-function recaptchaVerifierInvisible() {
-  function onSignInSubmit() {
-    // TODO(you): Implement
-  }
-
-  // [START auth_phone_recaptcha_verifier_invisible]
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-    'size': 'invisible',
-    'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-      onSignInSubmit();
-    }
-  });
-  // [END auth_phone_recaptcha_verifier_invisible]
-}
-
-function recaptchaVerifierVisible() {
-  // [START auth_phone_recaptcha_verifier_visible]
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-    'size': 'normal',
-    'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-      // ...
-    },
-    'expired-callback': () => {
-      // Response expired. Ask user to solve reCAPTCHA again.
-      // ...
-    }
-  });
-  // [END auth_phone_recaptcha_verifier_visible]
-}
-
-function recaptchaVerifierSimple() {
-  // [START auth_phone_recaptcha_verifier_simple]
+function render() {
   window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-  // [END auth_phone_recaptcha_verifier_simple]
+  recaptchaVerifier.render();
 }
 
-function recaptchaRender() {
-  /** @type {firebase.auth.RecaptchaVerifier} */
-  const recaptchaVerifier = window.recaptchaVerifier;
+function phoneAuth() {
+  //get the number
+  console.log("number start...");
+  var number = document.getElementById('number').value;
 
-  // [START auth_phone_recaptcha_render]
-  recaptchaVerifier.render().then((widgetId) => {
-    window.recaptchaWidgetId = widgetId;
+  firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
+
+    window.confirmationResult = confirmationResult;
+    coderesult = confirmationResult;
+    console.log(coderesult);
+    alert("Message sent");
+    document.getElementById("otpid").style.display = "block";
+    document.getElementById("signupid").style.display = "none";
+  }).catch(function (error) {
+    console.log(error);
+    alert(error.message);
   });
-  // [END auth_phone_recaptcha_render]
 }
 
-function phoneSignIn() {
-  function getPhoneNumberFromUserInput() {
-    return "+15558675309";
-  }
+function codeverify() {
+  var code = document.getElementById('verificationCode').value;
+  var name = document.getElementById('name').value;
+  var city = document.getElementById('city').value;
+  var referral = document.getElementById('referral').value;
+  var phone = document.getElementById('number').value;
+  // var myReferral;
+  console.log(code + ".....");
 
-  // [START auth_phone_signin]
-  const phoneNumber = getPhoneNumberFromUserInput();
-  const appVerifier = window.recaptchaVerifier;
-  firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
-      .then((confirmationResult) => {
-        // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        window.confirmationResult = confirmationResult;
-        // ...
+  coderesult.confirm(code).then(function (result) {
+    var email = document.getElementById("email_field").value;
+    var password = document.getElementById("password_field").value;
+    console.log(email);
+    var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+    firebase.auth().currentUser.linkWithCredential(credential)
+      .then((usercred) => {
+        var user = usercred.user;
+        firebase.firestore().collection("users").doc(email).set({
+            "email": email,
+            "name": name,
+            "city": city,
+            "referral": referral,
+            "phone": phone, //+_phoneTextEditingController.text.trim(),
+            "verified": "no",
+            "bookingCount": 0,
+            "userLevel": "Basic",
+            "profileImage": "null",
+            "mywalletmoney": 0,
+            "referralused": 0,
+            "myReferral": "",
+          })
+          .then(() => {
+            window.location.href = "account.html";
+            console.log("Document successfully written!");
+          })
+          .catch((error) => {
+            console.error("Error writing document: ", error);
+          });
+        console.log("Account linking success", user);
       }).catch((error) => {
-        // Error; SMS not sent
-        // ...
+        console.log("Account linking error", error);
       });
-  // [END auth_phone_signin]
-}
-
-function verifyCode() {
-  function getCodeFromUserInput() {
-    return "1234";
-  }
-
-  /** @type {firebase.auth.ConfirmationResult} */
-  const confirmationResult = undefined;
-
-  // [START auth_phone_verify_code]
-  const code = getCodeFromUserInput();
-  confirmationResult.confirm(code).then((result) => {
-    // User signed in successfully.
-    const user = result.user;
-    // ...
-  }).catch((error) => {
-    // User couldn't sign in (bad verification code?)
-    // ...
+  }).catch(function (error) {
+    alert(error.message);
   });
-  // [END auth_phone_verify_code]
-}
-
-function getRecaptchaResponse() {
-  const recaptchaWidgetId = "...";
-  const grecaptcha = {};
-
-  // [START auth_get_recaptcha_response]
-  const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
-  // [END auth_get_recaptcha_response]
 }

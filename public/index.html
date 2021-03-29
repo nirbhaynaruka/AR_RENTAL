@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-  crossorigin="anonymous" />
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
   <!-- <link rel="stylesheet" href="style.css" /> -->
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/fixed.css" />
@@ -81,9 +81,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top headercover trans">
 
-      <a class="navbar-brand" href="#"
-      ><img src="assets/Group 1.png" alt="logo" srcset="" width="25%"
-    /></a>
+      <a class="navbar-brand" href="#"><img src="assets/Group 1.png" alt="logo" srcset="" width="25%" /></a>
 
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,7 +112,8 @@
           </li>
            -->
           <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14  trans" id="account" href="html/signup.html">Sign Up</a>
+            <a class="nav-link text-center text-uppercase font-14  trans" id="account" href="html/signup.html">Sign
+              Up</a>
           </li>
           <!-- <li class="nav-item"> <a class="nav-link text-uppercase font-14 text-white trans text-center"
               href="about.html">About</a> </li>
@@ -171,26 +170,31 @@
       <div class="section-center">
         <div class="container">
           <div class="booking-form">
-            <form>
+            <form action="html/findCar.html" method="GET">
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input class="form-control" type="date" required />
+                    <input class="form-control" min="2021-03-23" type="date" id="pickup-date" name="pickupDate"
+                      required />
                     <span class="form-label">Pick-Up Date</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input class="form-control" type="time" required />
+                    <input type="time" class="form-control" name="pickupTime" id="pickup-time" required />
                     <span class="form-label">Pick-Up Time</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <select class="form-control">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
+                    <select class="form-control text-uppercase" name="city">
+                      <option value="JAIPUR">JAIPUR</option>
+                      <option value="CHIRAWA">CHIRAWA</option>
+                      <option value="SIKAR">SIKAR</option>
+                      <option value="JHUNJHUNU">JHUNJHUNU</option>
+                      <option value="PILANI">PILANI</option>
+                      <option value="GUDHA">GUDHA</option>
+                      <option value="NAWALGARH">NAWALGARH</option>
                     </select>
                     <span class="select-arrow"></span>
                     <span class="form-label">Select City</span>
@@ -200,19 +204,21 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input class="form-control" type="date" required />
+                    <input class="form-control" type="date" id="drop-date" name="dropDate" required />
                     <span class="form-label">Drop-Off Date</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input class="form-control" type="time" required />
+                    <input class="form-control" type="time" id="drop-time" name="dropTime" required />
                     <span class="form-label">Drop-Off Time</span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-btn">
-                    <button class="submit-btn">Check availability</button>
+                    <button class="submit-btn">
+                      Check availability
+                    </button>
                   </div>
                 </div>
               </div>
@@ -429,7 +435,7 @@
   <!-- become partner -->
   <section class="becomepartner">
     <div class="row">
-      
+
       <div class="col-md-4">
         <div class="partnerdiv">
           <img class="partnerimage" src="assets/Join us.png" />
@@ -442,8 +448,8 @@
         </div>
         <div class="partnerbutton">
           <a href="html/partner.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
-            Become Partner
-          </button></a>
+              Become Partner
+            </button></a>
         </div>
       </div>
     </div>
@@ -495,7 +501,7 @@
               <a href="html/disclaimer.html" class="text-white">Disclaimer</a>
             </li>
           </ul>
-  
+
           <br /><br />
           <h5 class="text-uppercase">NEWSLETTER</h5>
           <hr />
@@ -565,18 +571,18 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
- 
+
   <!-- <script src="index.js"></script> -->
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
   <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-  
+
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
-  
+
   <script>
     // document.addEventListener('DOMContentLoaded', function () {
     //   const loadEl = document.querySelector('#load');
@@ -600,18 +606,40 @@
     //   }
     // });
   </script>
-  
-<script>
-  function myFunction(x) {
-    x.classList.toggle("change");
-  }
+
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
   </script>
 
-      <script>
-        
-        </script>
-  <script src="js/index.js"></script>
+  <script>
+    window.onload  = function formDate() {
+      var hours = new Date().getHours();
+      var minutes = new Date().getMinutes();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      // hours = hours % 12;
+      // hours = hours ? hours : 12; 
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      const formatYmd = date => date.toISOString().slice(0, 10);
+      var dateControl = document.querySelector('input[type="time"]');
+      dateControl.value = hours + ":" + minutes;
+      // dateControl.min = hours + ":" + minutes;
+      var dateControl1 = document.querySelector('input[type="date"]');
+      dateControl1.value = formatYmd(new Date());
+      dateControl1.min = formatYmd(new Date());
+      document.getElementById('drop-date').valueAsDate = new Date(new Date().getFullYear(), new Date().getMonth(),
+        new Date().getDate() + 2);
+      var dropdate = document.getElementById('drop-date');
+      dropdate.min = formatYmd(new Date());
+      var droptime = document.getElementById('drop-time');
+      droptime.value = hours + ":" + minutes;
+
+    }
+  </script>
   <script src="js/fixed.js"></script>
+  <script src="js/index.js"></script>
 
   <!-- <script src="/__/firebase/6.1.1/firebase-firestore.js"></script> -->
 </body>
