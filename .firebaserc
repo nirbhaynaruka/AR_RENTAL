@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "ar-carrental"
+  },
+  "targets": {
+    "ar-carrental": {
+      "hosting": {
+        "staging": [
+          "staging-lzz-personalblog"
+        ],
+        "main": [
+          "ar-rentalcars"
+        ]
+      }
+    }
   }
 }
