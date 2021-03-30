@@ -53,6 +53,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 // }
 // Mask the global 'window' for this snippet file
 window.onload = function () {
+  document.getElementById("otpid").style.display = "none";
   render();
 };
 
@@ -64,7 +65,7 @@ function render() {
 function phoneAuth() {
   //get the number
   console.log("number start...");
-  var number = document.getElementById('number').value;
+  var number = "+91"+document.getElementById('number').value;
 
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
 
