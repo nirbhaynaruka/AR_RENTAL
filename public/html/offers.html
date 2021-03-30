@@ -1,214 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Rental Car</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/logo for footer.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/fixed.css" />
+    <link rel="stylesheet" href="../css/offers.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AR_CarRental</title>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top headercover trans">
+        <a class="navbar-brand" href="home.html"
+          ><img src="../assets/Group 1.png" alt="logo" srcset=""
+        /></a>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/fixed.css" />
-  <link rel="stylesheet" href="../css/offers.css" />
-</head>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="nav_tog" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-md fixed-top headercover trans">
-      <a class="navbar-brand" href="home.html"><img src="../assets/Group 1.png" alt="logo" srcset="" width="25%" /></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-center trans" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center trans" href="offers.html"
+                >Offers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center trans" href="tarrif.html"
+                >Tarrif</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center trans" href="contact_us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center trans"
+                href="#"
+                id="myBookings"
+              ></a>
+            </li>
 
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-        <div class="nav_tog" onclick="myFunction(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center trans"
+                id="signup"
+                href="signup.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+          <a href="signin.html" class="signIn_btn" id="signin">
+            <button
+              class="btn btn-primary my-2 my-sm-0"
+              id="logout"
+              type="button"
+            >
+              Sign In
+            </button>
+          </a>
         </div>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 trans" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 trans" href="offers.html">Offers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 trans" href="tarrif.html">Tarrif</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 trans" href="contact_us.html">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14  trans" href="#" id="myBookings"></a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link text-center text-uppercase font-14 trans" id="signup" href="signup.html">Sign Up</a>
-          </li>
-        </ul>
-        <a href="signin.html" class="signIn_btn" id="signin">
-          <button class="btn btn-primary my-2 my-sm-0" id="logout" type="button">
-            Sign In
-          </button>
-        </a>
+      </nav>
+    </header>
+    <!-- Header -->
+    <!-- Main Body -->
+    <section class="container offers-page">
+      <div class="heading">
+        <h1>Offers</h1>
       </div>
-    </nav>
-  </header>
-  <!-- Header -->
-  <!-- Main Body -->
-  <section class="container offers-page">
-    <div class="heading">
-      <h1>Offers</h1>
-    </div>
-    <!-- <div class="offers">
+      <!-- <div class="offers">
       <img src="../assets/offers.png" alt="" srcset="">
     </div> -->
-  </section> 
+    </section>
 
-  <section class="Carousels container-fluid">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" id="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../assets/offers.png" class="d-block w-100" alt="..." />
+    <section class="Carousels container-fluid">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" id="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/offers.png" class="d-block" alt="..." />
+          </div>
         </div>
-       
+        
       </div>
-      <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a> -->
-     </div>
-  </section>
- 
-  <!-- Testimonials -->
-  <section class="testimonial_bg">
-    <div class="testimonial_heading text-center">
-      <h3 class="text-uppercase">why we are best in class</h3>
-      <h1>Testimonials</h1>
-    </div>
-    <div class="testimonial-container">
-      <div class="testiSlide">
-        <div>
-          <figure class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-              <!-- <div class="btn"></div> -->
-            </blockquote>
-            <img src="https://pbs.twimg.com/profile_images/829191018331385858/jxsj-ZmD.jpg" alt="Maksim Goffin" />
-            <div class="peopl">
-              <h3>Neil Patel</h3>
-              <p class="indentity">SEO Expert</p>
-            </div>
-          </figure>
-        </div>
+    </section>
 
-        <div>
-          <figure class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-              <!-- <div class="btn"></div> -->
-            </blockquote>
-            <img src="https://secure.gravatar.com/avatar/24a495e3a7316e619af62445f1a86886?s=96&d=mm&r=g"
-              alt="Maksim Goffin" />
-            <div class="peopl">
-              <h3>Shaan</h3>
-              <p class="indentity">Web Developer</p>
-            </div>
-          </figure>
-        </div>
+    <!-- Testimonials -->
+    <section class="testimonial_bg">
+      <div class="testimonial_heading text-center">
+        <h3 class="text-uppercase">why we are best in class</h3>
+        <h1>Testimonials</h1>
+      </div>
+      <div class="testimonial-container">
+        <div class="testiSlide">
+          <div>
+            <figure class="testimonial">
+              <blockquote>
+                Highly recommended. Very useful even during corona lockdown
+                great offer always, excellent, best price, and good quality
+                cars.
+                <!-- <div class="btn"></div> -->
+              </blockquote>
+              <img src="../assets/amit.png" alt="Amit Jangir" />
+              <div class="peopl">
+                <h3>Amit Jangir</h3>
+                <p class="indentity">Customer</p>
+              </div>
+            </figure>
+          </div>
 
-        <div>
-          <figure class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-              <!-- <div class="btn"></div> -->
-            </blockquote>
-            <img src="https://yt3.ggpht.com/a/AGF-l7_ESQtd3r7nPdFdP_mmyxn65RFy9JlGT0dGyA=s900-mo-c-c0xffffffff-rj-k-no"
-              alt="Maksim Goffin" />
-            <div class="peopl">
-              <h3>Brian Dean</h3>
-              <p class="indentity">SEO / Blogger</p>
-            </div>
-          </figure>
-        </div>
+          <div>
+            <figure class="testimonial">
+              <blockquote>
+                Always love to suggest this wonderful app to people who wants to
+                travel in side or outside of city bye car, well done guys.
+                <!-- <div class="btn"></div> -->
+              </blockquote>
+              <img src="../assets/amrita.png" alt="Amrita" />
+              <div class="peopl">
+                <h3>Amrita Chaudhary</h3>
+                <p class="indentity">Customer</p>
+              </div>
+            </figure>
+          </div>
 
-        <div>
-          <figure class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-              <!-- <div class="btn"></div> -->
-            </blockquote>
-            <img src="https://design.sva.edu/wp-content/uploads/2018/08/Sagmeister.jpg" alt="Maksim Goffin" />
-            <div class="peopl">
-              <h3>Stefan Sagmeister</h3>
-              <p class="indentity">Graphic Designer</p>
-            </div>
-          </figure>
+          <div>
+            <figure class="testimonial">
+              <blockquote>
+                Very good service , relatively cheap compared to other platforms
+                , cars was good in quality and on time delivery.
+                <!-- <div class="btn"></div> -->
+              </blockquote>
+              <img src="../assets/devesh.png" alt="Devesh" />
+              <div class="peopl">
+                <h3>Devesh Singh</h3>
+                <p class="indentity">Customer</p>
+              </div>
+            </figure>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- become partner -->
-  <section class="becomepartner">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="partnerdiv">
-          <img class="partnerimage" src="../assets/Join us.png" />
+    </section>
+    <!-- become partner -->
+    <section class="becomepartner">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="partnerdiv">
+            <img class="partnerimage" src="../assets/Join us.png" />
+          </div>
+        </div>
+        <div class="col-md-8 partner-text">
+          <div>
+            <p>Join us on the ride.</p>
+            <p>Become our Partner and earn Together</p>
+          </div>
+          <div class="partnerbutton">
+            <a href="partner.html"
+              ><button class="btn btn-lg btn-primary btn-block" type="submit">
+                Become Partner
+              </button></a
+            >
+          </div>
         </div>
       </div>
-      <div class="col-md-8 partner-text">
-        <div>
-          <p>Join us on the ride.</p>
-          <p>Become our Partner and earn Together</p>
-        </div>
-        <div class="partnerbutton">
-          <a href="partner.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
-              Become Partner
-            </button></a>
-        </div>
-      </div>
-    </div>
-  </section>
-      <!-- Footer -->
-      <footer
+    </section>
+    <!-- Footer -->
+    <footer
       class="bg-light text-lg-start"
       style="background-color: rgba(0, 0, 0, 0.2)"
     >
@@ -218,12 +231,7 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0 footer_logo">
-            <img
-              src="../assets/logo for footer.png"
-              alt=""
-              srcset=""
-              
-            />
+            <img src="../assets/logo for footer.png" alt="" srcset="" />
             <br /><br />
             <p>The best in Class Car Rentals Services</p>
 
@@ -265,15 +273,20 @@
             <h5 class="text-uppercase">NEWSLETTER</h5>
             <hr />
             <!-- Add Text fields -->
-            <div class="row news"> 
+            <div class="row news">
               <div class="col-md-8 newsEmail">
-                <input type="email" name="emailNews" placeholder="Your Email Address">
+                <input
+                  type="email"
+                  name="emailNews"
+                  placeholder="Your Email Address"
+                />
               </div>
               <div class="col-md-4">
-                <button type="submit" id="newsletter"><img src="../assets/newsletter_send.png" alt=""></button>
+                <button type="submit" id="newsletter">
+                  <img src="../assets/newsletter_send.png" alt="" />
+                </button>
               </div>
             </div>
-            
           </div>
           <!--Grid column-->
 
@@ -329,35 +342,40 @@
     </footer>
     <!-- Footer -->
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
-    }
-  </script>
-   <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
 
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-   <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
- 
-   <!-- Add Firebase products that you want to use -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-  <script src="../js/offer.js"></script>
-  <script src="../js/fixed.js"></script>
-</body>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
+    <script src="../js/offer.js"></script>
+    <script src="../js/fixed.js"></script>
+  </body>
 </html>

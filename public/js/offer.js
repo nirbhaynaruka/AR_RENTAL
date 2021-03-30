@@ -51,7 +51,7 @@ function getOffers(myCity) {
                 var div = document.createElement('div');
                 div.className = 'carousel-item';
                 // var 
-                div.innerHTML = '<img src=\'' + doc.data().bannerthumbnail + '\'  class="d-block w-100" alt=\'' + doc.data().city + '\'>'
+                div.innerHTML = '<img src=\'' + doc.data().bannerthumbnail + '\'  class="d-block" alt=\'' + doc.data().city + '\'>'
                 document.getElementById('carousel-inner').appendChild(div);
 
                 console.log(doc.id, " => ", doc.data());
