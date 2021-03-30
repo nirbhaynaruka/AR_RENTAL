@@ -86,7 +86,7 @@ function codeverify() {
   var name = document.getElementById('name').value;
   var city = document.getElementById('city').value;
   var referral = document.getElementById('referral').value;
-  var phone = document.getElementById('number').value;
+  var phone = "+91"+document.getElementById('number').value;
   // var myReferral;
   console.log(code + ".....");
 
