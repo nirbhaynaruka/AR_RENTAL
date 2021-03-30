@@ -275,8 +275,8 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -287,10 +287,11 @@ figure.testimonial {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
+  margin: 10px 5%;
   padding: 0 20px;
   text-align: left;
   box-shadow: none !important;
+  display: block;
 }
 figure.testimonial * {
   -webkit-box-sizing: border-box;
@@ -299,18 +300,19 @@ figure.testimonial * {
   transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 figure.testimonial img {
+  /* margin: auto; */
   max-width: 100%;
   vertical-align: middle;
-  height: 90px;
-  width: 90px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
-  margin: 40px 0 0 10px;
+  margin: 10px 0 0 10px;
 }
 figure.testimonial blockquote {
   background-color: #fff;
   display: block;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.5em;
   margin: 0;
   padding: 25px 50px 30px;
@@ -338,15 +340,15 @@ figure.testimonial .btn {
   width: 0;
   height: 0;
   border-left: 0 solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #fff;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
   margin: 0;
   position: absolute;
 }
 figure.testimonial .peopl {
   position: absolute;
-  bottom: 45px;
-  padding: 0 10px 0 120px;
+  bottom: 80px;
+  padding: 0 10px 0 150px;
   margin: 0;
   color: #ffffff;
   -webkit-transform: translateY(50%);
