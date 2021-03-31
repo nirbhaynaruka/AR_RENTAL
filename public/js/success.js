@@ -14,12 +14,12 @@ window.onload = function () {
     var bookingtime = Object.values(params)[5];
     var div = document.createElement('div');
     div.className = 'success_details';
-    div.innerHTML = '<table class="table" id="table"><tbody><tr><td>OrderID</td><td>'+orderid+'\
-    </td></tr><tr><td>Payment ID</td><td>'+paymentid+'\
-    </td></tr><tr><td>Email</td><td>'+email+'\
-    </td></tr><tr><td>Mobile</td><td>'+mobile+'\
-    </td></tr><tr><td>Amount Paid</td><td>'+amountpaid+'\
-    </td></tr><tr><td>Booking Time</td><td>'+new Date(parseInt(bookingtime))+'\</td></tr></tbody></table>'
+    div.innerHTML = '<table class="table" id="table"><tbody><tr><td class="font-weight-bold">OrderID</td><td class="text-right">'+orderid+'\
+    </td></tr><tr><td class="font-weight-bold">Payment ID</td><td class="text-right">'+paymentid+'\
+    </td></tr><tr><td class="font-weight-bold">Email</td><td class="text-right">'+email+'\
+    </td></tr><tr><td class="font-weight-bold">Mobile</td><td class="text-right">'+mobile+'\
+    </td></tr><tr><td class="font-weight-bold">Amount Paid</td><td class="text-right">'+amountpaid+'\
+    </td></tr><tr><td class="font-weight-bold">Booking Time</td><td class="text-right">'+new Date(parseInt(bookingtime))+'\</td></tr></tbody></table>'
     document.getElementById('successpage').appendChild(div);
 
 }

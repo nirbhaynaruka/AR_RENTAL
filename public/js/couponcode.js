@@ -1,15 +1,17 @@
 var Coupon = 0;
 
 function checkcoupon(city) {
-    var couponcode = document.getElementById("couponCode").value;
-
+    var couponcode = document.getElementById("couponCode").value.toUpperCase();
+    
     firestore.collection("CouponCodes").where("city", "==", city).where("couponCode", "==", couponcode)
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                document.getElementById("couponCharge").innerHTML = "-" + parseInt((couponc * doc.data().finalAmount) / 100);
+                document.getElementById('coupon').style.display = "block";
+                document.getElementById('couponCharge').style.display = "block";
+                document.getElementById("couponCharge").innerHTML = "- ₹" + parseInt((couponc * doc.data().finalAmount) / 100);
                 Coupon = parseInt((couponc * doc.data().finalAmount) / 100);
-                document.getElementById("netpayable").innerHTML = (netpayable - parseInt(Coupon));
+                document.getElementById("netpayable").innerHTML = "₹" +  (netpayable - parseInt(Coupon));
                 // console.log(doc.id, " => ", doc.data(), doc.data().finalAmount);
             });
 
@@ -42,6 +44,22 @@ async function bookcar(e) {
         console.log("got an error" + error);
     });
 
+     await console.log(couponc, orderId, carid, modelName,
+                "address" + address,
+                "carImageurl" + carImageURL,
+                "carName" + companyName,
+                "couponCharge" + parseInt(Coupon),
+                "dropDate" + dropDate1,
+                "excessKM" + excessKM,
+                "extraCharge" + 0,
+                "orderId" + orderId,
+                "pickupDate" + pickDate1,
+                "security" + 500,
+                "status" + "incoming",
+                "total" + (netpayable - parseInt(Coupon) - walletcharge),
+                "user" + email_id,
+                "userphoneno" + userphone, "walletcharge" + walletcharge);
+
     var options = {
         "key": "rzp_test_NKlINcf4dh5TQX", // Enter the Key ID generated from the Dashboard
         "amount": (netpayable - parseInt(Coupon) - walletcharge) * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -54,21 +72,7 @@ async function bookcar(e) {
             // alert(response.razorpay_payment_id);
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
-            // await console.log(couponc, orderId, carid, modelName,
-            //     "address" + address,
-            //     "carImageurl" + carImageURL,
-            //     "carName" + companyName,
-            //     "couponCharge" + parseInt(Coupon),
-            //     "dropDate" + dropDate1,
-            //     "excessKM" + excessKM,
-            //     "extraCharge" + 0,
-            //     "orderId" + orderId,
-            //     "pickupDate" + pickDate1,
-            //     "security" + 2000,
-            //     "status" + "incoming",
-            //     "total" + (netpayable - parseInt(Coupon) - walletcharge),
-            //     "user" + email_id,
-            //     "userphoneno" + userphone, "walletcharge" + walletcharge);
+           
             await firebase.firestore().collection("users").doc(email_id).collection("orders").doc(orderId).set({
                     "address": address,
                     "baseCharge": couponc,
@@ -83,7 +87,7 @@ async function bookcar(e) {
                     "extraCharge": 0,
                     "orderId": parseInt(orderId),
                     "pickupDate": pickDate1,
-                    "security": 2000,
+                    "security": 500,
                     "status": "incoming",
                     "total": parseFloat(netpayable - parseInt(Coupon) - walletcharge),
                     "user": email_id,
@@ -113,7 +117,7 @@ async function bookcar(e) {
                     "extraCharge": 0,
                     "orderId": parseInt(orderId),
                     "pickupDate": pickDate1,
-                    "security": 2000,
+                    "security": 500,
                     "status": "incoming",
                     "total": parseFloat(netpayable - parseInt(Coupon) - walletcharge),
                     "user": email_id,
@@ -148,7 +152,7 @@ async function bookcar(e) {
             "address": "Razorpay Corporate Office"
         },
         "theme": {
-            "color": "#3399cc"
+            "color": "#494f9d"
         }
     };
     var rzp1 = new Razorpay(options);
