@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,800&display=swap");
 
-
 .terms-text {
-    margin-top: 5%;
-    margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-.terms-text p{
-    font-family: "Open Sans", sans-serif;
-    font-size: large;
+.terms-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: large;
 }
 
 .testimonial_bg {
@@ -247,6 +246,7 @@ figure.testimonial .peopl h3 {
 /* .slick-next:before {
   content: "";
 } */
-.slick-prev, .slick-next{
-	display: none !important;
+.slick-prev,
+.slick-next {
+  display: none !important;
 }
