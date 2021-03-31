@@ -7,9 +7,13 @@
     text-align: center;
 }
 .btn{
-    width: 50%;
+    width: 30%;
     display: block;
     margin: auto;
+    background-color: #494f9d;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 1.1px;
 }
 .navPage{
     margin: 1rem;

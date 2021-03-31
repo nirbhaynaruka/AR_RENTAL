@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AR_CarRental</title>
+    <title>AR Rental Car</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/logo for footer.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -26,6 +31,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/fixed.css" />
+    <link rel="stylesheet" href="../css/failurePage.css" />
   </head>
   <body>
     <!-- Header -->
@@ -61,13 +67,13 @@
               <a class="nav-link trans" href="offers.html">Offers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link trans" href="#">Tarrif</a>
+              <a class="nav-link trans" href="tarrif.html">Tarrif</a>
             </li>
             <li class="nav-item">
               <a class="nav-link trans" href="contact_us.html">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link trans" href="#" id="myBookings"></a>
+              <a class="nav-link trans" href="myBookings.html" id="myBookings"></a>
             </li>
 
             <li class="nav-item">
@@ -91,14 +97,16 @@
     <!-- Header -->
     <!-- Main Body -->
     <section class="container">
-      <div class="success_img">
+      <div class="failure_img">
         <img src="../assets/payment_failed.gif" alt="failed" />
-        <h4 class="text-center">Payment Failed</h4>
+        <h4 class="text-center">Payment Failed !</h4>
         <h6 class="text-center">Please try again!</h6>
       </div>
-      
+
       <div class="navPage">
-        <button type="button" class="btn">Go to Home</button>
+        <a href="home.html">
+          <button type="button" class="btn">Go to Home</button>
+        </a>
       </div>
     </section>
     <!-- Footer -->

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,800&display=swap");
+
+*{
+    font-family: "Open Sans", sans-serif;
+}
+.failure_img{
+    margin: 4.5em;
+}
+.failure_img > img{
+    /* border-radius: 60%; */
+    /* background-color: #494f9d; */
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.failure_img h4{
+    padding-top: 1em;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    color: red;
+}
+.failure_img h6{
+    padding-top: 0.5em;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    color: black;
+}
+.navPage{
+    text-align: center;
+}
+.btn{
+    color: white;
+    width: 30%;
+    display: block;
+    margin: auto;
+    background-color: #494f9d;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 1.1px;
+}
+.navPage{
+    margin: 1rem;
+}
