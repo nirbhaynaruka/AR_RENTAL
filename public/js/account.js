@@ -101,7 +101,7 @@ function myfunc(email_id) {
               console.log(myData.verified);
             }
           });
-          document.getElementById("singlePage").innerHTML = (verified == "no" ? '<div class="referPara"><p class="text-center">Please Verify your ID from our Android App <span style="color:orange">AR_CarRental</span><br>By submitting your Aadhar card and Driving License<br>*Physical copy of Aadhar card and Driving License is <br>required when coming to recieve the car at fleet</p></div>' :
+          document.getElementById("singlePage").innerHTML = (verified == "no" ? '<div class="referPara"><p class="text-center">Please Verify your ID from our Android App <a href="https://play.google.com/store/apps/details?id=com.twp.car_rental"><span style="color:orange">AR_CarRental</span></a><br>By submitting your Aadhar card and Driving License<br>*Physical copy of Aadhar card and Driving License is <br>required when coming to recieve the car at fleet</p></div>' :
             '<div class="wallet"> <img src="../assets/verified.png" alt="verified"><div class="referPara"><p class="text-center">Hooray ! Your ID is verified and you <br> are eligible for bookings</p><p>*Physical copy of Aadhar card and Driving License is <br>required when coming to recieve the car at fleet</p></div></div>');
         }
 
