@@ -14,7 +14,13 @@
   position: relative;
   /* height: 1vh; */
 }
-
+.card{
+  display: block;
+    margin: auto;
+}
+.services{
+  text-align: center;
+}
 @media only screen and (min-width: 768px) {
   .section .section-center {
     /* position: absolute; */
