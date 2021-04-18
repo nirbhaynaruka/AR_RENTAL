@@ -28,9 +28,11 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/fixed.css" />
+    <link rel="stylesheet" href="../css/aboutus.css" />
+
   </head>
 
-  <body onload="formDate()">
+  <body >
     <header>
       <nav class="navbar navbar-expand-md fixed-top headercover trans">
         <a class="navbar-brand" href="#"
@@ -114,262 +116,41 @@
       </nav>
     </header>
     <!-- Header -->
-
-    <!-- Main Body -->
-    <section class="Carousels container-fluid">
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="https://play.google.com/store/apps/details?id=com.twp.car_rental">
-
-              <img src="../assets/banner1.png" class="d-block w-100" alt="..." />
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="https://play.google.com/store/apps/details?id=com.twp.car_rental">
-
-              <img src="../assets/banner1.png" class="d-block w-100" alt="..." />
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="https://play.google.com/store/apps/details?id=com.twp.car_rental">
-
-              <img src="../assets/banner1.png" class="d-block w-100" alt="..." />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Find My Car -->
-    <section>
-      <div id="booking" class="section">
-        <div class="section-center">
-          <div class="container">
-            <div class="booking-form">
-              <form action="findCar.html" method="GET">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        min="2021-03-23"
-                        type="date"
-                        id="pickup-date"
-                        name="pickupDate"
-                        required
-                      />
-                      <span class="form-label">Pick-Up Date</span>
-                    </div>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="heading">
+                    <h2>About Us</h2>
+                    <hr class="hrhr">
                   </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input
-                      type="time"
-                        class="form-control"
-                        name="pickupTime"
-                        id="pickup-time"
-                        required
-                      />
-                      <span class="form-label">Pick-Up Time</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <select class="form-control text-uppercase" name="city">
-                        <!-- <option value="JAIPUR">JAIPUR</option>
-                        <option value="CHIRAWA">CHIRAWA</option> -->
-                        <option value="SIKAR">SIKAR</option>
-                        <option value="JHUNJHUNU">JHUNJHUNU</option>
-                        <!-- <option value="PILANI">PILANI</option> -->
-                        <option value="GUDHA">GUDHA</option>
-                        <!-- <option value="NAWALGARH">NAWALGARH</option> -->
-                      </select>
-                      <span class="select-arrow"></span>
-                      <span class="form-label">Select City</span>
-                    </div>
-                  </div>
+                <div class="text">
+                    <p>
+                        Hi, I am Abhishek Gill(Founder & CEO), my vision is to provide best in class Rental Car Service to the customers at an affordable.
+                        <!-- <br>  -->
+                    </p>
+                    <br>
+                    <br>
+
+                    <p class="number">
+                         Reach out to me on<br>
+                         <span class="numberspan">
+
+                             +91
+                             <a href="tel:8003073499">
+                                 8003073499 
+                                </a>
+                            </span>
+                    </p>
                 </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        type="date"
-                        id="drop-date"
-                        name="dropDate"
-                        required
-                      />
-                      <span class="form-label">Drop-Off Date</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        type="time"
-                        id="drop-time"
-                        name="dropTime"
-                        required
-                      />
-                      <span class="form-label">Drop-Off Time</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-btn">
-                      <button class="submit-btn" >
-                        Check availability
-                      </button>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="aboutimage">
+                    <img src="../assets/aboutus.jpeg" alt="aboutus"/>
                 </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-
-    <!-- Locations -->
-    <section class="text-center">
-      <div class="loc_heading">
-        <h1>We serve at different locations</h1>
-      </div>
-      <div class="locations">
-        <ul class="list-inline">
-          <li class="list-inline-item">Jaipur</li>
-          <li class="list-inline-item">Sikar</li>
-          <li class="list-inline-item">Chirawa</li>
-          <li class="list-inline-item">Pilani</li>
-          <br />
-          <li class="list-inline-item">Gudha</li>
-          <li class="list-inline-item">Jhunjhunu</li>
-          <li class="list-inline-item">Nawalgarh</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- how it works -->
-    <section class="text-center container howItWork">
-      <div class="work_heading">
-        <h2 class="text-uppercase">How it works</h2>
-        <h1>AR Rental follow 3 working steps</h1>
-      </div>
-      <div class="row step-cards">
-        <div class="col-md-4 step-cards-item">
-          <div class="card" style="width: 18rem">
-            <img
-              src="../assets/Location marker.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Choose a Location</h5>
-              <p class="card-text">
-                Choose from a wide range of different locations around you
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 step-cards-item">
-          <div class="card" style="width: 18rem">
-            <img
-              src="../assets/pickup date.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Pick-up Date</h5>
-              <p class="card-text">Choose your preferred date</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 step-cards-item">
-          <div class="card" style="width: 18rem">
-            <img
-              src="../assets/book your car.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Book Your Car</h5>
-              <p class="card-text">
-                Confirm your booking for easy pickup/drop off
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- secvices -->
-    <section class="container-fluid service-section">
-      <div class="row">
-        <div class="col-md-6 secvices-img">
-          <img src="../assets/range rover.png" alt="" srcset="" width="90%" />
-        </div>
-        <div class="col-md-6">
-          <div class="service_heading">
-            <h3 class="text-uppercase">BEST SERVICES</h3>
-            <h1>Feel the best experience with our rental deals</h1>
-          </div>
-          <hr />
-          <div class="services">
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../assets/City transfers.png" alt="" srcset="" />
-              </div>
-              <div class="col-md-9 services-text">
-                <h3>City Transfers</h3>
-                <h5>Easy to rent personal car</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../assets/Hospital transfer.png" alt="" srcset="" />
-              </div>
-              <div class="col-md-9 services-text">
-                <h3>Hospital Transfer</h3>
-                <h5>Get your personal vehicle incase of any emergency</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../assets/airport transfer.png" alt="" srcset="" />
-              </div>
-              <div class="col-md-9 services-text">
-                <h3>Airport Transfer</h3>
-                <h5>Get your personal car as you land</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../assets/Ceremony.png" alt="" srcset="" />
-              </div>
-              <div class="col-md-9 services-text">
-                <h3>Ceremony Rental</h3>
-                <h5>Rent a personal car for any ceremony</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
+        <!-- Testimonials -->
     <section class="testimonial_bg">
       <div class="testimonial_heading text-center">
         <h3 class="text-uppercase">why we are best in class</h3>
@@ -489,7 +270,7 @@
             <hr />
             <ul class="list-unstyled mb-0 foot-link">
               <li>
-                <a href="aboutus.html" class="text-white text-underline">About Us</a>
+                <a href="#" class="text-white text-underline">About Us</a>
               </li>
               <li>
                 <a href="faq.html" class="text-white">FAQ</a>

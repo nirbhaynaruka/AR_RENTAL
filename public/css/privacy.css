@@ -1,0 +1,12 @@
+.heading, .text{
+    padding: 5%;
+}
+.hrhr{
+    background-color: coral;
+    height: 3px;
+    width: 19%;
+    float: left;
+}
+.head{
+    font-weight: bold;
+}

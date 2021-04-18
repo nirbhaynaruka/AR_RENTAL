@@ -1,0 +1,23 @@
+img{
+    width: 100%;
+}
+.aboutimage{
+padding: 10%;
+}
+.heading, .text{
+    padding: 10%;
+}
+.hrhr{
+    background-color: coral;
+    height: 3px;
+    width: 50%;
+    float: left;
+}
+
+.number{
+
+    font-weight: bold;
+}
+.numberspan{
+    font-weight: bolder;
+}
