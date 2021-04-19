@@ -38,6 +38,7 @@ async function bookcar(e) {
             userName = myData.name;
             userphone = myData.phone;
             walletcharge = myData.mywalletmoney;
+            city = myData.city;
             console.log(userphone);
         }
     }).catch(function (error) {
@@ -94,6 +95,7 @@ async function bookcar(e) {
                     "userphoneno": userphone,
                     "walletcharge": walletcharge,
                     "paymentID": response.razorpay_payment_id,
+                    "city" : city,
                 })
                 .then(async () => {
                     await proceedreferral(email_id);
@@ -124,6 +126,7 @@ async function bookcar(e) {
                     "userphoneno": userphone,
                     "walletcharge": walletcharge,
                     "paymentID": response.razorpay_payment_id,
+                    "city" : city,
                 })
                 .then(() => {
                     window.location.href = "successPage.html" +
@@ -142,7 +145,12 @@ async function bookcar(e) {
                 .catch((error) => {
                     console.error("Error writing document: ", error);
                 });
+                await firebase.firestore()
+                .collection("Cars")
+                .doc(carid).update({
 
+                    "status": "unavailable"
+                });
             await firebase.firestore()
                 .collection("users")
                 .doc(email_id).update({

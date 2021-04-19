@@ -82,7 +82,7 @@ window.onload = function () {
   firestore
     .collection("Cars")
     .where("carID", "==", carID)
-    .get()
+    .get()   
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         var div = document.createElement("div");
