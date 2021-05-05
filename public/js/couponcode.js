@@ -93,9 +93,13 @@ async function bookcar(e) {
                     "total": parseFloat(netpayable - parseInt(Coupon) - walletcharge),
                     "user": email_id,
                     "userphoneno": userphone,
-                    "walletcharge": walletcharge,
+                    "walletCharge": walletcharge,
                     "paymentID": response.razorpay_payment_id,
                     "city" : city,
+                    "damageCharge": 0,
+      "overSpeedingCharge": 0,
+      "tax": 0,
+      "finalAmount": 0,
                 })
                 .then(async () => {
                     await proceedreferral(email_id);
@@ -124,9 +128,13 @@ async function bookcar(e) {
                     "total": parseFloat(netpayable - parseInt(Coupon) - walletcharge),
                     "user": email_id,
                     "userphoneno": userphone,
-                    "walletcharge": walletcharge,
+                    "walletCharge": walletcharge,
                     "paymentID": response.razorpay_payment_id,
                     "city" : city,
+                    "damageCharge": 0,
+      "overSpeedingCharge": 0,
+      "tax": 0,
+      "finalAmount": 0,
                 })
                 .then(() => {
                     window.location.href = "successPage.html" +
