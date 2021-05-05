@@ -157,7 +157,7 @@ async function bookcar(e) {
                 .collection("Cars")
                 .doc(carid).update({
 
-                    "status": "unavailable"
+                    "status": "Unavailable"
                 });
             await firebase.firestore()
                 .collection("users")
